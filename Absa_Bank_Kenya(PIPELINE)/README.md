@@ -24,22 +24,16 @@ The projects share a common containerized environment managed at this root level
 
 ## 📊 Dashboards
 
-The platform includes pre-defined SQL queries for Metabase dashboards in the `dashboards/` directory.
+The platform includes two ways to visualize insights:
 
-### Metabase Connection
-1. Access Metabase at `http://localhost:3000`.
-2. Add a new Database:
-   - **Database type**: PostgreSQL
-   - **Host**: `postgres` (or `localhost` if connecting from host)
-   - **Port**: `5432`
-   - **Database name**: `absa_warehouse` or `absa_open_banking`
-   - **Username**: `absa_admin`
-   - **Password**: `absa_password`
+### 1. Modern Interactive Dashboards (Streamlit)
+A high-fidelity, interactive dashboard built with Streamlit and Plotly.
+- **Access**: `http://localhost:8501`
+- **Features**: Interactive time-series trends, NPL ratio analysis, and account distribution charts.
 
-### Available Dashboards
-- **Financial Performance**: `dashboards/financial_performance.sql`
-- **Asset Quality & Risk**: `dashboards/asset_quality_risk.sql`
-- **Open Banking Insights**: `dashboards/open_banking_insights.sql`
+### 2. BI Layer (Metabase)
+Pre-defined SQL queries for Metabase dashboards in the `dashboards/` directory.
+- **Access**: `http://localhost:3000`
 
 ## 🚦 Getting Started
 

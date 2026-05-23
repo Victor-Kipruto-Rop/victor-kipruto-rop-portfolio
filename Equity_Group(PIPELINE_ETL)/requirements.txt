@@ -7,3 +7,5 @@ sqlalchemy
 python-dotenv
 pytest
 matplotlib
+streamlit
+plotly

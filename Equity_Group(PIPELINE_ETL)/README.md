@@ -23,22 +23,16 @@ The projects share a common containerized environment managed at this root level
 
 ## 📊 Dashboards
 
-The platform includes pre-defined SQL queries for Metabase dashboards in the `dashboards/` directory.
+The platform includes two ways to visualize insights:
 
-### Metabase Connection
-1. Access Metabase at `http://localhost:3001`.
-2. Add a new Database:
-   - **Database type**: PostgreSQL
-   - **Host**: `postgres` (or `localhost` if connecting from host)
-   - **Port**: `5432`
-   - **Database name**: `equitel_analytics` or `pan_africa_platform`
-   - **Username**: `equity_admin`
-   - **Password**: `equity_password`
+### 1. Modern Interactive Dashboards (Streamlit)
+A high-fidelity, interactive dashboard built with Streamlit and Plotly.
+- **Access**: `http://localhost:8502`
+- **Features**: Regional profit contribution maps, adoption S-curves, and product cross-sell penetration.
 
-### Available Dashboards
-- **Equitel Adoption**: `dashboards/equitel_adoption_trends.sql`
-- **Pan-Africa Consolidation**: `dashboards/pan_africa_consolidation.sql`
-- **Product Mix & Cross-Sell**: `dashboards/product_mix_cross_sell.sql`
+### 2. BI Layer (Metabase)
+Pre-defined SQL queries for Metabase dashboards in the `dashboards/` directory.
+- **Access**: `http://localhost:3001`
 
 ## 🚦 Getting Started
 

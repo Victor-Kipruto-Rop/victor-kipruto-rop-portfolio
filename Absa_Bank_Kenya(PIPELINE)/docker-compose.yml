@@ -50,5 +50,17 @@ services:
     depends_on:
       - postgres
 
+  dashboard:
+    image: apache/airflow:2.7.1
+    command: bash -c "pip install streamlit plotly && streamlit run /opt/airflow/projects/dashboard_app.py --server.port 8501 --server.address 0.0.0.0"
+    ports:
+      - "8501:8501"
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+    volumes:
+      - .:/opt/airflow/projects
+    depends_on:
+      - postgres
+
 volumes:
   postgres_data:
