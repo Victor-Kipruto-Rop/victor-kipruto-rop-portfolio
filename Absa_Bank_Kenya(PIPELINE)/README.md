@@ -1,5 +1,7 @@
 # 🏦 Absa Bank Kenya Integrated Data Platform
 
+![Project Architecture](./images/absa.png)
+
 This directory contains the integrated data engineering pipelines for Absa Bank Kenya, consolidating financial performance tracking and open banking innovation into a single, unified infrastructure.
 
 ## 🚀 Overview
