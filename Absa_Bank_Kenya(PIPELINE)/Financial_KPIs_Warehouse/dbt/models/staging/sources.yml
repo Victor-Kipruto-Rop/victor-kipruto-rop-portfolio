@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: absa_warehouse
+    schema: public
+    tables:
+      - name: raw_quarterly_data

@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: absa_admin
+      POSTGRES_PASSWORD: absa_password
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+
+  airflow:
+    image: apache/airflow:2.7.1
+    command: standalone
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://absa_admin:absa_password@postgres/postgres
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - _PIP_ADDITIONAL_DEPENDENCIES=dbt-postgres pandas pdfplumber requests beautifulsoup4 psycopg2-binary sqlalchemy python-dotenv fastapi uvicorn pydantic
+    volumes:
+      - ./Financial_KPIs_Warehouse/dags:/opt/airflow/dags/kpi
+      - ./Open_Banking_API_Pipeline/dags:/opt/airflow/dags/api
+      - ./Financial_KPIs_Warehouse:/opt/airflow/projects/kpi
+      - ./Open_Banking_API_Pipeline:/opt/airflow/projects/api
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+
+  absa-api:
+    build:
+      context: ./Open_Banking_API_Pipeline
+    ports:
+      - "8000:8000"
+    environment:
+      - ABSA_CONSUMER_KEY=${ABSA_CONSUMER_KEY}
+      - ABSA_CONSUMER_SECRET=${ABSA_CONSUMER_SECRET}
+      - DATABASE_URL=postgresql://absa_admin:absa_password@postgres/absa_open_banking
+    depends_on:
+      - postgres
+
+  metabase:
+    image: metabase/metabase:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:

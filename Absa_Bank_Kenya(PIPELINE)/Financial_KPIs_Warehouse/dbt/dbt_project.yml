@@ -1,0 +1,23 @@
+name: 'absa_kpi_warehouse'
+version: '1.0.0'
+config-version: 2
+
+profile: 'absa_warehouse'
+
+model-paths: ["models"]
+seed-paths: ["../seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  absa_kpi_warehouse:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

@@ -1,0 +1,16 @@
+name: 'absa_open_banking'
+version: '1.0.0'
+config-version: 2
+
+profile: 'absa_open_banking'
+
+model-paths: ["models"]
+seed-paths: ["../seeds"]
+test-paths: ["tests"]
+
+models:
+  absa_open_banking:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
