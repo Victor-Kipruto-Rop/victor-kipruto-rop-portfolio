@@ -1,0 +1,16 @@
+name: 'financial_performance'
+version: '1.0.0'
+config-version: 2
+
+profile: 'financial_performance'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+models:
+  financial_performance:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

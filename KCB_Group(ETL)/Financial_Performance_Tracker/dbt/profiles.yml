@@ -1,0 +1,12 @@
+financial_performance:
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: kcb_admin
+      password: kcb_password
+      port: 5432
+      dbname: kcb_financials
+      schema: public
+      threads: 4
+  target: dev
