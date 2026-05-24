@@ -1,14 +1,12 @@
 with source as (
-    select * from {{ source('absa_warehouse', 'raw_quarterly_data') }}
+    select * from {{ source('absa_raw', 'raw_absa_financials') }}
 ),
-
 renamed as (
     select
-        metric_name,
-        period,
-        value as metric_value,
-        cast(extracted_at as timestamp) as extracted_at
+        indicator,
+        year,
+        value_m_kes,
+        reported_date
     from source
 )
-
 select * from renamed

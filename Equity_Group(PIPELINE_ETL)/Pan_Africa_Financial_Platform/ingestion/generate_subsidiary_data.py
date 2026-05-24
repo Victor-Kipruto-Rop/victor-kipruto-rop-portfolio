@@ -1,39 +1,45 @@
 import pandas as pd
 import numpy as np
-from datetime import datetime, timedelta
 import os
+from datetime import datetime
 
-def generate_subsidiary_data(output_dir="/opt/airflow/projects/pan_africa/ingestion"):
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-
+def generate_equity_financials(output_dir="Equity_Group(PIPELINE_ETL)/Pan_Africa_Financial_Platform/ingestion"):
+    os.makedirs(output_dir, exist_ok=True)
+    
     subsidiaries = [
-        {"name": "Kenya", "currency": "KES", "base_profit": 15000000000},
-        {"name": "DRC", "currency": "CDF", "base_profit": 8000000000},
-        {"name": "Uganda", "currency": "UGX", "base_profit": 2000000000},
-        {"name": "Tanzania", "currency": "TZS", "base_profit": 1500000000},
-        {"name": "Rwanda", "currency": "RWF", "base_profit": 1000000000},
-        {"name": "South_Sudan", "currency": "SSP", "base_profit": 500000000},
-        {"name": "Ethiopia", "currency": "ETB", "base_profit": 200000000}
+        "Equity Bank Kenya", "Equity Bank Uganda", "Equity Bank Tanzania",
+        "Equity Bank Rwanda", "Equity Bank South Sudan", "Equity Bank Congo (DRC)",
+        "Equity Bank Ethiopia (Rep Office)"
     ]
-
-    periods = ["2023-FY", "2024-Q1", "2024-Q2", "2024-Q3"]
+    years = range(2020, 2026)
     
     data = []
-    for sub in subsidiaries:
-        for period in periods:
-            growth = 1 + np.random.normal(0.05, 0.02)
-            profit = sub["base_profit"] * growth
-            data.append({
-                "subsidiary": sub["name"],
-                "period": period,
-                "currency": sub["currency"],
-                "net_profit": round(profit, 2),
-                "total_assets": round(profit * 8, 2)
-            })
     
-    pd.DataFrame(data).to_csv(f"{output_dir}/subsidiary_financials.csv", index=False)
-    print(f"Generated Pan-Africa financial data in {output_dir}")
+    for sub in subsidiaries:
+        base_assets = np.random.uniform(500000, 1000000) if "Kenya" in sub or "Congo" in sub else np.random.uniform(50000, 150000)
+        
+        for year in years:
+            growth = 1 + np.random.uniform(0.1, 0.25) # Equity grows fast
+            assets = base_assets * growth
+            loans = assets * np.random.uniform(0.5, 0.6)
+            deposits = assets * np.random.uniform(0.75, 0.85)
+            profit = assets * np.random.uniform(0.02, 0.04)
+            
+            data.append({
+                "subsidiary": sub,
+                "year": year,
+                "total_assets_m_kes": round(assets, 2),
+                "net_loans_m_kes": round(loans, 2),
+                "customer_deposits_m_kes": round(deposits, 2),
+                "profit_after_tax_m_kes": round(profit, 2),
+                "npl_ratio_percent": round(np.random.uniform(5, 12), 2),
+                "digital_txn_percentage": round(np.random.uniform(85, 99), 2)
+            })
+            base_assets = assets
+            
+    df = pd.DataFrame(data)
+    df.to_csv(f"{output_dir}/equity_subsidiary_performance.csv", index=False)
+    print(f"Generated Equity subsidiary data in {output_dir}")
 
 if __name__ == "__main__":
-    generate_subsidiary_data()
+    generate_equity_financials()

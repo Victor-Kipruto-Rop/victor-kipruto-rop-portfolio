@@ -10,7 +10,7 @@ st.set_page_config(page_title="Kenya Banking Sector: Integrated Analytics", layo
 
 # Sidebar Navigation
 st.sidebar.title("Sector Navigator")
-bank_selection = st.sidebar.selectbox("Select Institution", ["Sector Overview (DWH)", "AML Monitoring Engine", "KRA Tax Revenue", "KCB Group", "Absa Bank Kenya", "Equity Group"])
+bank_selection = st.sidebar.selectbox("Select Institution", ["Sector Overview (DWH)", "AML Monitoring Engine", "KRA Tax Revenue", "M-Pesa Fraud Monitor", "KCB Group", "Absa Bank Kenya", "Equity Group"])
 
 st.sidebar.markdown("---")
 st.sidebar.button("Refresh Data", on_click=lambda: st.session_state.clear())
@@ -49,8 +49,22 @@ elif bank_selection == "KRA Tax Revenue":
         st.markdown("### [🏢 iTax Business Registration](http://localhost:8509)")
         st.write("Track business formation rates and taxpayer density.")
 
-elif bank_selection == "KCB Group":
+elif bank_selection == "M-Pesa Fraud Monitor":
+    st.title("🕵️ M-Pesa: Fraud & Anomaly Detection")
+    st.info("Real-time ML-powered fraud scoring for mobile money transactions.")
 
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        st.markdown("### [🕵️ Fraud Detection](http://localhost:8510)")
+        st.write("XGBoost-powered fraud scoring.")
+    with c2:
+        st.markdown("### [⚡ Real-Time Streaming](http://localhost:8511)")
+        st.write("Live Kafka-based transaction monitor.")
+    with c3:
+        st.markdown("### [🗺️ Agent Network](http://localhost:8512)")
+        st.write("Geospatial density and liquidity maps.")
+
+elif bank_selection == "KCB Group":
 
     st.title("🦁 KCB Group Integrated Analytics")
     st.info("Displaying KCB Group Consolidated Performance and M-Pesa Loan Analytics.")

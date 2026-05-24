@@ -1,7 +1,8 @@
 version: 2
 
 sources:
-  - name: absa_warehouse
+  - name: absa_raw
+    database: absa_warehouse
     schema: public
     tables:
-      - name: raw_quarterly_data
+      - name: raw_absa_financials

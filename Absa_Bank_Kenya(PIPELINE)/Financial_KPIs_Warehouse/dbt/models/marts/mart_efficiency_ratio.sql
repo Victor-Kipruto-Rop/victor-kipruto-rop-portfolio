@@ -1,23 +1,19 @@
 with staging as (
     select * from {{ ref('stg_absa_quarterly') }}
 ),
-
-efficiency_metrics as (
+pivoted as (
     select
-        period,
-        max(case when metric_name = 'Operating Expenses' then metric_value end) as operating_expenses,
-        max(case when metric_name = 'Total Operating Income' then metric_value end) as total_operating_income
+        year,
+        max(case when indicator = 'Net Interest Income' then value_m_kes end) as nii,
+        max(case when indicator = 'Non-Interest Income' then value_m_kes end) as non_int_income,
+        max(case when indicator = 'Operating Expenses' then value_m_kes end) as opex
     from staging
     group by 1
 ),
-
-calculated as (
+ratios as (
     select
-        period,
-        operating_expenses,
-        total_operating_income,
-        (operating_expenses / nullif(total_operating_income, 0)) * 100 as cost_to_income_ratio
-    from efficiency_metrics
+        year,
+        (opex / nullif((nii + non_int_income), 0)) * 100 as cost_to_income_ratio
+    from pivoted
 )
-
-select * from calculated
+select * from ratios

@@ -1,0 +1,51 @@
+services:
+  postgres-mpesa:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: mpesa_admin
+      POSTGRES_PASSWORD: mpesa_password
+      POSTGRES_DB: postgres
+    ports:
+      - "5439:5432"
+    volumes:
+      - postgres_mpesa_data:/var/lib/postgresql/data
+      - ./init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+
+  fraud-dashboard:
+    image: apache/airflow:2.7.1
+    command: bash -c "pip install streamlit plotly pandas xgboost scikit-learn joblib sqlalchemy psycopg2-binary && streamlit run /opt/airflow/projects/mpesa/Fraud_Anomaly_Detection/dashboard_app.py --server.port 8510 --server.address 0.0.0.0"
+    ports:
+      - "8510:8510"
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+    volumes:
+      - .:/opt/airflow/projects/mpesa
+    depends_on:
+      - postgres-mpesa
+
+  streaming-dashboard:
+    image: apache/airflow:2.7.1
+    command: bash -c "pip install streamlit plotly sqlalchemy psycopg2-binary pandas && streamlit run /opt/airflow/projects/mpesa/Real_Time_Transaction_Streaming/dashboard_app.py --server.port 8511 --server.address 0.0.0.0"
+    ports:
+      - "8511:8511"
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+    volumes:
+      - .:/opt/airflow/projects/mpesa
+    depends_on:
+      - postgres-mpesa
+
+  agent-dashboard:
+    image: apache/airflow:2.7.1
+    command: bash -c "pip install streamlit plotly pandas sqlalchemy psycopg2-binary && streamlit run /opt/airflow/projects/mpesa/Agent_Network_Analytics/dashboard_app.py --server.port 8512 --server.address 0.0.0.0"
+    ports:
+      - "8512:8512"
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+    volumes:
+      - .:/opt/airflow/projects/mpesa
+    depends_on:
+      - postgres-mpesa
+
+volumes:
+  postgres_mpesa_data:
