@@ -10,7 +10,7 @@ st.set_page_config(page_title="Kenya Banking Sector: Integrated Analytics", layo
 
 # Sidebar Navigation
 st.sidebar.title("Sector Navigator")
-bank_selection = st.sidebar.selectbox("Select Institution", ["Sector Overview (DWH)", "AML Monitoring Engine", "KCB Group", "Absa Bank Kenya", "Equity Group"])
+bank_selection = st.sidebar.selectbox("Select Institution", ["Sector Overview (DWH)", "AML Monitoring Engine", "KRA Tax Revenue", "KCB Group", "Absa Bank Kenya", "Equity Group"])
 
 st.sidebar.markdown("---")
 st.sidebar.button("Refresh Data", on_click=lambda: st.session_state.clear())
@@ -30,7 +30,12 @@ elif bank_selection == "AML Monitoring Engine":
     st.info("Rules-based detection of suspicious financial activities across the sector.")
     st.markdown("[Open AML Monitoring Dashboard](http://localhost:8505)")
 
+elif bank_selection == "KRA Tax Revenue":
+    st.title("🇰🇪 KRA: Tax Revenue Analytics")
+    st.info("Monitoring national tax collection performance and fiscal trends.")
+    st.markdown("[Open KRA Revenue Dashboard](http://localhost:8506)")
 elif bank_selection == "KCB Group":
+
     st.title("🦁 KCB Group Integrated Analytics")
     st.info("Displaying KCB Group Consolidated Performance and M-Pesa Loan Analytics.")
     

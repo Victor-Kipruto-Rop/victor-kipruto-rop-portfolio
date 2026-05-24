@@ -1,5 +1,10 @@
-with source as (
-    select * from {{ source('kra_raw', 'raw_kra_revenue') }}
+
+  create view "kra_warehouse"."public"."stg_revenue_monthly__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "kra_warehouse"."public"."raw_kra_revenue"
 ),
 renamed as (
     select
@@ -12,3 +17,4 @@ renamed as (
     from source
 )
 select * from renamed
+  );

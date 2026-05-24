@@ -1,5 +1,5 @@
 with monthly as (
-    select * from {{ ref('stg_revenue_monthly') }}
+    select * from "kra_warehouse"."public"."stg_revenue_monthly"
 ),
 marts as (
     select

@@ -1,5 +1,15 @@
-with monthly as (
-    select * from {{ ref('stg_revenue_monthly') }}
+
+  
+    
+
+  create  table "kra_warehouse"."public"."mart_target_vs_actual__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with monthly as (
+    select * from "kra_warehouse"."public"."stg_revenue_monthly"
 ),
 summary as (
     select
@@ -12,3 +22,5 @@ summary as (
     group by 1, 2
 )
 select * from summary
+  );
+  

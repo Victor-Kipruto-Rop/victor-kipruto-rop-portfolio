@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('kra_raw', 'raw_kra_revenue') }}
+    select * from "kra_warehouse"."public"."raw_kra_revenue"
 ),
 renamed as (
     select
