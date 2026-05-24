@@ -1,2 +1,0 @@
-[console_scripts]
-camelot = camelot.__main__:main

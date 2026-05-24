@@ -1,3 +1,0 @@
-[apache_airflow_provider]
-provider_info=airflow.providers.common.io.get_provider_info:get_provider_info
-
