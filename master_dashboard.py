@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import os
 
 # Page Config
-st.set_page_config(page_title="Kenya Banking Sector: Integrated Analytics", layout="wide", page_icon="🏦")
+st.set_page_config(page_title="Kenya Banking & Telecom: Integrated Analytics", layout="wide", page_icon="🏦")
 
 # Helper to load snapshot data
 def load_snapshot(project, snapshot_name):
@@ -21,7 +21,7 @@ def load_snapshot(project, snapshot_name):
 # Sidebar Navigation
 st.sidebar.title("Sector Navigator")
 bank_selection = st.sidebar.selectbox("Select View", 
-    ["Executive Summary (2025)", "Sector Overview (DWH)", "AML Monitoring Engine", "KRA Tax Revenue", "M-Pesa Fraud Monitor", "KCB Group", "Absa Bank Kenya", "Equity Group"])
+    ["Executive Summary (2025)", "Sector Overview (DWH)", "AML Monitoring Engine", "KRA Tax Revenue", "M-Pesa Fraud Monitor", "KCB Group", "Absa Bank Kenya", "Equity Group", "Safaricom PLC"])
 
 st.sidebar.markdown("---")
 st.sidebar.button("Refresh Snapshots", on_click=lambda: st.session_state.clear())
@@ -34,28 +34,32 @@ if bank_selection == "Executive Summary (2025)":
     kcb_df = load_snapshot("KCB_Group(ETL)/Financial_Performance_Tracker", "mart_roe_roa")
     absa_df = load_snapshot("Absa_Bank_Kenya(PIPELINE)", "mart_profitability")
     equity_df = load_snapshot("Equity_Group(PIPELINE_ETL)", "mart_subsidiary_performance")
+    saf_df = load_snapshot("Safaricom(PIPELINE)", "mart_financial_results")
     
     # Filter for 2025
     kcb_2025 = kcb_df[(kcb_df['year'] == 2025) & (kcb_df['subsidiary'] == 'KCB Group Consolidated')] if not kcb_df.empty else pd.DataFrame()
     absa_2025 = absa_df[absa_df['year'] == 2025] if not absa_df.empty else pd.DataFrame()
+    saf_2025 = saf_df[saf_df['period'] == 'FY 2025 (E)'] if not saf_df.empty else pd.DataFrame()
     
     # Prepare comparison table
     summary_data = []
     if not kcb_2025.empty:
         summary_data.append({
-            "Bank": "KCB Group",
+            "Institution": "KCB Group",
             "Net Profit (M KES)": kcb_2025['net_profit_m_kes'].iloc[0],
-            "Total Assets (M KES)": kcb_2025['total_assets_m_kes'].iloc[0],
-            "ROE %": kcb_2025['roe_percent'].iloc[0],
-            "ROA %": kcb_2025['roa_percent'].iloc[0]
+            "Total Assets (M KES)": kcb_2025['total_assets_m_kes'].iloc[0]
         })
     if not absa_2025.empty:
         summary_data.append({
-            "Bank": "Absa Kenya",
+            "Institution": "Absa Kenya",
             "Net Profit (M KES)": absa_2025['net_profit'].iloc[0],
-            "Total Assets (M KES)": absa_2025['total_assets'].iloc[0],
-            "ROE %": absa_2025['roe_percent'].iloc[0],
-            "ROA %": absa_2025['roa_percent'].iloc[0]
+            "Total Assets (M KES)": absa_2025['total_assets'].iloc[0]
+        })
+    if not saf_2025.empty:
+        summary_data.append({
+            "Institution": "Safaricom PLC",
+            "Net Profit (M KES)": saf_2025['net_profit_m_kes'].iloc[0],
+            "Total Assets (M KES)": 380000.0 # Estimate
         })
         
     if summary_data:
@@ -64,20 +68,18 @@ if bank_selection == "Executive Summary (2025)":
         col1, col2 = st.columns(2)
         with col1:
             st.write("### 💰 Profitability Comparison")
-            fig_prof = px.bar(comp_df, x="Bank", y="Net Profit (M KES)", color="Bank", text_auto='.2s')
+            fig_prof = px.bar(comp_df, x="Institution", y="Net Profit (M KES)", color="Institution", text_auto='.2s')
             st.plotly_chart(fig_prof, use_container_width=True)
             
         with col2:
-            st.write("### 📈 Efficiency (ROE)")
-            fig_roe = px.bar(comp_df, x="Bank", y="ROE %", color="Bank", text_auto='.2f')
-            st.plotly_chart(fig_roe, use_container_width=True)
+            st.write("### 📊 Market Valuation Matrix")
+            fig_val = px.scatter(comp_df, x='Total Assets (M KES)', y='Net Profit (M KES)', size='Net Profit (M KES)', color='Institution', hover_name='Institution')
+            st.plotly_chart(fig_val, use_container_width=True)
             
         st.write("### 📊 Consolidated 2025 Metrics")
         st.dataframe(comp_df.style.format({
             "Net Profit (M KES)": "{:,.0f}",
-            "Total Assets (M KES)": "{:,.0f}",
-            "ROE %": "{:.2f}%",
-            "ROA %": "{:.2f}%"
+            "Total Assets (M KES)": "{:,.0f}"
         }), use_container_width=True)
     else:
         st.warning("No 2025 snapshot data found. Please run 'create_all_snapshots.py' first.")
@@ -116,4 +118,8 @@ elif bank_selection == "Absa Bank Kenya":
 
 elif bank_selection == "Equity Group":
     st.title("🌍 Equity Group Pan-Africa Insights")
-    st.info("Displaying Equity Group Digital Adoption and Regional Consolidation.")
+    st.markdown("[Open Equity Integrated Dashboard](http://localhost:8502)")
+
+elif bank_selection == "Safaricom PLC":
+    st.title("📱 Safaricom PLC Integrated Analytics")
+    st.markdown("[Open Safaricom Financial & Network Dashboard](http://localhost:8513)")

@@ -1,0 +1,8 @@
+region,availability_percent,latency_ms,avg_speed_mbps,cx_score
+Nairobi,99.66,38.2,69.0,3.7
+Coast,99.56,34.7,45.4,4.1
+Rift Valley,99.5,42.5,37.5,4.5
+Central,99.78,24.5,73.9,4.7
+Western,99.66,19.6,40.3,4.7
+Nyanza,99.53,21.8,73.3,4.1
+Eastern,99.46,39.3,53.4,4.4

@@ -28,6 +28,10 @@ def create_all_snapshots():
         "Absa_Bank_Kenya(PIPELINE)/Financial_KPIs_Warehouse": {
              "db": "absa_warehouse", "port": 5432, "user": "absa_admin", "pass": "absa_password",
              "tables": ["mart_profitability", "mart_efficiency_ratio", "mart_asset_quality", "mart_capital_adequacy"]
+        },
+        "Safaricom(PIPELINE)": {
+             "db": "safaricom_warehouse", "port": 5439, "user": "saf_admin", "pass": "saf_password",
+             "tables": ["mart_financial_results", "mart_segment_revenue", "mart_fuliza_performance", "mart_network_quality", "mart_bonga_loyalty"]
         }
     }
 
