@@ -1,0 +1,12 @@
+name: 'agent_analytics'
+version: '1.0.0'
+config-version: 2
+profile: 'agent_profile'
+model-paths: ["models"]
+
+models:
+  agent_analytics:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

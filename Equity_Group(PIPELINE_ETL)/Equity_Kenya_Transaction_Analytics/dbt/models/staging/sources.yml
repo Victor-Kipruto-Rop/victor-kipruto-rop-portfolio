@@ -1,7 +1,0 @@
-version: 2
-sources:
-  - name: equity_raw
-    database: equity_warehouse
-    schema: public
-    tables:
-      - name: raw_equity_kenya_transactions

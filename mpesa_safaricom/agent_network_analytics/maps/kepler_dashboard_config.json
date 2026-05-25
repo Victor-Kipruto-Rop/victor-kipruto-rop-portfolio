@@ -1,0 +1,151 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "filters": [],
+      "layers": [
+        {
+          "id": "agents-layer",
+          "type": "point",
+          "config": {
+            "dataId": "agents",
+            "label": "Agent Locations",
+            "color": [255, 0, 0],
+            "columns": {
+              "lat": "geometry",
+              "lng": "geometry",
+              "altitude": null
+            },
+            "isVisible": true,
+            "visConfig": {
+              "radius": 4,
+              "fixedRadius": false,
+              "opacity": 0.8,
+              "outline": false,
+              "thickness": 0,
+              "colorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": ["#FFF744", "#FED766", "#FE4A49"]
+              },
+              "strokeColor": [0, 0, 0],
+              "radiusRange": [0, 50],
+              "hi": 100
+            }
+          }
+        },
+        {
+          "id": "wards-layer",
+          "type": "geojson",
+          "config": {
+            "dataId": "wards",
+            "label": "Ward Boundaries",
+            "color": [0, 0, 255],
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.3,
+              "strokeOpacity": 0.8,
+              "thickness": 1,
+              "colorRange": {
+                "name": "Viridis",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": ["#440154", "#31688e", "#35b779", "#fde724"]
+              },
+              "stroked": true,
+              "filled": true
+            }
+          }
+        },
+        {
+          "id": "grid-layer",
+          "type": "hexagon",
+          "config": {
+            "dataId": "grid",
+            "label": "Agent Density Grid",
+            "color": [34, 139, 34],
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.5,
+              "coverage": 0.9,
+              "sizeRange": [10, 100],
+              "colorRange": {
+                "name": "Hot",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": ["#440154", "#FED766", "#FE4A49"]
+              }
+            }
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "enabled": true,
+          "fieldsToShow": {
+            "agents": ["agent_id", "agent_name", "county", "transactions", "float_balance"],
+            "wards": ["ward_name", "county", "agent_count", "total_transactions"],
+            "grid": ["grid_x", "grid_y", "agent_count", "total_transactions"]
+          }
+        },
+        "brush": {
+          "enabled": true,
+          "config": {
+            "size": 1.5
+          }
+        }
+      }
+    },
+    "mapState": {
+      "bearing": 0,
+      "drag": true,
+      "latitude": -1.287,
+      "longitude": 36.8172,
+      "pitch": 0,
+      "zoom": 7,
+      "isSplit": false
+    },
+    "mapStyle": {
+      "styleType": "light",
+      "topLayerGroups": {},
+      "visibleLayerGroups": {
+        "label": true,
+        "road": true,
+        "border": false,
+        "building": true,
+        "water": true,
+        "land": true,
+        "3d building": false
+      },
+      "threeDBuildingColor": [9.376758000000057, 23.41822087084998, 53.3191080139105],
+      "mapboxApiAccessToken": ""
+    },
+    "datasets": [
+      {
+        "version": "v1",
+        "id": "agents",
+        "label": "Agent Locations (120k)",
+        "color": [255, 0, 0],
+        "allData": null,
+        "data": null
+      },
+      {
+        "version": "v1",
+        "id": "wards",
+        "label": "Ward Aggregates (879)",
+        "color": [0, 0, 255],
+        "allData": null,
+        "data": null
+      },
+      {
+        "version": "v1",
+        "id": "grid",
+        "label": "Agent Density Grid (0.01°)",
+        "color": [34, 139, 34],
+        "allData": null,
+        "data": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,786 @@
+[0m17:10:02.018472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7a9fb1bc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7aa0d36be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7a9f31f250>]}
+
+
+============================== 17:10:02.032094 | c9148fbe-a07a-4b4c-a394-8ca22e6820c0 ==============================
+[0m17:10:02.032094 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m17:10:02.033602 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/opt/airflow/projects/kra/VAT_Compliance_Gap_Analysis/dbt/logs', 'debug': 'False', 'profiles_dir': '.', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --profiles-dir .', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:10:02.530134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c9148fbe-a07a-4b4c-a394-8ca22e6820c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7a9d4b4be0>]}
+[0m17:10:02.725217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c9148fbe-a07a-4b4c-a394-8ca22e6820c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7aa0cc8730>]}
+[0m17:10:02.727619 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m17:10:02.766209 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m17:10:02.768297 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m17:10:02.769482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c9148fbe-a07a-4b4c-a394-8ca22e6820c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7a9d393ca0>]}
+[0m17:10:06.407806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c9148fbe-a07a-4b4c-a394-8ca22e6820c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7a9c2d6eb0>]}
+[0m17:10:06.719880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c9148fbe-a07a-4b4c-a394-8ca22e6820c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7a9c21dc70>]}
+[0m17:10:06.721514 [info ] [MainThread]: Found 4 models, 1 source, 423 macros
+[0m17:10:06.722863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c9148fbe-a07a-4b4c-a394-8ca22e6820c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7a9c1f15b0>]}
+[0m17:10:06.726905 [info ] [MainThread]: 
+[0m17:10:06.728159 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:10:06.729198 [info ] [MainThread]: 
+[0m17:10:06.730854 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:10:06.745246 [debug] [ThreadPool]: Acquiring new postgres connection 'list_kra_warehouse'
+[0m17:10:06.864144 [debug] [ThreadPool]: Using postgres connection "list_kra_warehouse"
+[0m17:10:06.865290 [debug] [ThreadPool]: On list_kra_warehouse: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "connection_name": "list_kra_warehouse"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:10:06.866206 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:10:06.880813 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.014 seconds
+[0m17:10:06.884565 [debug] [ThreadPool]: On list_kra_warehouse: Close
+[0m17:10:06.890001 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_kra_warehouse, now list_kra_warehouse_public)
+[0m17:10:06.908155 [debug] [ThreadPool]: Using postgres connection "list_kra_warehouse_public"
+[0m17:10:06.909153 [debug] [ThreadPool]: On list_kra_warehouse_public: BEGIN
+[0m17:10:06.910021 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:10:06.921799 [debug] [ThreadPool]: SQL status: BEGIN in 0.012 seconds
+[0m17:10:06.923135 [debug] [ThreadPool]: Using postgres connection "list_kra_warehouse_public"
+[0m17:10:06.924478 [debug] [ThreadPool]: On list_kra_warehouse_public: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "connection_name": "list_kra_warehouse_public"} */
+select
+      'kra_warehouse' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'kra_warehouse' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'kra_warehouse' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:10:06.931932 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.006 seconds
+[0m17:10:06.935819 [debug] [ThreadPool]: On list_kra_warehouse_public: ROLLBACK
+[0m17:10:06.937174 [debug] [ThreadPool]: On list_kra_warehouse_public: Close
+[0m17:10:06.953924 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:06.955171 [debug] [MainThread]: On master: BEGIN
+[0m17:10:06.956012 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:10:06.968190 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m17:10:06.969287 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:06.970821 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m17:10:06.979418 [debug] [MainThread]: SQL status: SELECT 1 in 0.007 seconds
+[0m17:10:06.983000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c9148fbe-a07a-4b4c-a394-8ca22e6820c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7a9c21b0a0>]}
+[0m17:10:06.984127 [debug] [MainThread]: On master: ROLLBACK
+[0m17:10:06.985232 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:06.986208 [debug] [MainThread]: On master: BEGIN
+[0m17:10:06.987487 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m17:10:06.988416 [debug] [MainThread]: On master: COMMIT
+[0m17:10:06.989268 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:06.990496 [debug] [MainThread]: On master: COMMIT
+[0m17:10:06.992289 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:10:06.993613 [debug] [MainThread]: On master: Close
+[0m17:10:07.022730 [debug] [Thread-1  ]: Began running node model.vat_compliance.stg_vat_compliance
+[0m17:10:07.024731 [info ] [Thread-1  ]: 1 of 2 START sql view model public.stg_vat_compliance .......................... [RUN]
+[0m17:10:07.026478 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_kra_warehouse_public, now model.vat_compliance.stg_vat_compliance)
+[0m17:10:07.027964 [debug] [Thread-1  ]: Began compiling node model.vat_compliance.stg_vat_compliance
+[0m17:10:07.057936 [debug] [Thread-1  ]: Writing injected SQL for node "model.vat_compliance.stg_vat_compliance"
+[0m17:10:07.059876 [debug] [Thread-1  ]: Began executing node model.vat_compliance.stg_vat_compliance
+[0m17:10:07.173150 [debug] [Thread-1  ]: Writing runtime sql for node "model.vat_compliance.stg_vat_compliance"
+[0m17:10:07.175492 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:10:07.176785 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: BEGIN
+[0m17:10:07.178020 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:10:07.192019 [debug] [Thread-1  ]: SQL status: BEGIN in 0.014 seconds
+[0m17:10:07.193643 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:10:07.195234 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.stg_vat_compliance"} */
+
+  create view "kra_warehouse"."public"."stg_vat_compliance__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "kra_warehouse"."public"."raw_vat_compliance"
+),
+renamed as (
+    select
+        sector,
+        year,
+        sector_gdp_m_kes,
+        theoretical_vat_m_kes,
+        actual_vat_m_kes,
+        vat_gap_m_kes,
+        c_efficiency_ratio
+    from source
+)
+select * from renamed
+  );
+[0m17:10:07.198935 [debug] [Thread-1  ]: Postgres adapter: Postgres error: relation "public.raw_vat_compliance" does not exist
+LINE 8:     select * from "kra_warehouse"."public"."raw_vat_complian...
+                          ^
+
+[0m17:10:07.200783 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: ROLLBACK
+[0m17:10:07.203491 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: Close
+[0m17:10:07.216672 [debug] [Thread-1  ]: Database Error in model stg_vat_compliance (models/staging/stg_vat_compliance.sql)
+  relation "public.raw_vat_compliance" does not exist
+  LINE 8:     select * from "kra_warehouse"."public"."raw_vat_complian...
+                            ^
+  compiled code at target/run/vat_compliance/models/staging/stg_vat_compliance.sql
+[0m17:10:07.222370 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c9148fbe-a07a-4b4c-a394-8ca22e6820c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7a97242ee0>]}
+[0m17:10:07.224465 [error] [Thread-1  ]: 1 of 2 ERROR creating sql view model public.stg_vat_compliance ................. [[31mERROR[0m in 0.19s]
+[0m17:10:07.226714 [debug] [Thread-1  ]: Finished running node model.vat_compliance.stg_vat_compliance
+[0m17:10:07.228647 [debug] [Thread-7  ]: Marking all children of 'model.vat_compliance.stg_vat_compliance' to be skipped because of status 'error'.  Reason: Database Error in model stg_vat_compliance (models/staging/stg_vat_compliance.sql)
+  relation "public.raw_vat_compliance" does not exist
+  LINE 8:     select * from "kra_warehouse"."public"."raw_vat_complian...
+                            ^
+  compiled code at target/run/vat_compliance/models/staging/stg_vat_compliance.sql.
+[0m17:10:07.230618 [debug] [Thread-3  ]: Began running node model.vat_compliance.mart_vat_gap_by_sector
+[0m17:10:07.231925 [info ] [Thread-3  ]: 2 of 2 SKIP relation public.mart_vat_gap_by_sector ............................. [[33mSKIP[0m]
+[0m17:10:07.234833 [debug] [Thread-3  ]: Finished running node model.vat_compliance.mart_vat_gap_by_sector
+[0m17:10:07.238731 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:07.240752 [debug] [MainThread]: On master: BEGIN
+[0m17:10:07.242529 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:10:07.257938 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m17:10:07.259012 [debug] [MainThread]: On master: COMMIT
+[0m17:10:07.260049 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:07.261073 [debug] [MainThread]: On master: COMMIT
+[0m17:10:07.262198 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:10:07.263066 [debug] [MainThread]: On master: Close
+[0m17:10:07.264233 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:10:07.265182 [debug] [MainThread]: Connection 'model.vat_compliance.stg_vat_compliance' was properly closed.
+[0m17:10:07.266189 [info ] [MainThread]: 
+[0m17:10:07.267291 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.54 seconds (0.54s).
+[0m17:10:07.269498 [debug] [MainThread]: Command end result
+[0m17:10:07.355320 [info ] [MainThread]: 
+[0m17:10:07.357028 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successs, and 0 warnings:[0m
+[0m17:10:07.358275 [info ] [MainThread]: 
+[0m17:10:07.359644 [error] [MainThread]:   Database Error in model stg_vat_compliance (models/staging/stg_vat_compliance.sql)
+  relation "public.raw_vat_compliance" does not exist
+  LINE 8:     select * from "kra_warehouse"."public"."raw_vat_complian...
+                            ^
+  compiled code at target/run/vat_compliance/models/staging/stg_vat_compliance.sql
+[0m17:10:07.360781 [info ] [MainThread]: 
+[0m17:10:07.362100 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m17:10:07.364477 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 5.5013285, "process_user_time": 9.299788, "process_kernel_time": 0.563774, "process_mem_max_rss": "110732", "process_in_blocks": "440", "process_out_blocks": "2520", "command_success": false}
+[0m17:10:07.366108 [debug] [MainThread]: Command `dbt run` failed at 17:10:07.365848 after 5.50 seconds
+[0m17:10:07.367332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7a9fb1bc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7aa0cc8730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7a9c21dc70>]}
+[0m17:10:07.368649 [debug] [MainThread]: Flushing usage events
+[0m17:10:09.345868 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:10:55.085053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234f396c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7023505406a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234ebda8b0>]}
+
+
+============================== 17:10:55.098638 | 927dde19-f34c-46e5-8a29-efc41daaf89f ==============================
+[0m17:10:55.098638 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m17:10:55.100435 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/opt/airflow/projects/kra/VAT_Compliance_Gap_Analysis/dbt/logs', 'fail_fast': 'False', 'profiles_dir': '.', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:10:55.602056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '927dde19-f34c-46e5-8a29-efc41daaf89f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234cd75520>]}
+[0m17:10:55.778013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '927dde19-f34c-46e5-8a29-efc41daaf89f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x702350540730>]}
+[0m17:10:55.780538 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m17:10:55.823016 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m17:10:56.200178 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:10:56.201114 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:10:56.346379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '927dde19-f34c-46e5-8a29-efc41daaf89f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234c9f87f0>]}
+[0m17:10:56.699664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '927dde19-f34c-46e5-8a29-efc41daaf89f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234ca28c70>]}
+[0m17:10:56.700968 [info ] [MainThread]: Found 4 models, 1 source, 423 macros
+[0m17:10:56.702143 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '927dde19-f34c-46e5-8a29-efc41daaf89f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234cbd4d00>]}
+[0m17:10:56.706009 [info ] [MainThread]: 
+[0m17:10:56.707184 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:10:56.708199 [info ] [MainThread]: 
+[0m17:10:56.709778 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:10:56.721664 [debug] [ThreadPool]: Acquiring new postgres connection 'list_kra_warehouse'
+[0m17:10:56.858185 [debug] [ThreadPool]: Using postgres connection "list_kra_warehouse"
+[0m17:10:56.859374 [debug] [ThreadPool]: On list_kra_warehouse: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "connection_name": "list_kra_warehouse"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:10:56.860219 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:10:56.877125 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.017 seconds
+[0m17:10:56.882977 [debug] [ThreadPool]: On list_kra_warehouse: Close
+[0m17:10:56.890855 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_kra_warehouse, now list_kra_warehouse_public)
+[0m17:10:56.920047 [debug] [ThreadPool]: Using postgres connection "list_kra_warehouse_public"
+[0m17:10:56.921862 [debug] [ThreadPool]: On list_kra_warehouse_public: BEGIN
+[0m17:10:56.924227 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:10:56.938384 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m17:10:56.939594 [debug] [ThreadPool]: Using postgres connection "list_kra_warehouse_public"
+[0m17:10:56.941172 [debug] [ThreadPool]: On list_kra_warehouse_public: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "connection_name": "list_kra_warehouse_public"} */
+select
+      'kra_warehouse' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'kra_warehouse' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'kra_warehouse' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:10:56.949811 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.007 seconds
+[0m17:10:56.953902 [debug] [ThreadPool]: On list_kra_warehouse_public: ROLLBACK
+[0m17:10:56.955395 [debug] [ThreadPool]: On list_kra_warehouse_public: Close
+[0m17:10:56.976687 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:56.978014 [debug] [MainThread]: On master: BEGIN
+[0m17:10:56.979131 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:10:56.992242 [debug] [MainThread]: SQL status: BEGIN in 0.013 seconds
+[0m17:10:56.993843 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:56.995644 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m17:10:57.007254 [debug] [MainThread]: SQL status: SELECT 1 in 0.010 seconds
+[0m17:10:57.012196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '927dde19-f34c-46e5-8a29-efc41daaf89f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234ca39460>]}
+[0m17:10:57.013512 [debug] [MainThread]: On master: ROLLBACK
+[0m17:10:57.014937 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:57.016055 [debug] [MainThread]: On master: BEGIN
+[0m17:10:57.017762 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m17:10:57.018934 [debug] [MainThread]: On master: COMMIT
+[0m17:10:57.019917 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:57.020857 [debug] [MainThread]: On master: COMMIT
+[0m17:10:57.022219 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:10:57.024058 [debug] [MainThread]: On master: Close
+[0m17:10:57.054628 [debug] [Thread-1  ]: Began running node model.vat_compliance.stg_vat_compliance
+[0m17:10:57.056312 [info ] [Thread-1  ]: 1 of 2 START sql view model public.stg_vat_compliance .......................... [RUN]
+[0m17:10:57.058086 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_kra_warehouse_public, now model.vat_compliance.stg_vat_compliance)
+[0m17:10:57.059764 [debug] [Thread-1  ]: Began compiling node model.vat_compliance.stg_vat_compliance
+[0m17:10:57.088300 [debug] [Thread-1  ]: Writing injected SQL for node "model.vat_compliance.stg_vat_compliance"
+[0m17:10:57.090324 [debug] [Thread-1  ]: Began executing node model.vat_compliance.stg_vat_compliance
+[0m17:10:57.202068 [debug] [Thread-1  ]: Writing runtime sql for node "model.vat_compliance.stg_vat_compliance"
+[0m17:10:57.204367 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:10:57.205976 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: BEGIN
+[0m17:10:57.207481 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:10:57.219475 [debug] [Thread-1  ]: SQL status: BEGIN in 0.012 seconds
+[0m17:10:57.221371 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:10:57.222854 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.stg_vat_compliance"} */
+
+  create view "kra_warehouse"."public"."stg_vat_compliance__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "kra_warehouse"."public"."raw_vat_compliance"
+),
+renamed as (
+    select
+        sector,
+        year,
+        sector_gdp_m_kes,
+        theoretical_vat_m_kes,
+        actual_vat_m_kes,
+        vat_gap_m_kes,
+        c_efficiency_ratio
+    from source
+)
+select * from renamed
+  );
+[0m17:10:57.231126 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.007 seconds
+[0m17:10:57.256746 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:10:57.258462 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.stg_vat_compliance"} */
+alter table "kra_warehouse"."public"."stg_vat_compliance__dbt_tmp" rename to "stg_vat_compliance"
+[0m17:10:57.261088 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:10:57.312275 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: COMMIT
+[0m17:10:57.313604 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:10:57.314764 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: COMMIT
+[0m17:10:57.316946 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:10:57.336569 [debug] [Thread-1  ]: Applying DROP to: "kra_warehouse"."public"."stg_vat_compliance__dbt_backup"
+[0m17:10:57.351665 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:10:57.353293 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.stg_vat_compliance"} */
+drop view if exists "kra_warehouse"."public"."stg_vat_compliance__dbt_backup" cascade
+[0m17:10:57.354720 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.000 seconds
+[0m17:10:57.360243 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: Close
+[0m17:10:57.364716 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '927dde19-f34c-46e5-8a29-efc41daaf89f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234be66820>]}
+[0m17:10:57.366754 [info ] [Thread-1  ]: 1 of 2 OK created sql view model public.stg_vat_compliance ..................... [[32mCREATE VIEW[0m in 0.30s]
+[0m17:10:57.368537 [debug] [Thread-1  ]: Finished running node model.vat_compliance.stg_vat_compliance
+[0m17:10:57.370691 [debug] [Thread-3  ]: Began running node model.vat_compliance.mart_vat_gap_by_sector
+[0m17:10:57.372653 [info ] [Thread-3  ]: 2 of 2 START sql table model public.mart_vat_gap_by_sector ..................... [RUN]
+[0m17:10:57.374549 [debug] [Thread-3  ]: Acquiring new postgres connection 'model.vat_compliance.mart_vat_gap_by_sector'
+[0m17:10:57.376227 [debug] [Thread-3  ]: Began compiling node model.vat_compliance.mart_vat_gap_by_sector
+[0m17:10:57.387712 [debug] [Thread-3  ]: Writing injected SQL for node "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:10:57.389800 [debug] [Thread-3  ]: Began executing node model.vat_compliance.mart_vat_gap_by_sector
+[0m17:10:57.475349 [debug] [Thread-3  ]: Writing runtime sql for node "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:10:57.477588 [debug] [Thread-3  ]: Using postgres connection "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:10:57.479143 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: BEGIN
+[0m17:10:57.480543 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m17:10:57.491979 [debug] [Thread-3  ]: SQL status: BEGIN in 0.011 seconds
+[0m17:10:57.493250 [debug] [Thread-3  ]: Using postgres connection "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:10:57.494605 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.mart_vat_gap_by_sector"} */
+
+  
+    
+
+  create  table "kra_warehouse"."public"."mart_vat_gap_by_sector__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with staging as (
+    select * from "kra_warehouse"."public"."stg_vat_compliance"
+),
+marts as (
+    select
+        sector,
+        year,
+        sector_gdp_m_kes,
+        theoretical_vat_m_kes,
+        actual_vat_m_kes,
+        vat_gap_m_kes,
+        c_efficiency_ratio,
+        lag(c_efficiency_ratio) over (partition by sector order by year) as prev_year_efficiency
+    from staging
+)
+select * from marts
+  );
+  
+[0m17:10:57.512924 [debug] [Thread-3  ]: SQL status: SELECT 56 in 0.017 seconds
+[0m17:10:57.522714 [debug] [Thread-3  ]: Using postgres connection "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:10:57.523999 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.mart_vat_gap_by_sector"} */
+alter table "kra_warehouse"."public"."mart_vat_gap_by_sector__dbt_tmp" rename to "mart_vat_gap_by_sector"
+[0m17:10:57.525937 [debug] [Thread-3  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:10:57.543339 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: COMMIT
+[0m17:10:57.544965 [debug] [Thread-3  ]: Using postgres connection "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:10:57.546749 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: COMMIT
+[0m17:10:57.549243 [debug] [Thread-3  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:10:57.559331 [debug] [Thread-3  ]: Applying DROP to: "kra_warehouse"."public"."mart_vat_gap_by_sector__dbt_backup"
+[0m17:10:57.567507 [debug] [Thread-3  ]: Using postgres connection "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:10:57.569046 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.mart_vat_gap_by_sector"} */
+drop table if exists "kra_warehouse"."public"."mart_vat_gap_by_sector__dbt_backup" cascade
+[0m17:10:57.570917 [debug] [Thread-3  ]: SQL status: DROP TABLE in 0.001 seconds
+[0m17:10:57.575339 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: Close
+[0m17:10:57.577083 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '927dde19-f34c-46e5-8a29-efc41daaf89f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234be662e0>]}
+[0m17:10:57.579312 [info ] [Thread-3  ]: 2 of 2 OK created sql table model public.mart_vat_gap_by_sector ................ [[32mSELECT 56[0m in 0.20s]
+[0m17:10:57.581476 [debug] [Thread-3  ]: Finished running node model.vat_compliance.mart_vat_gap_by_sector
+[0m17:10:57.585309 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:57.586660 [debug] [MainThread]: On master: BEGIN
+[0m17:10:57.588013 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:10:57.602604 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m17:10:57.605937 [debug] [MainThread]: On master: COMMIT
+[0m17:10:57.607099 [debug] [MainThread]: Using postgres connection "master"
+[0m17:10:57.608227 [debug] [MainThread]: On master: COMMIT
+[0m17:10:57.609565 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:10:57.610674 [debug] [MainThread]: On master: Close
+[0m17:10:57.612998 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:10:57.614461 [debug] [MainThread]: Connection 'model.vat_compliance.stg_vat_compliance' was properly closed.
+[0m17:10:57.616023 [debug] [MainThread]: Connection 'model.vat_compliance.mart_vat_gap_by_sector' was properly closed.
+[0m17:10:57.617531 [info ] [MainThread]: 
+[0m17:10:57.619337 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.91 seconds (0.91s).
+[0m17:10:57.623238 [debug] [MainThread]: Command end result
+[0m17:10:57.831042 [info ] [MainThread]: 
+[0m17:10:57.832515 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:10:57.833693 [info ] [MainThread]: 
+[0m17:10:57.834918 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m17:10:57.837393 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.9255195, "process_user_time": 6.622171, "process_kernel_time": 0.567301, "process_mem_max_rss": "106536", "process_out_blocks": "1720", "process_in_blocks": "0"}
+[0m17:10:57.839109 [debug] [MainThread]: Command `dbt run` succeeded at 17:10:57.838833 after 2.93 seconds
+[0m17:10:57.840255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234f396c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234ccb3100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70234cda0ee0>]}
+[0m17:10:57.841516 [debug] [MainThread]: Flushing usage events
+[0m17:10:58.901050 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:41:12.390771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4d52cd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4e5dde20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4e5ddb80>]}
+
+
+============================== 17:41:12.405603 | 48199e63-0c53-4431-8919-6224db577096 ==============================
+[0m17:41:12.405603 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m17:41:12.407155 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'version_check': 'True', 'debug': 'False', 'log_path': '/opt/airflow/projects/kra/VAT_Compliance_Gap_Analysis/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:41:12.909895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '48199e63-0c53-4431-8919-6224db577096', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4f0f0a90>]}
+[0m17:41:13.087568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '48199e63-0c53-4431-8919-6224db577096', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4ae30280>]}
+[0m17:41:13.089214 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m17:41:13.137363 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m17:41:13.581926 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:41:13.583169 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:41:13.707021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '48199e63-0c53-4431-8919-6224db577096', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4ab509a0>]}
+[0m17:41:14.047671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '48199e63-0c53-4431-8919-6224db577096', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4aab9dc0>]}
+[0m17:41:14.048864 [info ] [MainThread]: Found 4 models, 1 source, 423 macros
+[0m17:41:14.049816 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48199e63-0c53-4431-8919-6224db577096', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4aaff490>]}
+[0m17:41:14.053848 [info ] [MainThread]: 
+[0m17:41:14.055268 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:41:14.056362 [info ] [MainThread]: 
+[0m17:41:14.058000 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:41:14.071272 [debug] [ThreadPool]: Acquiring new postgres connection 'list_kra_warehouse'
+[0m17:41:14.211534 [debug] [ThreadPool]: Using postgres connection "list_kra_warehouse"
+[0m17:41:14.212936 [debug] [ThreadPool]: On list_kra_warehouse: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "connection_name": "list_kra_warehouse"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:41:14.214160 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:41:14.231731 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.017 seconds
+[0m17:41:14.235455 [debug] [ThreadPool]: On list_kra_warehouse: Close
+[0m17:41:14.242094 [debug] [ThreadPool]: Acquiring new postgres connection 'list_kra_warehouse_public'
+[0m17:41:14.266868 [debug] [ThreadPool]: Using postgres connection "list_kra_warehouse_public"
+[0m17:41:14.268533 [debug] [ThreadPool]: On list_kra_warehouse_public: BEGIN
+[0m17:41:14.270180 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:41:14.281223 [debug] [ThreadPool]: SQL status: BEGIN in 0.011 seconds
+[0m17:41:14.282331 [debug] [ThreadPool]: Using postgres connection "list_kra_warehouse_public"
+[0m17:41:14.283515 [debug] [ThreadPool]: On list_kra_warehouse_public: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "connection_name": "list_kra_warehouse_public"} */
+select
+      'kra_warehouse' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'kra_warehouse' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'kra_warehouse' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m17:41:14.291033 [debug] [ThreadPool]: SQL status: SELECT 19 in 0.006 seconds
+[0m17:41:14.296790 [debug] [ThreadPool]: On list_kra_warehouse_public: ROLLBACK
+[0m17:41:14.298532 [debug] [ThreadPool]: On list_kra_warehouse_public: Close
+[0m17:41:14.330052 [debug] [MainThread]: Using postgres connection "master"
+[0m17:41:14.331510 [debug] [MainThread]: On master: BEGIN
+[0m17:41:14.332721 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:41:14.347906 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m17:41:14.349019 [debug] [MainThread]: Using postgres connection "master"
+[0m17:41:14.350297 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m17:41:14.366934 [debug] [MainThread]: SQL status: SELECT 4 in 0.015 seconds
+[0m17:41:14.373870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48199e63-0c53-4431-8919-6224db577096', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4aa34520>]}
+[0m17:41:14.375640 [debug] [MainThread]: On master: ROLLBACK
+[0m17:41:14.377079 [debug] [MainThread]: Using postgres connection "master"
+[0m17:41:14.378071 [debug] [MainThread]: On master: BEGIN
+[0m17:41:14.379695 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m17:41:14.381022 [debug] [MainThread]: On master: COMMIT
+[0m17:41:14.382245 [debug] [MainThread]: Using postgres connection "master"
+[0m17:41:14.383289 [debug] [MainThread]: On master: COMMIT
+[0m17:41:14.384631 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:41:14.385735 [debug] [MainThread]: On master: Close
+[0m17:41:14.408160 [debug] [Thread-1  ]: Began running node model.vat_compliance.stg_vat_compliance
+[0m17:41:14.410020 [info ] [Thread-1  ]: 1 of 2 START sql view model public.stg_vat_compliance .......................... [RUN]
+[0m17:41:14.413804 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_kra_warehouse_public, now model.vat_compliance.stg_vat_compliance)
+[0m17:41:14.415462 [debug] [Thread-1  ]: Began compiling node model.vat_compliance.stg_vat_compliance
+[0m17:41:14.440090 [debug] [Thread-1  ]: Writing injected SQL for node "model.vat_compliance.stg_vat_compliance"
+[0m17:41:14.441717 [debug] [Thread-1  ]: Began executing node model.vat_compliance.stg_vat_compliance
+[0m17:41:14.555427 [debug] [Thread-1  ]: Writing runtime sql for node "model.vat_compliance.stg_vat_compliance"
+[0m17:41:14.556978 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:41:14.558227 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: BEGIN
+[0m17:41:14.559331 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m17:41:14.573193 [debug] [Thread-1  ]: SQL status: BEGIN in 0.014 seconds
+[0m17:41:14.574741 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:41:14.576277 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.stg_vat_compliance"} */
+
+  create view "kra_warehouse"."public"."stg_vat_compliance__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "kra_warehouse"."public"."raw_vat_compliance"
+),
+renamed as (
+    select
+        sector,
+        year,
+        sector_gdp_m_kes,
+        theoretical_vat_m_kes,
+        actual_vat_m_kes,
+        vat_gap_m_kes,
+        c_efficiency_ratio
+    from source
+)
+select * from renamed
+  );
+[0m17:41:14.581884 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.004 seconds
+[0m17:41:14.603054 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:41:14.604802 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.stg_vat_compliance"} */
+alter table "kra_warehouse"."public"."stg_vat_compliance__dbt_tmp" rename to "stg_vat_compliance"
+[0m17:41:14.607236 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:41:14.656130 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: COMMIT
+[0m17:41:14.657409 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:41:14.658512 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: COMMIT
+[0m17:41:14.660730 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:41:14.681312 [debug] [Thread-1  ]: Applying DROP to: "kra_warehouse"."public"."stg_vat_compliance__dbt_backup"
+[0m17:41:14.695160 [debug] [Thread-1  ]: Using postgres connection "model.vat_compliance.stg_vat_compliance"
+[0m17:41:14.696560 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.stg_vat_compliance"} */
+drop view if exists "kra_warehouse"."public"."stg_vat_compliance__dbt_backup" cascade
+[0m17:41:14.698420 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.000 seconds
+[0m17:41:14.705748 [debug] [Thread-1  ]: On model.vat_compliance.stg_vat_compliance: Close
+[0m17:41:14.715405 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '48199e63-0c53-4431-8919-6224db577096', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee49f2d910>]}
+[0m17:41:14.717391 [info ] [Thread-1  ]: 1 of 2 OK created sql view model public.stg_vat_compliance ..................... [[32mCREATE VIEW[0m in 0.30s]
+[0m17:41:14.719712 [debug] [Thread-1  ]: Finished running node model.vat_compliance.stg_vat_compliance
+[0m17:41:14.722383 [debug] [Thread-3  ]: Began running node model.vat_compliance.mart_vat_gap_by_sector
+[0m17:41:14.724720 [info ] [Thread-3  ]: 2 of 2 START sql table model public.mart_vat_gap_by_sector ..................... [RUN]
+[0m17:41:14.726909 [debug] [Thread-3  ]: Acquiring new postgres connection 'model.vat_compliance.mart_vat_gap_by_sector'
+[0m17:41:14.728380 [debug] [Thread-3  ]: Began compiling node model.vat_compliance.mart_vat_gap_by_sector
+[0m17:41:14.739137 [debug] [Thread-3  ]: Writing injected SQL for node "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:41:14.742122 [debug] [Thread-3  ]: Began executing node model.vat_compliance.mart_vat_gap_by_sector
+[0m17:41:14.836771 [debug] [Thread-3  ]: Writing runtime sql for node "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:41:14.838923 [debug] [Thread-3  ]: Using postgres connection "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:41:14.840372 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: BEGIN
+[0m17:41:14.841796 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m17:41:14.856070 [debug] [Thread-3  ]: SQL status: BEGIN in 0.014 seconds
+[0m17:41:14.857998 [debug] [Thread-3  ]: Using postgres connection "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:41:14.859877 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.mart_vat_gap_by_sector"} */
+
+  
+    
+
+  create  table "kra_warehouse"."public"."mart_vat_gap_by_sector__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with staging as (
+    select * from "kra_warehouse"."public"."stg_vat_compliance"
+),
+marts as (
+    select
+        sector,
+        year,
+        sector_gdp_m_kes,
+        theoretical_vat_m_kes,
+        actual_vat_m_kes,
+        vat_gap_m_kes,
+        c_efficiency_ratio,
+        lag(c_efficiency_ratio) over (partition by sector order by year) as prev_year_efficiency
+    from staging
+)
+select * from marts
+  );
+  
+[0m17:41:14.867950 [debug] [Thread-3  ]: SQL status: SELECT 56 in 0.007 seconds
+[0m17:41:14.878298 [debug] [Thread-3  ]: Using postgres connection "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:41:14.880193 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.mart_vat_gap_by_sector"} */
+alter table "kra_warehouse"."public"."mart_vat_gap_by_sector" rename to "mart_vat_gap_by_sector__dbt_backup"
+[0m17:41:14.882862 [debug] [Thread-3  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:41:14.895890 [debug] [Thread-3  ]: Using postgres connection "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:41:14.897508 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.mart_vat_gap_by_sector"} */
+alter table "kra_warehouse"."public"."mart_vat_gap_by_sector__dbt_tmp" rename to "mart_vat_gap_by_sector"
+[0m17:41:14.899848 [debug] [Thread-3  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m17:41:14.928104 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: COMMIT
+[0m17:41:14.929765 [debug] [Thread-3  ]: Using postgres connection "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:41:14.931193 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: COMMIT
+[0m17:41:14.933876 [debug] [Thread-3  ]: SQL status: COMMIT in 0.001 seconds
+[0m17:41:14.946037 [debug] [Thread-3  ]: Applying DROP to: "kra_warehouse"."public"."mart_vat_gap_by_sector__dbt_backup"
+[0m17:41:14.955989 [debug] [Thread-3  ]: Using postgres connection "model.vat_compliance.mart_vat_gap_by_sector"
+[0m17:41:14.957585 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "vat_compliance", "target_name": "dev", "node_id": "model.vat_compliance.mart_vat_gap_by_sector"} */
+drop table if exists "kra_warehouse"."public"."mart_vat_gap_by_sector__dbt_backup" cascade
+[0m17:41:14.963427 [debug] [Thread-3  ]: SQL status: DROP TABLE in 0.004 seconds
+[0m17:41:14.968333 [debug] [Thread-3  ]: On model.vat_compliance.mart_vat_gap_by_sector: Close
+[0m17:41:14.971722 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '48199e63-0c53-4431-8919-6224db577096', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4952a1c0>]}
+[0m17:41:14.976557 [info ] [Thread-3  ]: 2 of 2 OK created sql table model public.mart_vat_gap_by_sector ................ [[32mSELECT 56[0m in 0.24s]
+[0m17:41:14.981932 [debug] [Thread-3  ]: Finished running node model.vat_compliance.mart_vat_gap_by_sector
+[0m17:41:14.985518 [debug] [MainThread]: Using postgres connection "master"
+[0m17:41:14.986419 [debug] [MainThread]: On master: BEGIN
+[0m17:41:14.987265 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:41:14.998305 [debug] [MainThread]: SQL status: BEGIN in 0.011 seconds
+[0m17:41:14.999479 [debug] [MainThread]: On master: COMMIT
+[0m17:41:15.000575 [debug] [MainThread]: Using postgres connection "master"
+[0m17:41:15.001762 [debug] [MainThread]: On master: COMMIT
+[0m17:41:15.003184 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:41:15.004411 [debug] [MainThread]: On master: Close
+[0m17:41:15.009104 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:41:15.010112 [debug] [MainThread]: Connection 'list_kra_warehouse' was properly closed.
+[0m17:41:15.011139 [debug] [MainThread]: Connection 'model.vat_compliance.stg_vat_compliance' was properly closed.
+[0m17:41:15.012156 [debug] [MainThread]: Connection 'model.vat_compliance.mart_vat_gap_by_sector' was properly closed.
+[0m17:41:15.013111 [info ] [MainThread]: 
+[0m17:41:15.014132 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.96 seconds (0.96s).
+[0m17:41:15.016842 [debug] [MainThread]: Command end result
+[0m17:41:15.201830 [info ] [MainThread]: 
+[0m17:41:15.203362 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:41:15.205028 [info ] [MainThread]: 
+[0m17:41:15.206363 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m17:41:15.209109 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.9693189, "process_user_time": 6.631788, "process_kernel_time": 0.582751, "process_mem_max_rss": "106568", "process_out_blocks": "1728", "process_in_blocks": "0"}
+[0m17:41:15.211115 [debug] [MainThread]: Command `dbt run` succeeded at 17:41:15.210767 after 2.97 seconds
+[0m17:41:15.212627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4d52cd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4e5ef9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79ee4e1d7250>]}
+[0m17:41:15.214150 [debug] [MainThread]: Flushing usage events
+[0m17:41:16.537068 [debug] [MainThread]: An error was encountered while trying to flush usage events

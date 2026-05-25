@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: sector_raw
-    database: sector_dwh
-    schema: public
-    tables:
-      - name: raw_cbk_returns

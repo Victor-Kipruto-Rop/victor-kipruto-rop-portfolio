@@ -1,0 +1,1246 @@
+[0m14:01:34.148343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c2b84b98df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c2b86944220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c2b844323d0>]}
+
+
+============================== 14:01:34.184426 | a2e8f785-ef1a-431b-91cd-26ff277a90a4 ==============================
+[0m14:01:34.184426 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m14:01:34.185740 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/opt/airflow/projects/sector_dwh/dbt/logs', 'debug': 'False', 'profiles_dir': '.', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt seed --profiles-dir .', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:01:34.656830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a2e8f785-ef1a-431b-91cd-26ff277a90a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c2b83784250>]}
+[0m14:01:34.837316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a2e8f785-ef1a-431b-91cd-26ff277a90a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c2b83765cd0>]}
+[0m14:01:34.839715 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m14:01:34.889168 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m14:01:34.892322 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:01:34.894197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a2e8f785-ef1a-431b-91cd-26ff277a90a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c2b82366100>]}
+[0m14:01:39.894408 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.sector_dwh.mart_bank_monthly_consolidated' (models/marts/mart_bank_monthly_consolidated.sql) depends on a node named 'stg_bank_supervisory_data' which was not found
+[0m14:01:39.898491 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_wall_clock_time": 5.906868, "process_user_time": 10.174666, "process_kernel_time": 0.597276, "process_mem_max_rss": "101300", "process_in_blocks": "7080", "process_out_blocks": "1664", "command_success": false}
+[0m14:01:39.900898 [debug] [MainThread]: Command `dbt seed` failed at 14:01:39.900481 after 5.91 seconds
+[0m14:01:39.902667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c2b84b98df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c2b8218d670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c2b81009f10>]}
+[0m14:01:39.904539 [debug] [MainThread]: Flushing usage events
+[0m14:01:41.184812 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:02:35.006244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b8015cbcd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b801516af40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b80154aabe0>]}
+
+
+============================== 14:02:35.020034 | 6f73dbe9-ae38-449f-b9a9-02d46c451d34 ==============================
+[0m14:02:35.020034 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m14:02:35.021603 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/opt/airflow/projects/sector_dwh/dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt seed --profiles-dir .', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:02:35.528468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6f73dbe9-ae38-449f-b9a9-02d46c451d34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b8016d048b0>]}
+[0m14:02:35.692033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6f73dbe9-ae38-449f-b9a9-02d46c451d34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b8013589040>]}
+[0m14:02:35.694293 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m14:02:35.740665 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m14:02:35.742985 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:02:35.744305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6f73dbe9-ae38-449f-b9a9-02d46c451d34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b80134ed3a0>]}
+[0m14:02:39.471295 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.sector_dwh.mart_sector_kpis' (models/marts/mart_sector_kpis.sql) depends on a node named 'bank_registry' which was not found
+[0m14:02:39.474060 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_wall_clock_time": 4.6173124, "process_user_time": 8.46182, "process_kernel_time": 0.556711, "process_mem_max_rss": "101496", "process_in_blocks": "24304", "process_out_blocks": "16", "command_success": false}
+[0m14:02:39.475726 [debug] [MainThread]: Command `dbt seed` failed at 14:02:39.475423 after 4.62 seconds
+[0m14:02:39.477003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b8015cbcd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b8014cd1a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b80135bfa90>]}
+[0m14:02:39.478275 [debug] [MainThread]: Flushing usage events
+[0m14:02:40.881501 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:02:51.891625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6ba0a70dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6ba26793a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6ba0203c40>]}
+
+
+============================== 14:02:51.904919 | 420e75cf-b01d-41a2-8ce3-dc639a58b51e ==============================
+[0m14:02:51.904919 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m14:02:51.906515 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/opt/airflow/projects/sector_dwh/dbt/logs', 'profiles_dir': '.', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt seed --profiles-dir .', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:02:52.396629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '420e75cf-b01d-41a2-8ce3-dc639a58b51e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6ba25f3ac0>]}
+[0m14:02:52.579092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '420e75cf-b01d-41a2-8ce3-dc639a58b51e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b9e376280>]}
+[0m14:02:52.581059 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m14:02:52.621768 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m14:02:52.624212 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:02:52.625570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '420e75cf-b01d-41a2-8ce3-dc639a58b51e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b9e29dbb0>]}
+[0m14:02:56.214222 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.sector_dwh.mart_sector_kpis' (models/marts/mart_sector_kpis.sql) depends on a node named 'bank_registry' which was not found
+[0m14:02:56.217065 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_wall_clock_time": 4.470902, "process_user_time": 8.309348, "process_kernel_time": 0.491843, "process_mem_max_rss": "101428", "process_out_blocks": "8", "command_success": false, "process_in_blocks": "0"}
+[0m14:02:56.218698 [debug] [MainThread]: Command `dbt seed` failed at 14:02:56.218408 after 4.47 seconds
+[0m14:02:56.219953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6ba0a70dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b9e0ed1c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b9e334a30>]}
+[0m14:02:56.221249 [debug] [MainThread]: Flushing usage events
+[0m14:02:57.572964 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:03:26.960454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78140463fd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78140572bac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781403dd15b0>]}
+
+
+============================== 14:03:26.974272 | 86d6a055-269e-4356-836e-dba61fe2f272 ==============================
+[0m14:03:26.974272 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m14:03:26.975891 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/projects/sector_dwh/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt seed --profiles-dir .', 'send_anonymous_usage_stats': 'True'}
+[0m14:03:27.522518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '86d6a055-269e-4356-836e-dba61fe2f272', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781406201a60>]}
+[0m14:03:27.689322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '86d6a055-269e-4356-836e-dba61fe2f272', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781401f42250>]}
+[0m14:03:27.691252 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m14:03:27.737246 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m14:03:27.739177 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:03:27.740336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '86d6a055-269e-4356-836e-dba61fe2f272', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781401dff190>]}
+[0m14:03:31.647581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '86d6a055-269e-4356-836e-dba61fe2f272', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781400a5e670>]}
+[0m14:03:31.982772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '86d6a055-269e-4356-836e-dba61fe2f272', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7814009d3af0>]}
+[0m14:03:31.984302 [info ] [MainThread]: Found 2 models, 1 seed, 1 source, 423 macros
+[0m14:03:31.985542 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86d6a055-269e-4356-836e-dba61fe2f272', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7814009514f0>]}
+[0m14:03:31.989415 [info ] [MainThread]: 
+[0m14:03:31.990855 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:03:31.992034 [info ] [MainThread]: 
+[0m14:03:31.993738 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:03:31.997455 [debug] [ThreadPool]: Acquiring new postgres connection 'list_sector_dwh'
+[0m14:03:32.121072 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh"
+[0m14:03:32.122435 [debug] [ThreadPool]: On list_sector_dwh: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "list_sector_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:03:32.123871 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:03:32.138770 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.015 seconds
+[0m14:03:32.142638 [debug] [ThreadPool]: On list_sector_dwh: Close
+[0m14:03:32.157744 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sector_dwh, now list_sector_dwh_public)
+[0m14:03:32.177542 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh_public"
+[0m14:03:32.178760 [debug] [ThreadPool]: On list_sector_dwh_public: BEGIN
+[0m14:03:32.179862 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:03:32.192946 [debug] [ThreadPool]: SQL status: BEGIN in 0.013 seconds
+[0m14:03:32.194207 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh_public"
+[0m14:03:32.195466 [debug] [ThreadPool]: On list_sector_dwh_public: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "list_sector_dwh_public"} */
+select
+      'sector_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'sector_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'sector_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m14:03:32.203413 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.007 seconds
+[0m14:03:32.207214 [debug] [ThreadPool]: On list_sector_dwh_public: ROLLBACK
+[0m14:03:32.208694 [debug] [ThreadPool]: On list_sector_dwh_public: Close
+[0m14:03:32.226692 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:32.227903 [debug] [MainThread]: On master: BEGIN
+[0m14:03:32.228798 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:03:32.242287 [debug] [MainThread]: SQL status: BEGIN in 0.013 seconds
+[0m14:03:32.243425 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:32.244838 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:03:32.254226 [debug] [MainThread]: SQL status: SELECT 0 in 0.008 seconds
+[0m14:03:32.257663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86d6a055-269e-4356-836e-dba61fe2f272', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7814009b0b80>]}
+[0m14:03:32.259229 [debug] [MainThread]: On master: ROLLBACK
+[0m14:03:32.260703 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:32.262272 [debug] [MainThread]: On master: BEGIN
+[0m14:03:32.263971 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m14:03:32.265183 [debug] [MainThread]: On master: COMMIT
+[0m14:03:32.266314 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:32.267416 [debug] [MainThread]: On master: COMMIT
+[0m14:03:32.268818 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:03:32.269876 [debug] [MainThread]: On master: Close
+[0m14:03:32.292498 [debug] [Thread-1  ]: Began running node seed.sector_dwh.bank_registry
+[0m14:03:32.294471 [info ] [Thread-1  ]: 1 of 1 START seed file public.bank_registry .................................... [RUN]
+[0m14:03:32.296048 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_sector_dwh_public, now seed.sector_dwh.bank_registry)
+[0m14:03:32.297262 [debug] [Thread-1  ]: Began compiling node seed.sector_dwh.bank_registry
+[0m14:03:32.298582 [debug] [Thread-1  ]: Began executing node seed.sector_dwh.bank_registry
+[0m14:03:32.393108 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:03:32.394265 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: BEGIN
+[0m14:03:32.395310 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:03:32.408302 [debug] [Thread-1  ]: SQL status: BEGIN in 0.013 seconds
+[0m14:03:32.410024 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:03:32.411824 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "seed.sector_dwh.bank_registry"} */
+
+    create table "sector_dwh"."public"."bank_registry" ("bank_code" integer,"bank_name" text,"banking_group" text,"headquarters_county" text,"license_date" date,"tier" text)
+  
+[0m14:03:32.426374 [debug] [Thread-1  ]: SQL status: CREATE TABLE in 0.013 seconds
+[0m14:03:32.555283 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:03:32.556507 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: 
+          insert into "sector_dwh"."public"."bank_registry" ("bank_code", "bank_name", "banking_group", "headquarters_county", "license_date", "tier") values
+          (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s...
+[0m14:03:32.559024 [debug] [Thread-1  ]: SQL status: INSERT 0 20 in 0.001 seconds
+[0m14:03:32.575507 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.sector_dwh.bank_registry"
+[0m14:03:32.631233 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: COMMIT
+[0m14:03:32.632269 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:03:32.633124 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: COMMIT
+[0m14:03:32.635235 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m14:03:32.640710 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: Close
+[0m14:03:32.648181 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86d6a055-269e-4356-836e-dba61fe2f272', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7813dbe16760>]}
+[0m14:03:32.649884 [info ] [Thread-1  ]: 1 of 1 OK loaded seed file public.bank_registry ................................ [[32mINSERT 20[0m in 0.35s]
+[0m14:03:32.651712 [debug] [Thread-1  ]: Finished running node seed.sector_dwh.bank_registry
+[0m14:03:32.655569 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:32.657034 [debug] [MainThread]: On master: BEGIN
+[0m14:03:32.658238 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:03:32.671886 [debug] [MainThread]: SQL status: BEGIN in 0.014 seconds
+[0m14:03:32.673288 [debug] [MainThread]: On master: COMMIT
+[0m14:03:32.674435 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:32.675589 [debug] [MainThread]: On master: COMMIT
+[0m14:03:32.676898 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:03:32.677960 [debug] [MainThread]: On master: Close
+[0m14:03:32.682187 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:03:32.683500 [debug] [MainThread]: Connection 'seed.sector_dwh.bank_registry' was properly closed.
+[0m14:03:32.684606 [info ] [MainThread]: 
+[0m14:03:32.685863 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 0.69 seconds (0.69s).
+[0m14:03:32.688527 [debug] [MainThread]: Command end result
+[0m14:03:32.771200 [info ] [MainThread]: 
+[0m14:03:32.772688 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:03:32.773837 [info ] [MainThread]: 
+[0m14:03:32.776638 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m14:03:32.779727 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 5.964787, "process_user_time": 9.561447, "process_kernel_time": 0.59147, "process_mem_max_rss": "111704", "process_in_blocks": "680", "process_out_blocks": "2488"}
+[0m14:03:32.781901 [debug] [MainThread]: Command `dbt seed` succeeded at 14:03:32.781414 after 5.97 seconds
+[0m14:03:32.783477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78140463fd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7813dbebbf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7813dbd6e760>]}
+[0m14:03:32.785044 [debug] [MainThread]: Flushing usage events
+[0m14:03:34.064425 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:03:38.672991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d00d5d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09cf57eac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09cf8675b0>]}
+
+
+============================== 14:03:38.681329 | 6c931e41-0c10-47d0-a1df-a49b7b009b88 ==============================
+[0m14:03:38.681329 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m14:03:38.682274 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/projects/sector_dwh/dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --profiles-dir .', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:03:39.042166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6c931e41-0c10-47d0-a1df-a49b7b009b88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d1c97a60>]}
+[0m14:03:39.206071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6c931e41-0c10-47d0-a1df-a49b7b009b88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09cd9d8250>]}
+[0m14:03:39.208555 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m14:03:39.253731 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m14:03:39.777566 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:03:39.778861 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:03:39.940846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6c931e41-0c10-47d0-a1df-a49b7b009b88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09cd76ed60>]}
+[0m14:03:40.264721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6c931e41-0c10-47d0-a1df-a49b7b009b88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09cd7099d0>]}
+[0m14:03:40.266037 [info ] [MainThread]: Found 2 models, 1 seed, 1 source, 423 macros
+[0m14:03:40.267019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6c931e41-0c10-47d0-a1df-a49b7b009b88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09cd773a30>]}
+[0m14:03:40.270074 [info ] [MainThread]: 
+[0m14:03:40.271089 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:03:40.272119 [info ] [MainThread]: 
+[0m14:03:40.273557 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:03:40.285738 [debug] [ThreadPool]: Acquiring new postgres connection 'list_sector_dwh'
+[0m14:03:40.415270 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh"
+[0m14:03:40.416776 [debug] [ThreadPool]: On list_sector_dwh: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "list_sector_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:03:40.418035 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:03:40.438876 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.021 seconds
+[0m14:03:40.443551 [debug] [ThreadPool]: On list_sector_dwh: Close
+[0m14:03:40.448128 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sector_dwh, now list_sector_dwh_public)
+[0m14:03:40.470135 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh_public"
+[0m14:03:40.471370 [debug] [ThreadPool]: On list_sector_dwh_public: BEGIN
+[0m14:03:40.472365 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:03:40.486627 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m14:03:40.487781 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh_public"
+[0m14:03:40.488981 [debug] [ThreadPool]: On list_sector_dwh_public: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "list_sector_dwh_public"} */
+select
+      'sector_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'sector_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'sector_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m14:03:40.496093 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.006 seconds
+[0m14:03:40.499766 [debug] [ThreadPool]: On list_sector_dwh_public: ROLLBACK
+[0m14:03:40.501346 [debug] [ThreadPool]: On list_sector_dwh_public: Close
+[0m14:03:40.522765 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:40.524084 [debug] [MainThread]: On master: BEGIN
+[0m14:03:40.524998 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:03:40.539411 [debug] [MainThread]: SQL status: BEGIN in 0.014 seconds
+[0m14:03:40.540702 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:40.542059 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:03:40.552831 [debug] [MainThread]: SQL status: SELECT 0 in 0.009 seconds
+[0m14:03:40.556745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6c931e41-0c10-47d0-a1df-a49b7b009b88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09cd709cd0>]}
+[0m14:03:40.559568 [debug] [MainThread]: On master: ROLLBACK
+[0m14:03:40.560987 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:40.562196 [debug] [MainThread]: On master: BEGIN
+[0m14:03:40.564055 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m14:03:40.564983 [debug] [MainThread]: On master: COMMIT
+[0m14:03:40.565752 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:40.566450 [debug] [MainThread]: On master: COMMIT
+[0m14:03:40.567413 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:03:40.568276 [debug] [MainThread]: On master: Close
+[0m14:03:40.589661 [debug] [Thread-1  ]: Began running node model.sector_dwh.stg_cbk_returns
+[0m14:03:40.591606 [info ] [Thread-1  ]: 1 of 2 START sql view model public.stg_cbk_returns ............................. [RUN]
+[0m14:03:40.593385 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_sector_dwh_public, now model.sector_dwh.stg_cbk_returns)
+[0m14:03:40.595409 [debug] [Thread-1  ]: Began compiling node model.sector_dwh.stg_cbk_returns
+[0m14:03:40.625407 [debug] [Thread-1  ]: Writing injected SQL for node "model.sector_dwh.stg_cbk_returns"
+[0m14:03:40.632379 [debug] [Thread-1  ]: Began executing node model.sector_dwh.stg_cbk_returns
+[0m14:03:40.737805 [debug] [Thread-1  ]: Writing runtime sql for node "model.sector_dwh.stg_cbk_returns"
+[0m14:03:40.739930 [debug] [Thread-1  ]: Using postgres connection "model.sector_dwh.stg_cbk_returns"
+[0m14:03:40.741026 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: BEGIN
+[0m14:03:40.742018 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:03:40.753044 [debug] [Thread-1  ]: SQL status: BEGIN in 0.011 seconds
+[0m14:03:40.754306 [debug] [Thread-1  ]: Using postgres connection "model.sector_dwh.stg_cbk_returns"
+[0m14:03:40.755806 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "model.sector_dwh.stg_cbk_returns"} */
+
+  create view "sector_dwh"."public"."stg_cbk_returns__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "sector_dwh"."public"."raw_cbk_returns"
+),
+renamed as (
+    select
+        bank_id,
+        year,
+        return_code,
+        value,
+        reported_date
+    from source
+)
+select * from renamed
+  );
+[0m14:03:40.759687 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.003 seconds
+[0m14:03:40.779361 [debug] [Thread-1  ]: Using postgres connection "model.sector_dwh.stg_cbk_returns"
+[0m14:03:40.780854 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "model.sector_dwh.stg_cbk_returns"} */
+alter table "sector_dwh"."public"."stg_cbk_returns__dbt_tmp" rename to "stg_cbk_returns"
+[0m14:03:40.782598 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:03:40.824715 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: COMMIT
+[0m14:03:40.826145 [debug] [Thread-1  ]: Using postgres connection "model.sector_dwh.stg_cbk_returns"
+[0m14:03:40.827571 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: COMMIT
+[0m14:03:40.829894 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m14:03:40.849063 [debug] [Thread-1  ]: Applying DROP to: "sector_dwh"."public"."stg_cbk_returns__dbt_backup"
+[0m14:03:40.862946 [debug] [Thread-1  ]: Using postgres connection "model.sector_dwh.stg_cbk_returns"
+[0m14:03:40.864066 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "model.sector_dwh.stg_cbk_returns"} */
+drop view if exists "sector_dwh"."public"."stg_cbk_returns__dbt_backup" cascade
+[0m14:03:40.865827 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.000 seconds
+[0m14:03:40.871271 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: Close
+[0m14:03:40.875687 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6c931e41-0c10-47d0-a1df-a49b7b009b88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09cca90e80>]}
+[0m14:03:40.877709 [info ] [Thread-1  ]: 1 of 2 OK created sql view model public.stg_cbk_returns ........................ [[32mCREATE VIEW[0m in 0.28s]
+[0m14:03:40.879352 [debug] [Thread-1  ]: Finished running node model.sector_dwh.stg_cbk_returns
+[0m14:03:40.881398 [debug] [Thread-3  ]: Began running node model.sector_dwh.mart_sector_kpis
+[0m14:03:40.883066 [info ] [Thread-3  ]: 2 of 2 START sql table model public.mart_sector_kpis ........................... [RUN]
+[0m14:03:40.885315 [debug] [Thread-3  ]: Acquiring new postgres connection 'model.sector_dwh.mart_sector_kpis'
+[0m14:03:40.886657 [debug] [Thread-3  ]: Began compiling node model.sector_dwh.mart_sector_kpis
+[0m14:03:40.898736 [debug] [Thread-3  ]: Writing injected SQL for node "model.sector_dwh.mart_sector_kpis"
+[0m14:03:40.900481 [debug] [Thread-3  ]: Began executing node model.sector_dwh.mart_sector_kpis
+[0m14:03:40.964689 [debug] [Thread-3  ]: Writing runtime sql for node "model.sector_dwh.mart_sector_kpis"
+[0m14:03:40.966622 [debug] [Thread-3  ]: Using postgres connection "model.sector_dwh.mart_sector_kpis"
+[0m14:03:40.967774 [debug] [Thread-3  ]: On model.sector_dwh.mart_sector_kpis: BEGIN
+[0m14:03:40.968867 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m14:03:40.983143 [debug] [Thread-3  ]: SQL status: BEGIN in 0.014 seconds
+[0m14:03:40.984863 [debug] [Thread-3  ]: Using postgres connection "model.sector_dwh.mart_sector_kpis"
+[0m14:03:40.986720 [debug] [Thread-3  ]: On model.sector_dwh.mart_sector_kpis: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "model.sector_dwh.mart_sector_kpis"} */
+
+  
+    
+
+  create  table "sector_dwh"."public"."mart_sector_kpis__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with staging as (
+    select * from "sector_dwh"."public"."stg_cbk_returns"
+),
+pivoted as (
+    select
+        bank_id,
+        year,
+        max(case when return_code = 'A1' then value end) as total_assets,
+        max(case when return_code = 'D1' then value end) as total_deposits,
+        max(case when return_code = 'L1' then value end) as net_loans,
+        max(case when return_code = 'P7' then value end) as net_profit,
+        max(case when return_code = 'R1' then value end) as npl_ratio,
+        max(case when return_code = 'C1' then value end) as capital_adequacy_ratio
+    from staging
+    group by 1, 2
+),
+calculated as (
+    select
+        p.*,
+        b.bank_name,
+        b.tier,
+        (net_profit / nullif(total_assets, 0)) * 100 as roa,
+        (net_loans / nullif(total_deposits, 0)) * 100 as loan_to_deposit_ratio
+    from pivoted p
+    left join "sector_dwh"."public"."bank_registry" b on p.bank_id = b.bank_id
+)
+select * from calculated
+  );
+  
+[0m14:03:40.991663 [debug] [Thread-3  ]: Postgres adapter: Postgres error: column b.bank_id does not exist
+LINE 36: ...tor_dwh"."public"."bank_registry" b on p.bank_id = b.bank_id
+                                                               ^
+HINT:  Perhaps you meant to reference the column "p.bank_id".
+
+[0m14:03:40.993498 [debug] [Thread-3  ]: On model.sector_dwh.mart_sector_kpis: ROLLBACK
+[0m14:03:40.995851 [debug] [Thread-3  ]: On model.sector_dwh.mart_sector_kpis: Close
+[0m14:03:41.015769 [debug] [Thread-3  ]: Database Error in model mart_sector_kpis (models/marts/mart_sector_kpis.sql)
+  column b.bank_id does not exist
+  LINE 36: ...tor_dwh"."public"."bank_registry" b on p.bank_id = b.bank_id
+                                                                 ^
+  HINT:  Perhaps you meant to reference the column "p.bank_id".
+  compiled code at target/run/sector_dwh/models/marts/mart_sector_kpis.sql
+[0m14:03:41.017301 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6c931e41-0c10-47d0-a1df-a49b7b009b88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09cca26550>]}
+[0m14:03:41.019103 [error] [Thread-3  ]: 2 of 2 ERROR creating sql table model public.mart_sector_kpis .................. [[31mERROR[0m in 0.13s]
+[0m14:03:41.021293 [debug] [Thread-3  ]: Finished running node model.sector_dwh.mart_sector_kpis
+[0m14:03:41.023509 [debug] [Thread-7  ]: Marking all children of 'model.sector_dwh.mart_sector_kpis' to be skipped because of status 'error'.  Reason: Database Error in model mart_sector_kpis (models/marts/mart_sector_kpis.sql)
+  column b.bank_id does not exist
+  LINE 36: ...tor_dwh"."public"."bank_registry" b on p.bank_id = b.bank_id
+                                                                 ^
+  HINT:  Perhaps you meant to reference the column "p.bank_id".
+  compiled code at target/run/sector_dwh/models/marts/mart_sector_kpis.sql.
+[0m14:03:41.027729 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:41.029115 [debug] [MainThread]: On master: BEGIN
+[0m14:03:41.030352 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:03:41.041054 [debug] [MainThread]: SQL status: BEGIN in 0.011 seconds
+[0m14:03:41.042683 [debug] [MainThread]: On master: COMMIT
+[0m14:03:41.044014 [debug] [MainThread]: Using postgres connection "master"
+[0m14:03:41.045408 [debug] [MainThread]: On master: COMMIT
+[0m14:03:41.046998 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:03:41.048354 [debug] [MainThread]: On master: Close
+[0m14:03:41.053102 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:03:41.054317 [debug] [MainThread]: Connection 'model.sector_dwh.stg_cbk_returns' was properly closed.
+[0m14:03:41.055493 [debug] [MainThread]: Connection 'model.sector_dwh.mart_sector_kpis' was properly closed.
+[0m14:03:41.056656 [info ] [MainThread]: 
+[0m14:03:41.057857 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.78 seconds (0.78s).
+[0m14:03:41.061206 [debug] [MainThread]: Command end result
+[0m14:03:41.254362 [info ] [MainThread]: 
+[0m14:03:41.255926 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successs, and 0 warnings:[0m
+[0m14:03:41.257178 [info ] [MainThread]: 
+[0m14:03:41.258722 [error] [MainThread]:   Database Error in model mart_sector_kpis (models/marts/mart_sector_kpis.sql)
+  column b.bank_id does not exist
+  LINE 36: ...tor_dwh"."public"."bank_registry" b on p.bank_id = b.bank_id
+                                                                 ^
+  HINT:  Perhaps you meant to reference the column "p.bank_id".
+  compiled code at target/run/sector_dwh/models/marts/mart_sector_kpis.sql
+[0m14:03:41.259915 [info ] [MainThread]: 
+[0m14:03:41.260961 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m14:03:41.263510 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.6894214, "process_user_time": 6.141724, "process_kernel_time": 0.559519, "process_mem_max_rss": "107340", "process_in_blocks": "440", "process_out_blocks": "1720", "command_success": false}
+[0m14:03:41.264936 [debug] [MainThread]: Command `dbt run` failed at 14:03:41.264650 after 2.69 seconds
+[0m14:03:41.265982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d00d5d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09d32c8160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09cd92d9a0>]}
+[0m14:03:41.267046 [debug] [MainThread]: Flushing usage events
+[0m14:03:42.422967 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:04:25.549065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0243921d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0244a92ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c02431325b0>]}
+
+
+============================== 14:04:25.563189 | c0cec7c5-542d-48a4-93e9-974a9a66985e ==============================
+[0m14:04:25.563189 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m14:04:25.564717 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/opt/airflow/projects/sector_dwh/dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt seed --profiles-dir .', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:04:26.035079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c0cec7c5-542d-48a4-93e9-974a9a66985e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0245562a60>]}
+[0m14:04:26.196035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c0cec7c5-542d-48a4-93e9-974a9a66985e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c02412a4250>]}
+[0m14:04:26.197996 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m14:04:26.237788 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m14:04:26.680074 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:04:26.681426 [debug] [MainThread]: Partial parsing: updated file: sector_dwh://seeds/bank_registry.csv
+[0m14:04:27.380036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c0cec7c5-542d-48a4-93e9-974a9a66985e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0240ddb6a0>]}
+[0m14:04:27.701618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c0cec7c5-542d-48a4-93e9-974a9a66985e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0240d85ac0>]}
+[0m14:04:27.703117 [info ] [MainThread]: Found 2 models, 1 seed, 1 source, 423 macros
+[0m14:04:27.704356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c0cec7c5-542d-48a4-93e9-974a9a66985e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0240d96490>]}
+[0m14:04:27.708049 [info ] [MainThread]: 
+[0m14:04:27.709568 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:04:27.710918 [info ] [MainThread]: 
+[0m14:04:27.712697 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:04:27.715655 [debug] [ThreadPool]: Acquiring new postgres connection 'list_sector_dwh'
+[0m14:04:27.835100 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh"
+[0m14:04:27.836080 [debug] [ThreadPool]: On list_sector_dwh: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "list_sector_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:04:27.837042 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:04:27.852902 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.016 seconds
+[0m14:04:27.856604 [debug] [ThreadPool]: On list_sector_dwh: Close
+[0m14:04:27.875214 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sector_dwh, now list_sector_dwh_public)
+[0m14:04:27.898327 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh_public"
+[0m14:04:27.899798 [debug] [ThreadPool]: On list_sector_dwh_public: BEGIN
+[0m14:04:27.901162 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:04:27.915222 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m14:04:27.916605 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh_public"
+[0m14:04:27.917844 [debug] [ThreadPool]: On list_sector_dwh_public: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "list_sector_dwh_public"} */
+select
+      'sector_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'sector_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'sector_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m14:04:27.924806 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.006 seconds
+[0m14:04:27.928692 [debug] [ThreadPool]: On list_sector_dwh_public: ROLLBACK
+[0m14:04:27.930087 [debug] [ThreadPool]: On list_sector_dwh_public: Close
+[0m14:04:27.945856 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:27.946934 [debug] [MainThread]: On master: BEGIN
+[0m14:04:27.947811 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:04:27.959386 [debug] [MainThread]: SQL status: BEGIN in 0.011 seconds
+[0m14:04:27.960633 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:27.962110 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:04:27.971858 [debug] [MainThread]: SQL status: SELECT 1 in 0.008 seconds
+[0m14:04:27.976145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c0cec7c5-542d-48a4-93e9-974a9a66985e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0240d35310>]}
+[0m14:04:27.977659 [debug] [MainThread]: On master: ROLLBACK
+[0m14:04:27.979032 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:27.980042 [debug] [MainThread]: On master: BEGIN
+[0m14:04:27.981641 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m14:04:27.982658 [debug] [MainThread]: On master: COMMIT
+[0m14:04:27.983674 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:27.984836 [debug] [MainThread]: On master: COMMIT
+[0m14:04:27.986292 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:04:27.987396 [debug] [MainThread]: On master: Close
+[0m14:04:28.006880 [debug] [Thread-1  ]: Began running node seed.sector_dwh.bank_registry
+[0m14:04:28.008606 [info ] [Thread-1  ]: 1 of 1 START seed file public.bank_registry .................................... [RUN]
+[0m14:04:28.010116 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_sector_dwh_public, now seed.sector_dwh.bank_registry)
+[0m14:04:28.011407 [debug] [Thread-1  ]: Began compiling node seed.sector_dwh.bank_registry
+[0m14:04:28.012779 [debug] [Thread-1  ]: Began executing node seed.sector_dwh.bank_registry
+[0m14:04:28.107516 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:04:28.109088 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: BEGIN
+[0m14:04:28.110572 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:04:28.125745 [debug] [Thread-1  ]: SQL status: BEGIN in 0.015 seconds
+[0m14:04:28.127345 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:04:28.128869 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "seed.sector_dwh.bank_registry"} */
+truncate table "sector_dwh"."public"."bank_registry"
+[0m14:04:28.141759 [debug] [Thread-1  ]: SQL status: TRUNCATE TABLE in 0.011 seconds
+[0m14:04:28.323549 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:04:28.324854 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: 
+          insert into "sector_dwh"."public"."bank_registry" ("bank_id", "bank_name", "tier", "listing_status") values
+          (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s)
+      ...
+[0m14:04:28.327567 [debug] [Thread-1  ]: Postgres adapter: Postgres error: column "bank_id" of relation "bank_registry" does not exist
+LINE 2: ...nsert into "sector_dwh"."public"."bank_registry" ("bank_id",...
+                                                             ^
+
+[0m14:04:28.328690 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: ROLLBACK
+[0m14:04:28.330144 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: Close
+[0m14:04:28.339051 [debug] [Thread-1  ]: Database Error in seed bank_registry (seeds/bank_registry.csv)
+  column "bank_id" of relation "bank_registry" does not exist
+  LINE 2: ...nsert into "sector_dwh"."public"."bank_registry" ("bank_id",...
+                                                               ^
+[0m14:04:28.343348 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c0cec7c5-542d-48a4-93e9-974a9a66985e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c024021ee80>]}
+[0m14:04:28.345096 [error] [Thread-1  ]: 1 of 1 ERROR loading seed file public.bank_registry ............................ [[31mERROR[0m in 0.33s]
+[0m14:04:28.346985 [debug] [Thread-1  ]: Finished running node seed.sector_dwh.bank_registry
+[0m14:04:28.349459 [debug] [Thread-7  ]: Marking all children of 'seed.sector_dwh.bank_registry' to be skipped because of status 'error'.  Reason: Database Error in seed bank_registry (seeds/bank_registry.csv)
+  column "bank_id" of relation "bank_registry" does not exist
+  LINE 2: ...nsert into "sector_dwh"."public"."bank_registry" ("bank_id",...
+                                                               ^.
+[0m14:04:28.353149 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:28.354522 [debug] [MainThread]: On master: BEGIN
+[0m14:04:28.355767 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:04:28.370511 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m14:04:28.371685 [debug] [MainThread]: On master: COMMIT
+[0m14:04:28.373083 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:28.374431 [debug] [MainThread]: On master: COMMIT
+[0m14:04:28.375954 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:04:28.377182 [debug] [MainThread]: On master: Close
+[0m14:04:28.378679 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:04:28.379913 [debug] [MainThread]: Connection 'seed.sector_dwh.bank_registry' was properly closed.
+[0m14:04:28.381086 [info ] [MainThread]: 
+[0m14:04:28.382422 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 0.67 seconds (0.67s).
+[0m14:04:28.384521 [debug] [MainThread]: Command end result
+[0m14:04:28.467529 [info ] [MainThread]: 
+[0m14:04:28.469020 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successs, and 0 warnings:[0m
+[0m14:04:28.470229 [info ] [MainThread]: 
+[0m14:04:28.471617 [error] [MainThread]:   Database Error in seed bank_registry (seeds/bank_registry.csv)
+  column "bank_id" of relation "bank_registry" does not exist
+  LINE 2: ...nsert into "sector_dwh"."public"."bank_registry" ("bank_id",...
+                                                               ^
+[0m14:04:28.472803 [info ] [MainThread]: 
+[0m14:04:28.473830 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m14:04:28.476137 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_wall_clock_time": 3.065567, "process_user_time": 6.634505, "process_kernel_time": 0.509885, "process_mem_max_rss": "109888", "process_in_blocks": "24", "process_out_blocks": "2472", "command_success": false}
+[0m14:04:28.477861 [debug] [MainThread]: Command `dbt seed` failed at 14:04:28.477541 after 3.07 seconds
+[0m14:04:28.479121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0243921d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c02437895b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0241224c10>]}
+[0m14:04:28.480394 [debug] [MainThread]: Flushing usage events
+[0m14:04:29.834576 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:04:42.092965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbe275dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbfe7f3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbda09c40>]}
+
+
+============================== 14:04:42.105891 | c6476c55-aa0e-4a1b-82e0-25b8637f135d ==============================
+[0m14:04:42.105891 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m14:04:42.107468 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/projects/sector_dwh/dbt/logs', 'fail_fast': 'False', 'profiles_dir': '.', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt seed --profiles-dir . --full-refresh', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:04:42.643182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c6476c55-aa0e-4a1b-82e0-25b8637f135d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbfe39ac0>]}
+[0m14:04:42.802000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c6476c55-aa0e-4a1b-82e0-25b8637f135d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbbb7c280>]}
+[0m14:04:42.803625 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m14:04:42.843782 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m14:04:43.284893 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:04:43.286114 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:04:43.445241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c6476c55-aa0e-4a1b-82e0-25b8637f135d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbb86dd90>]}
+[0m14:04:43.766805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c6476c55-aa0e-4a1b-82e0-25b8637f135d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbb827d00>]}
+[0m14:04:43.768606 [info ] [MainThread]: Found 2 models, 1 seed, 1 source, 423 macros
+[0m14:04:43.769828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c6476c55-aa0e-4a1b-82e0-25b8637f135d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbb807700>]}
+[0m14:04:43.774119 [info ] [MainThread]: 
+[0m14:04:43.775363 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:04:43.776827 [info ] [MainThread]: 
+[0m14:04:43.778494 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:04:43.781133 [debug] [ThreadPool]: Acquiring new postgres connection 'list_sector_dwh'
+[0m14:04:43.889686 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh"
+[0m14:04:43.890698 [debug] [ThreadPool]: On list_sector_dwh: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "list_sector_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:04:43.891660 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:04:43.908989 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.017 seconds
+[0m14:04:43.916999 [debug] [ThreadPool]: On list_sector_dwh: Close
+[0m14:04:43.936516 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sector_dwh, now list_sector_dwh_public)
+[0m14:04:43.955150 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh_public"
+[0m14:04:43.956297 [debug] [ThreadPool]: On list_sector_dwh_public: BEGIN
+[0m14:04:43.957431 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:04:43.969261 [debug] [ThreadPool]: SQL status: BEGIN in 0.012 seconds
+[0m14:04:43.970512 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh_public"
+[0m14:04:43.971650 [debug] [ThreadPool]: On list_sector_dwh_public: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "list_sector_dwh_public"} */
+select
+      'sector_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'sector_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'sector_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m14:04:43.978295 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.005 seconds
+[0m14:04:43.982096 [debug] [ThreadPool]: On list_sector_dwh_public: ROLLBACK
+[0m14:04:43.983557 [debug] [ThreadPool]: On list_sector_dwh_public: Close
+[0m14:04:43.999914 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:44.001036 [debug] [MainThread]: On master: BEGIN
+[0m14:04:44.001975 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:04:44.013606 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m14:04:44.014683 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:44.016299 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:04:44.025871 [debug] [MainThread]: SQL status: SELECT 1 in 0.008 seconds
+[0m14:04:44.030703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c6476c55-aa0e-4a1b-82e0-25b8637f135d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbb786f40>]}
+[0m14:04:44.032458 [debug] [MainThread]: On master: ROLLBACK
+[0m14:04:44.033938 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:44.035070 [debug] [MainThread]: On master: BEGIN
+[0m14:04:44.036530 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m14:04:44.037657 [debug] [MainThread]: On master: COMMIT
+[0m14:04:44.038643 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:44.039626 [debug] [MainThread]: On master: COMMIT
+[0m14:04:44.040920 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:04:44.041978 [debug] [MainThread]: On master: Close
+[0m14:04:44.062680 [debug] [Thread-1  ]: Began running node seed.sector_dwh.bank_registry
+[0m14:04:44.064609 [info ] [Thread-1  ]: 1 of 1 START seed file public.bank_registry .................................... [RUN]
+[0m14:04:44.066510 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_sector_dwh_public, now seed.sector_dwh.bank_registry)
+[0m14:04:44.068074 [debug] [Thread-1  ]: Began compiling node seed.sector_dwh.bank_registry
+[0m14:04:44.069436 [debug] [Thread-1  ]: Began executing node seed.sector_dwh.bank_registry
+[0m14:04:44.167941 [debug] [Thread-1  ]: Applying DROP to: "sector_dwh"."public"."bank_registry"
+[0m14:04:44.182624 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:04:44.184184 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "seed.sector_dwh.bank_registry"} */
+drop table if exists "sector_dwh"."public"."bank_registry" cascade
+[0m14:04:44.185594 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:04:44.207483 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.022 seconds
+[0m14:04:44.231697 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:04:44.233056 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: BEGIN
+[0m14:04:44.234821 [debug] [Thread-1  ]: SQL status: BEGIN in 0.000 seconds
+[0m14:04:44.236463 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:04:44.237701 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "seed.sector_dwh.bank_registry"} */
+
+    create table "sector_dwh"."public"."bank_registry" ("bank_id" text,"bank_name" text,"tier" text,"listing_status" text)
+  
+[0m14:04:44.242930 [debug] [Thread-1  ]: SQL status: CREATE TABLE in 0.004 seconds
+[0m14:04:44.342250 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:04:44.343602 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: 
+          insert into "sector_dwh"."public"."bank_registry" ("bank_id", "bank_name", "tier", "listing_status") values
+          (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s)
+      ...
+[0m14:04:44.346615 [debug] [Thread-1  ]: SQL status: INSERT 0 20 in 0.002 seconds
+[0m14:04:44.363642 [debug] [Thread-1  ]: Writing runtime SQL for node "seed.sector_dwh.bank_registry"
+[0m14:04:44.425022 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: COMMIT
+[0m14:04:44.426106 [debug] [Thread-1  ]: Using postgres connection "seed.sector_dwh.bank_registry"
+[0m14:04:44.426942 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: COMMIT
+[0m14:04:44.429858 [debug] [Thread-1  ]: SQL status: COMMIT in 0.002 seconds
+[0m14:04:44.434933 [debug] [Thread-1  ]: On seed.sector_dwh.bank_registry: Close
+[0m14:04:44.441369 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c6476c55-aa0e-4a1b-82e0-25b8637f135d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbac98610>]}
+[0m14:04:44.442871 [info ] [Thread-1  ]: 1 of 1 OK loaded seed file public.bank_registry ................................ [[32mCREATE 20[0m in 0.37s]
+[0m14:04:44.444609 [debug] [Thread-1  ]: Finished running node seed.sector_dwh.bank_registry
+[0m14:04:44.449475 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:44.450919 [debug] [MainThread]: On master: BEGIN
+[0m14:04:44.452152 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:04:44.464431 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m14:04:44.465825 [debug] [MainThread]: On master: COMMIT
+[0m14:04:44.467114 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:44.468407 [debug] [MainThread]: On master: COMMIT
+[0m14:04:44.469979 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:04:44.471080 [debug] [MainThread]: On master: Close
+[0m14:04:44.472268 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:04:44.473329 [debug] [MainThread]: Connection 'seed.sector_dwh.bank_registry' was properly closed.
+[0m14:04:44.474407 [info ] [MainThread]: 
+[0m14:04:44.475391 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 0.70 seconds (0.70s).
+[0m14:04:44.477331 [debug] [MainThread]: Command end result
+[0m14:04:44.560759 [info ] [MainThread]: 
+[0m14:04:44.562116 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:04:44.563152 [info ] [MainThread]: 
+[0m14:04:44.564159 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m14:04:44.566749 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 2.6187234, "process_user_time": 6.183541, "process_kernel_time": 0.550514, "process_mem_max_rss": "106312", "process_out_blocks": "1664", "process_in_blocks": "0"}
+[0m14:04:44.568386 [debug] [MainThread]: Command `dbt seed` succeeded at 14:04:44.568131 after 2.62 seconds
+[0m14:04:44.569624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbe275dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbbb7c280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75bbbacd7e20>]}
+[0m14:04:44.570681 [debug] [MainThread]: Flushing usage events
+[0m14:04:45.910866 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:04:50.406090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c563dfd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c574ccac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c55b705b0>]}
+
+
+============================== 14:04:50.414231 | 8dc8e885-0269-45ac-9845-be71a4e08703 ==============================
+[0m14:04:50.414231 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m14:04:50.415081 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '.', 'log_path': '/opt/airflow/projects/sector_dwh/dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:04:50.770344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8dc8e885-0269-45ac-9845-be71a4e08703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c57fa1a60>]}
+[0m14:04:50.950815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8dc8e885-0269-45ac-9845-be71a4e08703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c53ce2250>]}
+[0m14:04:50.953174 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m14:04:50.994869 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m14:04:51.451720 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:04:51.452953 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:04:51.619089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8dc8e885-0269-45ac-9845-be71a4e08703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c53a56d60>]}
+[0m14:04:51.938412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8dc8e885-0269-45ac-9845-be71a4e08703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c53a129a0>]}
+[0m14:04:51.939662 [info ] [MainThread]: Found 2 models, 1 seed, 1 source, 423 macros
+[0m14:04:51.940901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8dc8e885-0269-45ac-9845-be71a4e08703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c53a5c940>]}
+[0m14:04:51.944244 [info ] [MainThread]: 
+[0m14:04:51.945501 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:04:51.946768 [info ] [MainThread]: 
+[0m14:04:51.948336 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:04:51.961138 [debug] [ThreadPool]: Acquiring new postgres connection 'list_sector_dwh'
+[0m14:04:52.098290 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh"
+[0m14:04:52.099198 [debug] [ThreadPool]: On list_sector_dwh: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "list_sector_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:04:52.099918 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:04:52.114868 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.015 seconds
+[0m14:04:52.119269 [debug] [ThreadPool]: On list_sector_dwh: Close
+[0m14:04:52.126534 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_sector_dwh, now list_sector_dwh_public)
+[0m14:04:52.149506 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh_public"
+[0m14:04:52.150865 [debug] [ThreadPool]: On list_sector_dwh_public: BEGIN
+[0m14:04:52.152274 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:04:52.164788 [debug] [ThreadPool]: SQL status: BEGIN in 0.012 seconds
+[0m14:04:52.165996 [debug] [ThreadPool]: Using postgres connection "list_sector_dwh_public"
+[0m14:04:52.167209 [debug] [ThreadPool]: On list_sector_dwh_public: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "list_sector_dwh_public"} */
+select
+      'sector_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'sector_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'sector_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m14:04:52.174033 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.006 seconds
+[0m14:04:52.178224 [debug] [ThreadPool]: On list_sector_dwh_public: ROLLBACK
+[0m14:04:52.180089 [debug] [ThreadPool]: On list_sector_dwh_public: Close
+[0m14:04:52.207349 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:52.208913 [debug] [MainThread]: On master: BEGIN
+[0m14:04:52.210258 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:04:52.223620 [debug] [MainThread]: SQL status: BEGIN in 0.013 seconds
+[0m14:04:52.224796 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:52.226056 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:04:52.236576 [debug] [MainThread]: SQL status: SELECT 1 in 0.009 seconds
+[0m14:04:52.241508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8dc8e885-0269-45ac-9845-be71a4e08703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c53a12c70>]}
+[0m14:04:52.243003 [debug] [MainThread]: On master: ROLLBACK
+[0m14:04:52.244222 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:52.245164 [debug] [MainThread]: On master: BEGIN
+[0m14:04:52.246664 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m14:04:52.247688 [debug] [MainThread]: On master: COMMIT
+[0m14:04:52.248550 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:52.249429 [debug] [MainThread]: On master: COMMIT
+[0m14:04:52.250924 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:04:52.252108 [debug] [MainThread]: On master: Close
+[0m14:04:52.270792 [debug] [Thread-1  ]: Began running node model.sector_dwh.stg_cbk_returns
+[0m14:04:52.272419 [info ] [Thread-1  ]: 1 of 2 START sql view model public.stg_cbk_returns ............................. [RUN]
+[0m14:04:52.274067 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_sector_dwh_public, now model.sector_dwh.stg_cbk_returns)
+[0m14:04:52.275236 [debug] [Thread-1  ]: Began compiling node model.sector_dwh.stg_cbk_returns
+[0m14:04:52.298990 [debug] [Thread-1  ]: Writing injected SQL for node "model.sector_dwh.stg_cbk_returns"
+[0m14:04:52.300893 [debug] [Thread-1  ]: Began executing node model.sector_dwh.stg_cbk_returns
+[0m14:04:52.407124 [debug] [Thread-1  ]: Writing runtime sql for node "model.sector_dwh.stg_cbk_returns"
+[0m14:04:52.408817 [debug] [Thread-1  ]: Using postgres connection "model.sector_dwh.stg_cbk_returns"
+[0m14:04:52.409944 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: BEGIN
+[0m14:04:52.411035 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m14:04:52.422900 [debug] [Thread-1  ]: SQL status: BEGIN in 0.012 seconds
+[0m14:04:52.424461 [debug] [Thread-1  ]: Using postgres connection "model.sector_dwh.stg_cbk_returns"
+[0m14:04:52.426022 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "model.sector_dwh.stg_cbk_returns"} */
+
+  create view "sector_dwh"."public"."stg_cbk_returns__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "sector_dwh"."public"."raw_cbk_returns"
+),
+renamed as (
+    select
+        bank_id,
+        year,
+        return_code,
+        value,
+        reported_date
+    from source
+)
+select * from renamed
+  );
+[0m14:04:52.429753 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.002 seconds
+[0m14:04:52.453320 [debug] [Thread-1  ]: Using postgres connection "model.sector_dwh.stg_cbk_returns"
+[0m14:04:52.454871 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "model.sector_dwh.stg_cbk_returns"} */
+alter table "sector_dwh"."public"."stg_cbk_returns" rename to "stg_cbk_returns__dbt_backup"
+[0m14:04:52.456858 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:04:52.466176 [debug] [Thread-1  ]: Using postgres connection "model.sector_dwh.stg_cbk_returns"
+[0m14:04:52.467521 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "model.sector_dwh.stg_cbk_returns"} */
+alter table "sector_dwh"."public"."stg_cbk_returns__dbt_tmp" rename to "stg_cbk_returns"
+[0m14:04:52.469499 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:04:52.516887 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: COMMIT
+[0m14:04:52.518172 [debug] [Thread-1  ]: Using postgres connection "model.sector_dwh.stg_cbk_returns"
+[0m14:04:52.519339 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: COMMIT
+[0m14:04:52.521518 [debug] [Thread-1  ]: SQL status: COMMIT in 0.001 seconds
+[0m14:04:52.541769 [debug] [Thread-1  ]: Applying DROP to: "sector_dwh"."public"."stg_cbk_returns__dbt_backup"
+[0m14:04:52.555885 [debug] [Thread-1  ]: Using postgres connection "model.sector_dwh.stg_cbk_returns"
+[0m14:04:52.557233 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "model.sector_dwh.stg_cbk_returns"} */
+drop view if exists "sector_dwh"."public"."stg_cbk_returns__dbt_backup" cascade
+[0m14:04:52.560649 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.002 seconds
+[0m14:04:52.566405 [debug] [Thread-1  ]: On model.sector_dwh.stg_cbk_returns: Close
+[0m14:04:52.572165 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8dc8e885-0269-45ac-9845-be71a4e08703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c52d9af10>]}
+[0m14:04:52.574565 [info ] [Thread-1  ]: 1 of 2 OK created sql view model public.stg_cbk_returns ........................ [[32mCREATE VIEW[0m in 0.30s]
+[0m14:04:52.576887 [debug] [Thread-1  ]: Finished running node model.sector_dwh.stg_cbk_returns
+[0m14:04:52.579284 [debug] [Thread-3  ]: Began running node model.sector_dwh.mart_sector_kpis
+[0m14:04:52.581212 [info ] [Thread-3  ]: 2 of 2 START sql table model public.mart_sector_kpis ........................... [RUN]
+[0m14:04:52.583211 [debug] [Thread-3  ]: Acquiring new postgres connection 'model.sector_dwh.mart_sector_kpis'
+[0m14:04:52.584691 [debug] [Thread-3  ]: Began compiling node model.sector_dwh.mart_sector_kpis
+[0m14:04:52.597262 [debug] [Thread-3  ]: Writing injected SQL for node "model.sector_dwh.mart_sector_kpis"
+[0m14:04:52.599246 [debug] [Thread-3  ]: Began executing node model.sector_dwh.mart_sector_kpis
+[0m14:04:52.683055 [debug] [Thread-3  ]: Writing runtime sql for node "model.sector_dwh.mart_sector_kpis"
+[0m14:04:52.685102 [debug] [Thread-3  ]: Using postgres connection "model.sector_dwh.mart_sector_kpis"
+[0m14:04:52.686655 [debug] [Thread-3  ]: On model.sector_dwh.mart_sector_kpis: BEGIN
+[0m14:04:52.688073 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m14:04:52.701608 [debug] [Thread-3  ]: SQL status: BEGIN in 0.013 seconds
+[0m14:04:52.702922 [debug] [Thread-3  ]: Using postgres connection "model.sector_dwh.mart_sector_kpis"
+[0m14:04:52.704595 [debug] [Thread-3  ]: On model.sector_dwh.mart_sector_kpis: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "model.sector_dwh.mart_sector_kpis"} */
+
+  
+    
+
+  create  table "sector_dwh"."public"."mart_sector_kpis__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with staging as (
+    select * from "sector_dwh"."public"."stg_cbk_returns"
+),
+pivoted as (
+    select
+        bank_id,
+        year,
+        max(case when return_code = 'A1' then value end) as total_assets,
+        max(case when return_code = 'D1' then value end) as total_deposits,
+        max(case when return_code = 'L1' then value end) as net_loans,
+        max(case when return_code = 'P7' then value end) as net_profit,
+        max(case when return_code = 'R1' then value end) as npl_ratio,
+        max(case when return_code = 'C1' then value end) as capital_adequacy_ratio
+    from staging
+    group by 1, 2
+),
+calculated as (
+    select
+        p.*,
+        b.bank_name,
+        b.tier,
+        (net_profit / nullif(total_assets, 0)) * 100 as roa,
+        (net_loans / nullif(total_deposits, 0)) * 100 as loan_to_deposit_ratio
+    from pivoted p
+    left join "sector_dwh"."public"."bank_registry" b on p.bank_id = b.bank_id
+)
+select * from calculated
+  );
+  
+[0m14:04:52.717238 [debug] [Thread-3  ]: SQL status: SELECT 220 in 0.011 seconds
+[0m14:04:52.727063 [debug] [Thread-3  ]: Using postgres connection "model.sector_dwh.mart_sector_kpis"
+[0m14:04:52.728435 [debug] [Thread-3  ]: On model.sector_dwh.mart_sector_kpis: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "model.sector_dwh.mart_sector_kpis"} */
+alter table "sector_dwh"."public"."mart_sector_kpis__dbt_tmp" rename to "mart_sector_kpis"
+[0m14:04:52.730223 [debug] [Thread-3  ]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:04:52.744856 [debug] [Thread-3  ]: On model.sector_dwh.mart_sector_kpis: COMMIT
+[0m14:04:52.746080 [debug] [Thread-3  ]: Using postgres connection "model.sector_dwh.mart_sector_kpis"
+[0m14:04:52.747218 [debug] [Thread-3  ]: On model.sector_dwh.mart_sector_kpis: COMMIT
+[0m14:04:52.749249 [debug] [Thread-3  ]: SQL status: COMMIT in 0.001 seconds
+[0m14:04:52.756909 [debug] [Thread-3  ]: Applying DROP to: "sector_dwh"."public"."mart_sector_kpis__dbt_backup"
+[0m14:04:52.764758 [debug] [Thread-3  ]: Using postgres connection "model.sector_dwh.mart_sector_kpis"
+[0m14:04:52.766074 [debug] [Thread-3  ]: On model.sector_dwh.mart_sector_kpis: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "sector_dwh", "target_name": "dev", "node_id": "model.sector_dwh.mart_sector_kpis"} */
+drop table if exists "sector_dwh"."public"."mart_sector_kpis__dbt_backup" cascade
+[0m14:04:52.767694 [debug] [Thread-3  ]: SQL status: DROP TABLE in 0.000 seconds
+[0m14:04:52.771648 [debug] [Thread-3  ]: On model.sector_dwh.mart_sector_kpis: Close
+[0m14:04:52.773350 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8dc8e885-0269-45ac-9845-be71a4e08703', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c56448f10>]}
+[0m14:04:52.775499 [info ] [Thread-3  ]: 2 of 2 OK created sql table model public.mart_sector_kpis ...................... [[32mSELECT 220[0m in 0.19s]
+[0m14:04:52.777572 [debug] [Thread-3  ]: Finished running node model.sector_dwh.mart_sector_kpis
+[0m14:04:52.780905 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:52.782564 [debug] [MainThread]: On master: BEGIN
+[0m14:04:52.784050 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:04:52.794349 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m14:04:52.795479 [debug] [MainThread]: On master: COMMIT
+[0m14:04:52.798596 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:52.799864 [debug] [MainThread]: On master: COMMIT
+[0m14:04:52.801577 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m14:04:52.802810 [debug] [MainThread]: On master: Close
+[0m14:04:52.804998 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:04:52.806221 [debug] [MainThread]: Connection 'model.sector_dwh.stg_cbk_returns' was properly closed.
+[0m14:04:52.807834 [debug] [MainThread]: Connection 'model.sector_dwh.mart_sector_kpis' was properly closed.
+[0m14:04:52.809260 [info ] [MainThread]: 
+[0m14:04:52.811106 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.86 seconds (0.86s).
+[0m14:04:52.814697 [debug] [MainThread]: Command end result
+[0m14:04:52.983077 [info ] [MainThread]: 
+[0m14:04:52.984604 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:04:52.985768 [info ] [MainThread]: 
+[0m14:04:52.986954 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m14:04:52.989537 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.6794164, "process_user_time": 6.097843, "process_kernel_time": 0.563708, "process_mem_max_rss": "106812", "process_out_blocks": "1712", "process_in_blocks": "0"}
+[0m14:04:52.991323 [debug] [MainThread]: Command `dbt run` succeeded at 14:04:52.990985 after 2.68 seconds
+[0m14:04:52.992852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c563dfd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c57fa1a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743c55870190>]}
+[0m14:04:52.994191 [debug] [MainThread]: Flushing usage events
+[0m14:04:54.614653 [debug] [MainThread]: An error was encountered while trying to flush usage events

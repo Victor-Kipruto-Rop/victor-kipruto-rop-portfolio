@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: mpesa_raw
-    database: kcb_mpesa
-    schema: public
-    tables:
-      - name: raw_kcb_mpesa_loans

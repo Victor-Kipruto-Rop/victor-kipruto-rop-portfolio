@@ -1,0 +1,12 @@
+equitel_analytics:
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: equity_admin
+      password: equity_password
+      port: 5432
+      dbname: equitel_analytics
+      schema: public
+      threads: 4
+  target: dev

@@ -1,9 +1,0 @@
-version: 2
-
-sources:
-  - name: kra_raw
-    database: kra_warehouse
-    schema: public
-    tables:
-      - name: raw_kra_revenue
-      - name: raw_economic_survey_gdp

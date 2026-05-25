@@ -1,0 +1,29 @@
+# dbt/profiles.yml
+# For production / CI-CD, use environment variables or dbt Cloud Secrets instead.
+# Never commit real passwords — this file is git-ignored via .gitignore.
+
+mpesa:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('POSTGRES_HOST', 'localhost') }}"
+      port: "{{ env_var('POSTGRES_PORT', '5433') }}"
+      user: "{{ env_var('POSTGRES_USER', 'mpesa') }}"
+      pass: "{{ env_var('POSTGRES_PASSWORD', 'mpesa_pass') }}"
+      dbname: "{{ env_var('POSTGRES_DB', 'mpesa') }}"
+      schema: analytics
+      threads: 4
+      keepalives_idle: 60
+
+    prod:
+      type: postgres
+      host: "{{ env_var('POSTGRES_HOST_PROD') }}"
+      port: "{{ env_var('POSTGRES_PORT_PROD', '5432') }}"
+      user: "{{ env_var('POSTGRES_USER_PROD') }}"
+      pass: "{{ env_var('POSTGRES_PASSWORD_PROD') }}"
+      dbname: "{{ env_var('POSTGRES_DB_PROD', 'mpesa') }}"
+      schema: analytics
+      threads: 8
+      keepalives: 60
+      sslmode: require

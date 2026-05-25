@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M-Pesa Agent Network Analytics</title>
+
+    <!-- MapLibre (No Token Required) -->
+    <link
+        href="https://unpkg.com/maplibre-gl@4.3.2/dist/maplibre-gl.css"
+        rel="stylesheet"
+    />
+    <script src="https://unpkg.com/maplibre-gl@4.3.2/dist/maplibre-gl.js"></script>
+
+    <!-- Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #111827;
+            --panel-light: #1e293b;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+
+            --primary: #3b82f6;
+            --secondary: #8b5cf6;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+
+            --border: rgba(255, 255, 255, 0.08);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Inter, Segoe UI, sans-serif;
+            background: linear-gradient(135deg, #020617, #0f172a);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .header {
+            padding: 40px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            max-width: 1600px;
+            margin: auto;
+        }
+
+        .header h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        .stats {
+            margin-top: 28px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .stat-card {
+            background: linear-gradient(
+                145deg,
+                rgba(30, 41, 59, 0.95),
+                rgba(17, 24, 39, 0.95)
+            );
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: var(--shadow);
+            transition: 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: auto;
+            padding: 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 24px;
+        }
+
+        .panel {
+            background: rgba(17, 24, 39, 0.92);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .map-panel {
+            grid-column: 1 / -1;
+            height: 600px;
+        }
+
+        .panel-header {
+            padding: 18px 22px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .panel-header h2 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .panel-body {
+            padding: 20px;
+            height: calc(100% - 70px);
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: 340px !important;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .map-panel {
+                height: 450px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <h1>📍 M-Pesa Agent Network Analytics</h1>
+            <p>
+                Real-time geospatial monitoring and transaction intelligence dashboard
+            </p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value">120K+</div>
+                    <div class="stat-label">Total Agents</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value">879</div>
+                    <div class="stat-label">Wards Covered</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value">47</div>
+                    <div class="stat-label">Counties</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value">KES 2.4B</div>
+                    <div class="stat-label">Daily Transactions</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN GRID -->
+    <main class="container">
+
+        <!-- MAP -->
+        <section class="panel map-panel">
+            <div class="panel-header">
+                <h2>🗺️ National Agent Coverage Map</h2>
+            </div>
+
+            <div class="panel-body">
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <!-- COUNTY CHART -->
+        <section class="panel">
+            <div class="panel-header">
+                <h2>📊 Top Counties by Agent Count</h2>
+            </div>
+
+            <div class="panel-body">
+                <canvas id="countyChart"></canvas>
+            </div>
+        </section>
+
+        <!-- DENSITY -->
+        <section class="panel">
+            <div class="panel-header">
+                <h2>🔥 Agent Density Distribution</h2>
+            </div>
+
+            <div class="panel-body">
+                <canvas id="densityChart"></canvas>
+            </div>
+        </section>
+
+        <!-- WARDS -->
+        <section class="panel">
+            <div class="panel-header">
+                <h2>🏘️ Top Performing Wards</h2>
+            </div>
+
+            <div class="panel-body">
+                <canvas id="wardChart"></canvas>
+            </div>
+        </section>
+
+        <!-- TRANSACTIONS -->
+        <section class="panel">
+            <div class="panel-header">
+                <h2>💰 Transaction Volume Trends</h2>
+            </div>
+
+            <div class="panel-body">
+                <canvas id="transactionChart"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="footer">
+        Built with MapLibre GL + Chart.js • Secure Token-Free Architecture
+    </div>
+
+    <script>
+        // =========================
+        // MAPLIBRE INITIALIZATION
+        // =========================
+
+        const map = new maplibregl.Map({
+            container: 'map',
+
+            // FREE OPEN MAP STYLE (NO TOKEN)
+            style: 'https://demotiles.maplibre.org/style.json',
+
+            center: [36.817223, -1.286389],
+            zoom: 6.5
+        });
+
+        map.addControl(new maplibregl.NavigationControl());
+
+        // =========================
+        // LOAD GEOJSON
+        // =========================
+
+        map.on('load', () => {
+
+            // AGENTS
+            map.addSource('agents-source', {
+                type: 'geojson',
+                data: '../data/kepler/agents.geojson',
+                cluster: true,
+                clusterRadius: 40
+            });
+
+            map.addLayer({
+                id: 'agents-layer',
+                type: 'circle',
+                source: 'agents-source',
+                paint: {
+                    'circle-color': '#3b82f6',
+                    'circle-radius': [
+                        'step',
+                        ['get', 'point_count'],
+                        8,
+                        100,
+                        14,
+                        500,
+                        20
+                    ],
+                    'circle-opacity': 0.8
+                }
+            });
+
+            // WARDS
+            map.addSource('wards-source', {
+                type: 'geojson',
+                data: '../data/kepler/wards.geojson'
+            });
+
+            map.addLayer({
+                id: 'wards-layer',
+                type: 'fill',
+                source: 'wards-source',
+                paint: {
+                    'fill-color': '#8b5cf6',
+                    'fill-opacity': 0.08
+                }
+            });
+
+            map.addLayer({
+                id: 'wards-outline',
+                type: 'line',
+                source: 'wards-source',
+                paint: {
+                    'line-color': '#8b5cf6',
+                    'line-width': 1.2,
+                    'line-opacity': 0.3
+                }
+            });
+
+            console.log('Map loaded successfully');
+        });
+
+        // =========================
+        // GLOBAL CHART SETTINGS
+        // =========================
+
+        Chart.defaults.color = '#cbd5e1';
+        Chart.defaults.borderColor = 'rgba(255,255,255,0.08)';
+
+        // =========================
+        // COUNTY CHART
+        // =========================
+
+        new Chart(document.getElementById('countyChart'), {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Nairobi',
+                    'Mombasa',
+                    'Nakuru',
+                    'Kiambu',
+                    'Kisumu',
+                    'Others'
+                ],
+                datasets: [{
+                    data: [25000, 15000, 12000, 10000, 8500, 50000],
+                    backgroundColor: [
+                        '#3b82f6',
+                        '#8b5cf6',
+                        '#06b6d4',
+                        '#10b981',
+                        '#f59e0b',
+                        '#ef4444'
+                    ],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // =========================
+        // DENSITY CHART
+        // =========================
+
+        new Chart(document.getElementById('densityChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Low', 'Medium', 'High', 'Very High'],
+                datasets: [{
+                    data: [4500, 3200, 1800, 500],
+                    backgroundColor: [
+                        '#3b82f6',
+                        '#8b5cf6',
+                        '#10b981',
+                        '#f59e0b'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // =========================
+        // WARD CHART
+        // =========================
+
+        new Chart(document.getElementById('wardChart'), {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Central Ward',
+                    'Town East',
+                    'Westlands',
+                    'Riverside',
+                    'Upper Hill'
+                ],
+                datasets: [{
+                    data: [8500, 7900, 7400, 6900, 6200],
+                    backgroundColor: '#8b5cf6',
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // =========================
+        // TRANSACTION TREND
+        // =========================
+
+        new Chart(document.getElementById('transactionChart'), {
+            type: 'line',
+            data: {
+                labels: [
+                    'Mon',
+                    'Tue',
+                    'Wed',
+                    'Thu',
+                    'Fri',
+                    'Sat',
+                    'Sun'
+                ],
+                datasets: [{
+                    data: [18, 22, 25, 24, 28, 31, 27],
+                    borderColor: '#06b6d4',
+                    backgroundColor: 'rgba(6,182,212,0.15)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

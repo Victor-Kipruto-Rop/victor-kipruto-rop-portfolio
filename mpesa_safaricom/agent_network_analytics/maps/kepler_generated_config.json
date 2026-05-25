@@ -1,0 +1,21 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {},
+    "mapState": {
+      "longitude": 37.9062,
+      "latitude": 0.0236,
+      "zoom": 6
+    },
+    "datasets": [
+      {
+        "label": "agents",
+        "url": "../data/kepler/agents.geojson"
+      },
+      {
+        "label": "wards",
+        "url": "../data/kepler/wards.geojson"
+      }
+    ]
+  }
+}

@@ -1,9 +1,0 @@
-version: 2
-
-sources:
-  - name: customs_raw
-    database: kra_warehouse
-    schema: public
-    tables:
-      - name: raw_customs_declarations
-      - name: raw_customs_trade_data

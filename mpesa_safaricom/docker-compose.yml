@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  zookeeper:
+    image: bitnami/zookeeper:latest
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    ports:
+      - "2181:2181"
+
+  kafka:
+    image: bitnami/kafka:latest
+    environment:
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+
+  postgres-mpesa:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: ${DB_USER:-mpesa_admin}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-mpesa_password}
+      POSTGRES_DB: ${DB_NAME:-mpesa_warehouse}
+    ports:
+      - "5439:5432"
+    volumes:
+      - postgres_mpesa_data:/var/lib/postgresql/data
+      - ./init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+
+  airflow-webserver:
+    image: apache/airflow:2.7.1-python3.11
+    environment:
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://${DB_USER:-mpesa_admin}:${DB_PASSWORD:-mpesa_password}@postgres-mpesa:5432/${DB_NAME:-mpesa_warehouse}
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./dbt:/opt/airflow/dbt
+      - ./ingestion:/opt/airflow/ingestion
+    ports:
+      - "8089:8080"
+    depends_on:
+      - postgres-mpesa
+
+  airflow-scheduler:
+    image: apache/airflow:2.7.1-python3.11
+    environment:
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://${DB_USER:-mpesa_admin}:${DB_PASSWORD:-mpesa_password}@postgres-mpesa:5432/${DB_NAME:-mpesa_warehouse}
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./dbt:/opt/airflow/dbt
+      - ./ingestion:/opt/airflow/ingestion
+    depends_on:
+      - postgres-mpesa
+
+  streamlit-dashboard:
+    image: python:3.11-slim
+    command: bash -c "pip install streamlit plotly pandas sqlalchemy psycopg2-binary kafka-python && streamlit run dashboards/main_dashboard.py --server.port 8510 --server.address 0.0.0.0"
+    ports:
+      - "8510:8510"
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+      - DB_HOST=postgres-mpesa
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - postgres-mpesa
+
+volumes:
+  postgres_mpesa_data:

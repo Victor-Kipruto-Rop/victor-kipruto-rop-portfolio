@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: absa_open_banking
+    schema: public
+    tables:
+      - name: raw_transactions

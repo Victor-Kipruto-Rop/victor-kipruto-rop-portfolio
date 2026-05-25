@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: pan_africa_raw
+    schema: public
+    tables:
+      - name: raw_subsidiary_financials

@@ -1,0 +1,12 @@
+name: 'merchant_intelligence'
+version: '1.0.0'
+config-version: 2
+profile: 'merchant_profile'
+model-paths: ["models"]
+
+models:
+  merchant_intelligence:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

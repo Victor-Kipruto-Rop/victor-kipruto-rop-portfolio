@@ -1,0 +1,19 @@
+name: 'mpesa_safaricom'
+version: '1.0.0'
+config-version: 2
+profile: 'mpesa_profile'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+models:
+  mpesa_safaricom:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table

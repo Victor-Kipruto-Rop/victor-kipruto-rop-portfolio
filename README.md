@@ -61,21 +61,14 @@ I am a Data Engineer focused on:
 
 | Project Name | Description | Tools & Technologies |
 |---|---|---|
-| **MPESA_Safaricom(pipeline)** | End-to-end MPESA transaction analytics and pipeline engineering projects | Python, SQL, Kafka, Spark, Airflow |
-| **Agent_Network_Analytics** | Agent liquidity, transaction volumes, and operational analytics | Python, Pandas, PostgreSQL |
-| **Float_Liquidity_Forecasting** | Forecasting float requirements for mobile money agents | Python, ML, Time Series |
-| **Fraud_Anomaly_Detection** | Fraud detection and anomaly identification pipeline | Python, Scikit-learn, SQL |
-| **Merchant_Intelligence_Platform** | Merchant transaction analytics and BI platform | Python, Power BI, PostgreSQL |
-| **Real_Time_Transaction_Streaming** | Streaming MPESA transactions in real time | Kafka, Spark Streaming, Python |
-| **Remittance_Analytics** | Cross-border remittance analytics and reporting | Python, SQL, Dashboards |
-| **Absa_Bank_Kenya(PIPELINE)** | Banking ETL and analytics pipeline | Python, ETL, SQL |
-| **Equity_Group(PIPELINE_ETL)** | Enterprise-grade ETL workflows for banking data | Python, Airflow, PostgreSQL |
-| **Equity_Kenya_Transaction_Analytics** | Deep-dive into local transaction mix, county distribution, and channel efficiency | Python, dbt, SQL |
-| **KCB_Group(ETL)** | Data ingestion and transformation workflows | Python, SQL, ETL |
-| **Kenya_Banking_Sector** | Banking sector-wide analytics and reporting projects | Python, BI, Data Analytics |
-| **KRA(DATA ENGINEERING)** | Kenya Revenue Authority data engineering workflows | Python, SQL, ETL |
-| **mpesa_enterprise_projects** | Enterprise MPESA integration and analytics solutions | Python, APIs, Kafka |
-| **Safaricom Integrated** | [📱 View Safaricom Dashboard](https://kipruto45-victor-kipruto-rop-portfolio-g8pspygfpttsbfggjaadwy.streamlit.app/) | Robust analytical engine integrating audited financial results, Fuliza risk modeling, and CA Kenya network quality benchmarks. |
+| **[mpesa_safaricom](./mpesa_safaricom)** | End-to-end M-Pesa transaction analytics flagship pipeline | Python, SQL, Kafka, Spark, Airflow |
+| **[absa_bank_kenya](./absa_bank_kenya)** | Absa Banking ETL and Open Banking analytics pipeline | Python, ETL, SQL, dbt |
+| **[equity_group_etl](./equity_group_etl)** | Multi-subsidiary ETL workflows for Equity Group | Python, Airflow, PostgreSQL, dbt |
+| **[kcb_group_etl](./kcb_group_etl)** | KCB Data ingestion and transformation workflows | Python, SQL, ETL, dbt |
+| **[kra_data_engineering](./kra_data_engineering)** | KRA Revenue and Trade data engineering workflows | Python, SQL, ETL, dbt |
+| **[safaricom_pipeline](./safaricom_pipeline)** | Safaricom telecom data engineering analytics engine | Python, Spark, SQL |
+| **[kenya_banking_sector](./kenya_banking_sector)** | Banking sector-wide analytics and reporting | Python, BI, Data Analytics |
+| **[mpesa_loan_book_analytics](./mpesa_loan_book_analytics)** | M-Pesa loan book vintage and credit analytics | Python, SQL, dbt |
 
 ---
 

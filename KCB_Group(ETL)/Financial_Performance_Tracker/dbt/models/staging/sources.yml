@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: kcb_raw
-    database: kcb_financials
-    schema: public
-    tables:
-      - name: raw_kcb_financials

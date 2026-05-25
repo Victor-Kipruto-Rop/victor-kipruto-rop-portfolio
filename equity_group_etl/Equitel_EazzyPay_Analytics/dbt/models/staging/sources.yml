@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: equitel_raw
+    schema: public
+    tables:
+      - name: raw_equitel_subscribers
+      - name: raw_eazzypay_transactions

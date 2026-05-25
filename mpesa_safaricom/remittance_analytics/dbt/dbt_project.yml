@@ -1,0 +1,12 @@
+name: 'remittance_analytics'
+version: '1.0.0'
+config-version: 2
+profile: 'remittance_profile'
+model-paths: ["models"]
+
+models:
+  remittance_analytics:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

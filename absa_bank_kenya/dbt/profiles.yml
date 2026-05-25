@@ -1,0 +1,12 @@
+absa_profile:
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DB_HOST', 'localhost') }}"
+      user: absa_admin
+      password: absa_password
+      port: 5432
+      dbname: absa_warehouse
+      schema: public
+      threads: 4
+  target: dev

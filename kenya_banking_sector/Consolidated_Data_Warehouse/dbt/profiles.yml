@@ -1,0 +1,12 @@
+sector_dwh:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DBT_HOST', 'postgres') }}"
+      user: sector_admin
+      password: sector_password
+      port: 5432
+      dbname: sector_dwh
+      schema: public
+      threads: 4

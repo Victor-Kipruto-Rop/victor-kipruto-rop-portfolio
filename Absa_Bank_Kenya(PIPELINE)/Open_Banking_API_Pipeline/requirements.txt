@@ -1,8 +1,0 @@
-fastapi
-uvicorn
-requests
-pydantic
-apache-airflow
-dbt-postgres
-pandas
-python-dotenv

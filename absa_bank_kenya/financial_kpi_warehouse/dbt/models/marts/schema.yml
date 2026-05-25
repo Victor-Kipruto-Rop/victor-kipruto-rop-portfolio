@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: mart_profitability
+    description: "Financial profitability metrics for Absa Bank Kenya"
+    columns:
+      - name: net_profit
+        tests:
+          - not_null
+      - name: roe_percent
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 100]
+              quote: false
+              # Custom range logic usually via dbt_expectations
+    
+  - name: mart_asset_quality
+    description: "Risk metrics including NPL ratios"
+    columns:
+      - name: npl_ratio_percentage
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 50

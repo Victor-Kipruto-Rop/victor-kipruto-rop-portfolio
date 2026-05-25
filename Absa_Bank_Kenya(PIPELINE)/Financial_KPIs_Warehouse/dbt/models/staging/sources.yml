@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: absa_raw
-    database: absa_warehouse
-    schema: public
-    tables:
-      - name: raw_absa_financials

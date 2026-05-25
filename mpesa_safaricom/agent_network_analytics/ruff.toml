@@ -1,0 +1,6 @@
+line-length    = 100
+target-version = py311
+select         = ["E", "F", "I", "W", "Q"]
+ignore         = ["E501", "E402"]
+[per-file-ignores]
+"__init__.py" = ["F401"]

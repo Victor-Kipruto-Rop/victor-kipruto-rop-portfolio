@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: sector_admin
+      POSTGRES_PASSWORD: sector_password
+      POSTGRES_DB: postgres
+    ports:
+      - "5437:5432"
+    volumes:
+      - postgres_sector_data:/var/lib/postgresql/data
+      - ./init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+
+  airflow:
+    image: apache/airflow:2.7.1
+    command: standalone
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://sector_admin:sector_password@postgres/postgres
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - _PIP_ADDITIONAL_DEPENDENCIES=dbt-postgres pandas plotly sqlalchemy psycopg2-binary
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - .:/opt/airflow/projects/sector_dwh
+    depends_on:
+      - postgres
+    ports:
+      - "8084:8080"
+
+  dashboard:
+    image: apache/airflow:2.7.1
+    command: bash -c "pip install streamlit plotly sqlalchemy psycopg2-binary pandas && streamlit run /opt/airflow/projects/dashboard_app.py --server.port 8504 --server.address 0.0.0.0"
+    ports:
+      - "8504:8504"
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+    volumes:
+      - .:/opt/airflow/projects
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_sector_data:

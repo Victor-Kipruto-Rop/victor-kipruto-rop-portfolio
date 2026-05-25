@@ -1,0 +1,11 @@
+apache-airflow
+dbt-postgres
+pandas
+requests
+psycopg2-binary
+sqlalchemy
+python-dotenv
+pytest
+matplotlib
+streamlit
+plotly

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Agent Network Analytics — Kepler.gl Viewer</title>
+    <script src="https://unpkg.com/kepler.gl@2.5.5/dist/kepler.gl.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/kepler.gl@2.5.5/dist/kepler.gl.css">
+    <style>
+        html, body { margin: 0; height: 100%; }
+        #map { width: 100%; height: 100%; }
+        .title { position: absolute; top: 10px; left: 10px; background: white; padding: 10px; border-radius: 4px; z-index: 10; }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h3>M-Pesa Agent Network Analytics</h3>
+        <p>Agents: 120,000 | Wards: 879 | Grid cells: 10,000+</p>
+    </div>
+    <div id="map"></div>
+    <script>
+        // Fetch GeoJSON files and load into Kepler.gl
+        async function initMap() {
+            const [agents, wards, grid] = await Promise.all([
+                fetch('../data/kepler/agents.geojson').then(r => r.json()),
+                fetch('../data/kepler/wards.geojson').then(r => r.json()),
+                fetch('../data/kepler/grid.geojson').then(r => r.json())
+            ]);
+
+            const datasets = [
+                {
+                    data: { url: '../data/kepler/agents.geojson' },
+                    info: { label: 'Agent Locations', id: 'agents' }
+                },
+                {
+                    data: { url: '../data/kepler/wards.geojson' },
+                    info: { label: 'Ward Aggregates', id: 'wards' }
+                },
+                {
+                    data: { url: '../data/kepler/grid.geojson' },
+                    info: { label: 'Density Grid', id: 'grid' }
+                }
+            ];
+
+            // Initialize Kepler.gl with datasets
+            const map = KeplerGl.default({
+                mapboxApiAccessToken: "YOUR_MAPBOX_TOKEN"
+            });
+
+            // Try to load each dataset
+            for (const ds of datasets) {
+                try {
+                    map.addDataToMap(ds.data, ds.info);
+                } catch (e) {
+                    console.log('Could not load dataset:', ds.info.id, e);
+                }
+            }
+
+            // Render
+            const el = document.getElementById('map');
+            el.appendChild(map.render());
+        }
+
+        // Fallback: open in Kepler.gl cloud
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                initMap();
+            } catch (e) {
+                console.error('Map initialization failed. Please visit kepler.gl and upload GeoJSON files manually.', e);
+                document.querySelector('.title').innerHTML = `
+                    <h3>Map Viewer Requires Kepler.gl</h3>
+                    <p><a href="https://kepler.gl/" target="_blank">Open Kepler.gl →</a></p>
+                    <p>Upload these files manually:</p>
+                    <ul>
+                        <li>data/kepler/agents.geojson</li>
+                        <li>data/kepler/wards.geojson</li>
+                        <li>data/kepler/grid.geojson</li>
+                    </ul>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

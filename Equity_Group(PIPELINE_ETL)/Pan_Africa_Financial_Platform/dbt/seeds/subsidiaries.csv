@@ -1,8 +1,0 @@
-subsidiary_id,subsidiary_name,country,local_currency,region,equity_stake
-EQ_KE,Equity Bank Kenya Limited,Kenya,KES,East Africa,100%
-EQ_UG,Equity Bank Uganda Limited,Uganda,UGX,East Africa,100%
-EQ_TZ,Equity Bank Tanzania Limited,Tanzania,TZS,East Africa,100%
-EQ_RW,Equity Bank Rwanda Limited,Rwanda,RWF,East Africa,100%
-EQ_SS,Equity Bank South Sudan Limited,South Sudan,SSP,East Africa,100%
-EQ_ET,Equity Bank Ethiopia,Ethiopia,ETB,East Africa,100%
-EQ_CD,Equity Banque Commerciale du Congo (EquityBCDC),Democratic Republic of Congo,CDF,Central Africa,86%

@@ -1,0 +1,1001 @@
+ward_code,county,constituency,ward_name
+001,Nairobi,Westlands,Parklands/Highridge
+002,Nairobi,Westlands,Kitisuru
+003,Nairobi,Westlands,Karura
+004,Nairobi,Westlands,Kangemi
+005,Nairobi,Westlands,Mountain View
+006,Nairobi,Dagoretti North,Kilimani
+007,Nairobi,Dagoretti North,Kawangware
+008,Nairobi,Dagoretti South,Mutu-ini
+009,Nairobi,Embakasi East,Upper Savanna
+010,Nairobi,Embakasi South,Imara Daima
+011,Mombasa,Likoni,Mtongwe
+012,Mombasa,Nyali,Frere Town
+013,Mombasa,Kisauni,Bamburi
+014,Kisumu,Kisumu Central,Market Milimani
+015,Kisumu,Seme,North Seme
+016,Nakuru,Nakuru Town East,Biashara
+017,Nakuru,Naivasha,Mai Mahiu
+018,Uasin Gishu,Ainabkoi,Kapsoya
+019,Kiambu,Ruiru,Kahawa Sukari
+020,Kiambu,Thika Town,Township
+021,Kakamega,Ruiru,East Village
+022,Kiambu,Ainabkoi,North Phase
+023,Mombasa,Ainabkoi,East Ward
+024,Machakos,Lurambi,Central Village
+025,Meru,Kajiado North,North Center
+026,Nairobi,Naivasha,Upper Village
+027,Uasin Gishu,Kajiado North,Town Gardens
+028,Nairobi,Ruiru,East Village
+029,Uasin Gishu,Nyali,Market Village
+030,Kakamega,Kisumu Central,Town Center
+031,Mombasa,Kajiado North,West Village
+032,Nakuru,Kisumu Central,West Phase
+033,Nakuru,Mavoko,West Center
+034,Kiambu,Ruiru,Upper Phase
+035,Nairobi,Kisumu Central,Riverside Gardens
+036,Nakuru,Naivasha,South Phase
+037,Kiambu,Ruiru,East Estate
+038,Kiambu,Naivasha,South Ward
+039,Kakamega,Nyali,North Estate
+040,Nairobi,Kajiado North,Town Center
+041,Machakos,Kisumu Central,Upper Gardens
+042,Kisumu,Naivasha,West Center
+043,Mombasa,Nyali,East Village
+044,Nakuru,Westlands,Upper Estate
+045,Kakamega,Nyali,Riverside View
+046,Mombasa,Westlands,Lower Gardens
+047,Meru,Ruiru,Upper Gardens
+048,Kakamega,Mavoko,West Plains
+049,Nakuru,Kajiado North,North Heights
+050,Nairobi,Imenti North,Central Plains
+051,Kisumu,Ruiru,East Estate
+052,Kisumu,Naivasha,West Estate
+053,Kisumu,Westlands,South View
+054,Mombasa,Kisumu Central,Lower View
+055,Nairobi,Mavoko,West Phase
+056,Machakos,Kisumu Central,Upper Center
+057,Nairobi,Nyali,East Heights
+058,Kisumu,Kajiado North,North Center
+059,Meru,Ainabkoi,West Zone
+060,Nakuru,Mavoko,Market Zone
+061,Kiambu,Imenti North,Central View
+062,Machakos,Lurambi,Town Zone
+063,Mombasa,Westlands,South Heights
+064,Nairobi,Kajiado North,Upper Plains
+065,Kisumu,Imenti North,North Estate
+066,Nairobi,Westlands,North Zone
+067,Machakos,Kisumu Central,Town Heights
+068,Kajiado,Kajiado North,Riverside Phase
+069,Kiambu,Naivasha,South Phase
+070,Nairobi,Kajiado North,Town Zone
+071,Kakamega,Nyali,Town Gardens
+072,Machakos,Westlands,South Village
+073,Kajiado,Kisumu Central,Town Heights
+074,Uasin Gishu,Imenti North,West Center
+075,Kiambu,Mavoko,Market Plains
+076,Meru,Kajiado North,Riverside Ward
+077,Kiambu,Kajiado North,South Center
+078,Uasin Gishu,Lurambi,East Gardens
+079,Mombasa,Lurambi,Upper Zone
+080,Nairobi,Naivasha,Central View
+081,Uasin Gishu,Nyali,Riverside Plains
+082,Meru,Ainabkoi,Town Center
+083,Meru,Kajiado North,Town Gardens
+084,Meru,Mavoko,East Phase
+085,Kajiado,Lurambi,Upper Zone
+086,Kiambu,Ruiru,Town Gardens
+087,Kajiado,Lurambi,Upper Gardens
+088,Nairobi,Kajiado North,Central View
+089,Kakamega,Nyali,Riverside Estate
+090,Kajiado,Westlands,Lower Phase
+091,Kakamega,Nyali,North Zone
+092,Nakuru,Ruiru,South Village
+093,Nakuru,Nyali,South Estate
+094,Kajiado,Mavoko,Upper Zone
+095,Mombasa,Westlands,North Center
+096,Nakuru,Ruiru,Market Center
+097,Kakamega,Mavoko,South Estate
+098,Uasin Gishu,Kajiado North,Lower Ward
+099,Machakos,Mavoko,South Heights
+100,Mombasa,Imenti North,Riverside Village
+101,Nairobi,Ruiru,North Plains
+102,Nakuru,Imenti North,Riverside Estate
+103,Meru,Lurambi,Central Heights
+104,Mombasa,Ruiru,West Village
+105,Uasin Gishu,Ruiru,Riverside Heights
+106,Kakamega,Ainabkoi,South Plains
+107,Kakamega,Westlands,Central Plains
+108,Kiambu,Nyali,Riverside Phase
+109,Kisumu,Mavoko,Lower Center
+110,Mombasa,Imenti North,Central Village
+111,Nakuru,Kajiado North,Lower Estate
+112,Uasin Gishu,Ainabkoi,West Ward
+113,Kakamega,Naivasha,Town Village
+114,Machakos,Kisumu Central,Lower Center
+115,Kakamega,Kajiado North,South Ward
+116,Nakuru,Ruiru,Town Village
+117,Mombasa,Imenti North,East Village
+118,Kakamega,Imenti North,Market Center
+119,Meru,Naivasha,Riverside Village
+120,Meru,Ainabkoi,Market Phase
+121,Kisumu,Westlands,North View
+122,Kakamega,Nyali,East Center
+123,Machakos,Kisumu Central,Upper Phase
+124,Kiambu,Nyali,Market Estate
+125,Kiambu,Lurambi,East Heights
+126,Kajiado,Westlands,Lower Ward
+127,Kisumu,Naivasha,South Plains
+128,Machakos,Nyali,South Zone
+129,Kisumu,Ainabkoi,Riverside Zone
+130,Mombasa,Nyali,Riverside Heights
+131,Nairobi,Imenti North,Central Zone
+132,Mombasa,Ainabkoi,West Gardens
+133,Kakamega,Lurambi,West Village
+134,Meru,Mavoko,Market Gardens
+135,Nairobi,Mavoko,North Village
+136,Kisumu,Westlands,Lower Ward
+137,Nakuru,Kajiado North,Riverside Center
+138,Kajiado,Nyali,West Phase
+139,Meru,Kajiado North,East Zone
+140,Nairobi,Kisumu Central,North Estate
+141,Meru,Ruiru,Riverside Gardens
+142,Kakamega,Ruiru,East Center
+143,Uasin Gishu,Naivasha,Lower Center
+144,Mombasa,Ainabkoi,North Heights
+145,Kiambu,Westlands,Riverside View
+146,Kajiado,Nyali,North Ward
+147,Kajiado,Lurambi,East Ward
+148,Meru,Imenti North,Riverside Ward
+149,Kakamega,Kajiado North,Central Zone
+150,Nakuru,Westlands,South Phase
+151,Kisumu,Nyali,Riverside Zone
+152,Kisumu,Ainabkoi,North Village
+153,Nairobi,Lurambi,West Estate
+154,Kiambu,Kisumu Central,Upper Ward
+155,Kiambu,Nyali,Riverside Village
+156,Kakamega,Mavoko,Lower Gardens
+157,Nakuru,Ainabkoi,Lower Zone
+158,Machakos,Kajiado North,South Gardens
+159,Kisumu,Kajiado North,East View
+160,Meru,Kisumu Central,North Village
+161,Kajiado,Kajiado North,Lower Village
+162,Kiambu,Ruiru,North Phase
+163,Nakuru,Ainabkoi,East Village
+164,Kiambu,Westlands,Central Ward
+165,Nakuru,Kajiado North,West Ward
+166,Machakos,Kajiado North,Market Gardens
+167,Kakamega,Lurambi,West Ward
+168,Machakos,Kajiado North,Riverside Gardens
+169,Kisumu,Ainabkoi,Upper Zone
+170,Nairobi,Imenti North,Market Center
+171,Nakuru,Nyali,North Center
+172,Kakamega,Naivasha,Riverside View
+173,Kajiado,Imenti North,Lower Gardens
+174,Kajiado,Ruiru,Market Heights
+175,Uasin Gishu,Mavoko,South Plains
+176,Kisumu,Ainabkoi,Riverside Ward
+177,Nairobi,Lurambi,North Estate
+178,Machakos,Mavoko,Town View
+179,Kisumu,Kisumu Central,Market Heights
+180,Kajiado,Lurambi,Riverside View
+181,Nakuru,Mavoko,East Zone
+182,Nairobi,Westlands,West Phase
+183,Meru,Mavoko,South Gardens
+184,Uasin Gishu,Imenti North,Town Zone
+185,Mombasa,Ainabkoi,Town Heights
+186,Machakos,Kajiado North,North Gardens
+187,Kakamega,Lurambi,West Plains
+188,Mombasa,Kisumu Central,Market Plains
+189,Machakos,Ainabkoi,Upper Heights
+190,Kisumu,Kajiado North,Town Plains
+191,Kajiado,Westlands,South View
+192,Nairobi,Naivasha,West Heights
+193,Kajiado,Mavoko,North Zone
+194,Nairobi,Naivasha,South Zone
+195,Machakos,Kajiado North,Riverside View
+196,Meru,Ruiru,Town Zone
+197,Kakamega,Mavoko,North Plains
+198,Kakamega,Kisumu Central,Upper Center
+199,Uasin Gishu,Kisumu Central,East Plains
+200,Kiambu,Kajiado North,Upper View
+201,Mombasa,Mavoko,Upper Heights
+202,Machakos,Imenti North,West Ward
+203,Kisumu,Mavoko,Riverside Heights
+204,Meru,Lurambi,Market Gardens
+205,Nairobi,Ainabkoi,Central Phase
+206,Machakos,Kajiado North,Market Phase
+207,Nairobi,Kisumu Central,Riverside Phase
+208,Nakuru,Ainabkoi,Lower Phase
+209,Meru,Imenti North,Town Center
+210,Meru,Nyali,Town Village
+211,Mombasa,Naivasha,East View
+212,Kakamega,Ruiru,South Plains
+213,Meru,Mavoko,Town Village
+214,Kisumu,Imenti North,Lower Center
+215,Uasin Gishu,Kajiado North,Town Plains
+216,Kisumu,Kisumu Central,East Plains
+217,Kiambu,Lurambi,Upper Center
+218,Nakuru,Ruiru,North Center
+219,Kakamega,Ainabkoi,South Ward
+220,Machakos,Nyali,Riverside Heights
+221,Mombasa,Nyali,Town Village
+222,Nairobi,Westlands,North Zone
+223,Kiambu,Ruiru,Lower Phase
+224,Kajiado,Lurambi,Riverside Heights
+225,Nakuru,Lurambi,South Heights
+226,Kakamega,Imenti North,Lower Village
+227,Kakamega,Lurambi,Central Estate
+228,Kisumu,Nyali,Market Gardens
+229,Nairobi,Naivasha,Central Ward
+230,Kajiado,Ruiru,Upper Estate
+231,Machakos,Ruiru,North Heights
+232,Nakuru,Westlands,Lower Village
+233,Kajiado,Nyali,West Gardens
+234,Nakuru,Ruiru,Lower Gardens
+235,Nakuru,Ainabkoi,East Gardens
+236,Kisumu,Ainabkoi,Central Ward
+237,Kiambu,Kisumu Central,Riverside Center
+238,Kakamega,Imenti North,Central View
+239,Kisumu,Kisumu Central,Lower Heights
+240,Kakamega,Ruiru,South Ward
+241,Machakos,Ruiru,Upper Ward
+242,Machakos,Imenti North,Upper Estate
+243,Kiambu,Westlands,Lower Center
+244,Kisumu,Ruiru,Market Ward
+245,Mombasa,Naivasha,Lower Plains
+246,Meru,Kisumu Central,West Phase
+247,Kakamega,Ainabkoi,Lower Plains
+248,Meru,Lurambi,Market Estate
+249,Nairobi,Lurambi,Central Center
+250,Uasin Gishu,Mavoko,North Ward
+251,Kiambu,Ainabkoi,Town Heights
+252,Nairobi,Ruiru,Riverside Phase
+253,Nakuru,Kisumu Central,East Center
+254,Kajiado,Ruiru,Lower Village
+255,Uasin Gishu,Kisumu Central,Town Heights
+256,Kakamega,Mavoko,Central Plains
+257,Nairobi,Imenti North,Riverside Plains
+258,Nairobi,Westlands,Town Village
+259,Mombasa,Naivasha,North View
+260,Kajiado,Naivasha,Lower Center
+261,Kajiado,Kajiado North,East Ward
+262,Machakos,Westlands,West Estate
+263,Uasin Gishu,Mavoko,Town Ward
+264,Mombasa,Imenti North,Riverside Gardens
+265,Kisumu,Kajiado North,East View
+266,Uasin Gishu,Ainabkoi,North Village
+267,Meru,Westlands,Upper Plains
+268,Kisumu,Nyali,North Gardens
+269,Meru,Ruiru,North Ward
+270,Kajiado,Ruiru,North Plains
+271,Meru,Mavoko,Town Center
+272,Nairobi,Nyali,Lower View
+273,Nakuru,Naivasha,Town Heights
+274,Nairobi,Nyali,South Center
+275,Uasin Gishu,Imenti North,Market Plains
+276,Uasin Gishu,Naivasha,South Center
+277,Nairobi,Westlands,North Phase
+278,Nairobi,Ruiru,Lower Heights
+279,Kisumu,Kajiado North,Market Heights
+280,Meru,Lurambi,Riverside View
+281,Machakos,Kajiado North,South Ward
+282,Kajiado,Ruiru,Town Village
+283,Kajiado,Imenti North,South Phase
+284,Nairobi,Imenti North,North View
+285,Kisumu,Kajiado North,Upper Heights
+286,Mombasa,Kisumu Central,Market Center
+287,Kakamega,Ainabkoi,Riverside Gardens
+288,Machakos,Lurambi,North Village
+289,Meru,Kajiado North,Market Gardens
+290,Kakamega,Mavoko,West Village
+291,Kiambu,Mavoko,East Gardens
+292,Uasin Gishu,Mavoko,West Heights
+293,Mombasa,Imenti North,Market Center
+294,Nakuru,Naivasha,West Phase
+295,Machakos,Naivasha,Upper Zone
+296,Nakuru,Mavoko,Market Gardens
+297,Kajiado,Kajiado North,Central Phase
+298,Meru,Nyali,South Phase
+299,Kakamega,Westlands,Town Gardens
+300,Nakuru,Kisumu Central,North Village
+301,Nakuru,Westlands,East Zone
+302,Machakos,Imenti North,Lower Zone
+303,Machakos,Mavoko,Upper Heights
+304,Machakos,Kajiado North,Market Village
+305,Nairobi,Imenti North,Upper Plains
+306,Nairobi,Imenti North,North Zone
+307,Machakos,Ruiru,Central Zone
+308,Nakuru,Nyali,Lower View
+309,Kiambu,Imenti North,Lower Ward
+310,Kakamega,Ruiru,Upper Village
+311,Kiambu,Lurambi,Market Estate
+312,Kakamega,Westlands,West Estate
+313,Kajiado,Kajiado North,East Village
+314,Kisumu,Nyali,Central View
+315,Nakuru,Kisumu Central,Lower Center
+316,Kisumu,Lurambi,Lower Ward
+317,Nakuru,Westlands,East Center
+318,Meru,Kajiado North,North Ward
+319,Kakamega,Ruiru,Central Village
+320,Uasin Gishu,Kisumu Central,Lower View
+321,Nakuru,Nyali,South Phase
+322,Nakuru,Ruiru,East Heights
+323,Uasin Gishu,Lurambi,East Plains
+324,Machakos,Kajiado North,Market View
+325,Kiambu,Nyali,Market Ward
+326,Meru,Imenti North,North View
+327,Nairobi,Lurambi,East Zone
+328,Kisumu,Kisumu Central,West Estate
+329,Mombasa,Imenti North,Riverside View
+330,Nakuru,Nyali,North Plains
+331,Kiambu,Nyali,North Zone
+332,Kakamega,Westlands,Upper Plains
+333,Kakamega,Kajiado North,Lower Zone
+334,Nakuru,Nyali,Market Plains
+335,Nairobi,Nyali,Riverside Center
+336,Meru,Imenti North,Upper Heights
+337,Uasin Gishu,Ainabkoi,Town Zone
+338,Nairobi,Kisumu Central,Market Heights
+339,Nakuru,Naivasha,North Village
+340,Kisumu,Lurambi,Town Ward
+341,Nairobi,Kajiado North,North Ward
+342,Kakamega,Naivasha,Central Ward
+343,Kisumu,Naivasha,Lower Plains
+344,Machakos,Naivasha,Upper Center
+345,Nakuru,Kisumu Central,Riverside Plains
+346,Machakos,Kisumu Central,Market Heights
+347,Kisumu,Imenti North,South Village
+348,Mombasa,Lurambi,Market Phase
+349,Nakuru,Kajiado North,Lower View
+350,Kiambu,Lurambi,Riverside Ward
+351,Kajiado,Kisumu Central,Lower Phase
+352,Kakamega,Mavoko,North Village
+353,Nakuru,Imenti North,Market Zone
+354,Nairobi,Kisumu Central,Town Ward
+355,Kisumu,Ruiru,Town Phase
+356,Nairobi,Nyali,Upper Center
+357,Machakos,Ainabkoi,Upper Village
+358,Nairobi,Kajiado North,South Plains
+359,Uasin Gishu,Mavoko,Riverside Zone
+360,Kakamega,Lurambi,East Center
+361,Machakos,Mavoko,Central Ward
+362,Kajiado,Ruiru,Lower Ward
+363,Machakos,Naivasha,South Ward
+364,Meru,Mavoko,South Gardens
+365,Kakamega,Westlands,Upper Zone
+366,Kiambu,Ruiru,South Gardens
+367,Meru,Kisumu Central,South Estate
+368,Kajiado,Kajiado North,Riverside Ward
+369,Nairobi,Nyali,East Heights
+370,Meru,Westlands,South Ward
+371,Machakos,Nyali,Lower Village
+372,Uasin Gishu,Ainabkoi,Lower Zone
+373,Meru,Naivasha,Riverside Ward
+374,Mombasa,Ruiru,North Phase
+375,Kisumu,Westlands,East Ward
+376,Mombasa,Ruiru,Upper Village
+377,Kakamega,Kajiado North,Market Estate
+378,Kajiado,Ainabkoi,North Gardens
+379,Uasin Gishu,Mavoko,Lower Estate
+380,Nakuru,Ruiru,Market Phase
+381,Kisumu,Westlands,East Heights
+382,Kiambu,Lurambi,East Ward
+383,Uasin Gishu,Imenti North,South Village
+384,Kakamega,Naivasha,Upper Center
+385,Kajiado,Naivasha,Market Ward
+386,Kakamega,Ainabkoi,Town Heights
+387,Kisumu,Mavoko,North Phase
+388,Nakuru,Ruiru,Market Zone
+389,Uasin Gishu,Imenti North,East Heights
+390,Uasin Gishu,Westlands,Lower Phase
+391,Meru,Kisumu Central,Upper Gardens
+392,Kajiado,Naivasha,North Village
+393,Kakamega,Ainabkoi,South Gardens
+394,Kisumu,Mavoko,Market Heights
+395,Machakos,Naivasha,North Heights
+396,Uasin Gishu,Lurambi,Riverside Village
+397,Mombasa,Kisumu Central,East Heights
+398,Mombasa,Kajiado North,South Estate
+399,Uasin Gishu,Kajiado North,South Ward
+400,Meru,Kajiado North,Central Center
+401,Mombasa,Westlands,Lower Zone
+402,Kisumu,Imenti North,Upper Zone
+403,Kiambu,Ruiru,Lower Heights
+404,Mombasa,Ainabkoi,Riverside Phase
+405,Kajiado,Westlands,West Plains
+406,Kakamega,Mavoko,Central Plains
+407,Nakuru,Naivasha,Upper Gardens
+408,Nairobi,Imenti North,West Plains
+409,Nairobi,Ainabkoi,Market Plains
+410,Nairobi,Kajiado North,West Center
+411,Uasin Gishu,Imenti North,Town View
+412,Meru,Ainabkoi,Riverside Gardens
+413,Meru,Naivasha,North Ward
+414,Kisumu,Imenti North,Market Heights
+415,Uasin Gishu,Westlands,Market Estate
+416,Machakos,Imenti North,Lower Center
+417,Kiambu,Mavoko,East Gardens
+418,Mombasa,Ainabkoi,North Estate
+419,Kajiado,Lurambi,South Heights
+420,Uasin Gishu,Imenti North,West Gardens
+421,Kiambu,Ruiru,Lower Center
+422,Kiambu,Westlands,Upper Estate
+423,Kisumu,Kisumu Central,North View
+424,Uasin Gishu,Ainabkoi,West Ward
+425,Kiambu,Kajiado North,North Phase
+426,Uasin Gishu,Lurambi,Market Gardens
+427,Nakuru,Nyali,Central Heights
+428,Uasin Gishu,Mavoko,Upper Heights
+429,Machakos,Mavoko,East Village
+430,Kiambu,Mavoko,Riverside Heights
+431,Mombasa,Ainabkoi,Upper Gardens
+432,Nakuru,Naivasha,Lower Heights
+433,Kakamega,Westlands,West Village
+434,Kisumu,Naivasha,Market Heights
+435,Nairobi,Ainabkoi,Town Ward
+436,Uasin Gishu,Kisumu Central,Central Gardens
+437,Nairobi,Kisumu Central,Town Estate
+438,Mombasa,Kajiado North,West Phase
+439,Kisumu,Naivasha,Central Gardens
+440,Kisumu,Naivasha,Lower Center
+441,Machakos,Ainabkoi,West Gardens
+442,Mombasa,Kisumu Central,Upper Village
+443,Kakamega,Kisumu Central,Central Gardens
+444,Kajiado,Lurambi,Riverside Phase
+445,Kajiado,Naivasha,Town Plains
+446,Mombasa,Ruiru,Central Plains
+447,Kiambu,Mavoko,East Estate
+448,Kajiado,Kajiado North,Upper Zone
+449,Meru,Ruiru,Market View
+450,Machakos,Mavoko,Town Gardens
+451,Machakos,Lurambi,Lower Plains
+452,Kajiado,Kajiado North,Town Plains
+453,Kiambu,Westlands,Lower Estate
+454,Machakos,Naivasha,Riverside Ward
+455,Mombasa,Westlands,North Ward
+456,Nairobi,Lurambi,South Ward
+457,Kiambu,Westlands,South Ward
+458,Meru,Westlands,Lower Estate
+459,Kisumu,Mavoko,Riverside Phase
+460,Uasin Gishu,Kisumu Central,Upper Plains
+461,Machakos,Kisumu Central,East Heights
+462,Nairobi,Imenti North,Central Plains
+463,Nakuru,Westlands,West Plains
+464,Kisumu,Westlands,North Estate
+465,Meru,Ainabkoi,West Phase
+466,Mombasa,Imenti North,East Center
+467,Kakamega,Ainabkoi,South Ward
+468,Kajiado,Naivasha,Town Heights
+469,Nakuru,Lurambi,Central Ward
+470,Meru,Nyali,East Village
+471,Nairobi,Kisumu Central,Central Ward
+472,Kajiado,Imenti North,East Heights
+473,Mombasa,Mavoko,Lower Zone
+474,Mombasa,Imenti North,West Ward
+475,Kakamega,Ruiru,Riverside Gardens
+476,Nakuru,Westlands,Market View
+477,Uasin Gishu,Lurambi,West Village
+478,Kiambu,Kisumu Central,Lower Phase
+479,Uasin Gishu,Kisumu Central,Lower Plains
+480,Nairobi,Lurambi,North Ward
+481,Kakamega,Ainabkoi,Upper Zone
+482,Kisumu,Lurambi,Riverside View
+483,Nakuru,Mavoko,West Ward
+484,Meru,Kajiado North,Upper Zone
+485,Kakamega,Ainabkoi,West Phase
+486,Mombasa,Kajiado North,South Gardens
+487,Nairobi,Lurambi,Market Plains
+488,Meru,Imenti North,North Phase
+489,Machakos,Nyali,Riverside Village
+490,Machakos,Kajiado North,Upper Center
+491,Kajiado,Westlands,West Heights
+492,Kajiado,Ainabkoi,South Plains
+493,Kisumu,Mavoko,Central Estate
+494,Nakuru,Imenti North,South Phase
+495,Nairobi,Naivasha,North Plains
+496,Nairobi,Imenti North,Lower Ward
+497,Nairobi,Nyali,Upper Village
+498,Machakos,Ruiru,Upper Plains
+499,Uasin Gishu,Naivasha,North Ward
+500,Meru,Ruiru,Market Center
+501,Kisumu,Kisumu Central,North Heights
+502,Uasin Gishu,Imenti North,Riverside Gardens
+503,Machakos,Westlands,Riverside Plains
+504,Meru,Mavoko,Town Zone
+505,Machakos,Ainabkoi,Lower Ward
+506,Kakamega,Nyali,East Ward
+507,Uasin Gishu,Ruiru,Lower Ward
+508,Nakuru,Lurambi,Town Estate
+509,Kiambu,Ruiru,Upper Ward
+510,Nairobi,Kisumu Central,Town Heights
+511,Mombasa,Imenti North,Town Phase
+512,Meru,Lurambi,Upper Gardens
+513,Kiambu,Ruiru,Riverside Center
+514,Meru,Nyali,East Heights
+515,Nairobi,Kisumu Central,North Heights
+516,Machakos,Westlands,Upper Plains
+517,Nairobi,Imenti North,Town Zone
+518,Kiambu,Imenti North,Central Zone
+519,Kakamega,Lurambi,East Village
+520,Kisumu,Lurambi,North Estate
+521,Machakos,Kajiado North,Riverside Center
+522,Kisumu,Naivasha,Lower View
+523,Kakamega,Imenti North,Town Center
+524,Uasin Gishu,Kisumu Central,East Zone
+525,Nairobi,Lurambi,Lower Phase
+526,Kajiado,Lurambi,Market Center
+527,Kakamega,Mavoko,Upper Ward
+528,Machakos,Nyali,Market Gardens
+529,Meru,Imenti North,Lower Heights
+530,Machakos,Ainabkoi,Town Village
+531,Nairobi,Ruiru,South Center
+532,Nairobi,Mavoko,South Ward
+533,Kakamega,Nyali,South Center
+534,Kajiado,Mavoko,South Phase
+535,Uasin Gishu,Lurambi,Upper Estate
+536,Nakuru,Westlands,Lower Village
+537,Mombasa,Lurambi,Central Gardens
+538,Nakuru,Lurambi,South Center
+539,Kakamega,Westlands,North Phase
+540,Nakuru,Westlands,Lower Plains
+541,Kisumu,Naivasha,Lower Plains
+542,Kajiado,Ruiru,Central Plains
+543,Meru,Imenti North,Riverside Zone
+544,Kakamega,Naivasha,Upper Estate
+545,Nakuru,Imenti North,East Estate
+546,Meru,Nyali,North Center
+547,Kiambu,Ruiru,Upper Heights
+548,Mombasa,Kisumu Central,Upper Zone
+549,Nakuru,Ruiru,Market Heights
+550,Meru,Imenti North,Upper View
+551,Kiambu,Kisumu Central,West Ward
+552,Nairobi,Ruiru,North View
+553,Machakos,Nyali,North Gardens
+554,Meru,Lurambi,East Gardens
+555,Machakos,Kajiado North,Upper Center
+556,Kajiado,Kisumu Central,North Ward
+557,Uasin Gishu,Kajiado North,Upper Village
+558,Machakos,Naivasha,East Estate
+559,Uasin Gishu,Lurambi,Lower Village
+560,Kisumu,Westlands,Town Center
+561,Kiambu,Imenti North,Upper Heights
+562,Mombasa,Kisumu Central,South Ward
+563,Kakamega,Westlands,Market Phase
+564,Kakamega,Ainabkoi,West Phase
+565,Kiambu,Mavoko,West Phase
+566,Nairobi,Kisumu Central,South View
+567,Kisumu,Nyali,South View
+568,Mombasa,Ainabkoi,Market Ward
+569,Meru,Lurambi,Town Estate
+570,Kajiado,Imenti North,Riverside Village
+571,Kajiado,Imenti North,Market Ward
+572,Kisumu,Westlands,Market Zone
+573,Kajiado,Ruiru,East Zone
+574,Machakos,Imenti North,Central Estate
+575,Kakamega,Mavoko,Riverside Village
+576,Nairobi,Kajiado North,South Heights
+577,Meru,Kajiado North,Lower Gardens
+578,Meru,Mavoko,South Estate
+579,Nakuru,Kajiado North,West Zone
+580,Kiambu,Westlands,South Center
+581,Nakuru,Imenti North,Central Village
+582,Kakamega,Ainabkoi,Central Phase
+583,Kisumu,Lurambi,East Ward
+584,Kajiado,Ruiru,South Zone
+585,Machakos,Ainabkoi,East Phase
+586,Kiambu,Mavoko,Lower View
+587,Machakos,Lurambi,Upper Estate
+588,Machakos,Imenti North,Market Zone
+589,Kakamega,Naivasha,East Heights
+590,Meru,Naivasha,Market Heights
+591,Nairobi,Naivasha,North Village
+592,Kajiado,Mavoko,Central View
+593,Meru,Westlands,Market Phase
+594,Kisumu,Ainabkoi,Lower Phase
+595,Nakuru,Lurambi,Lower Village
+596,Kajiado,Ainabkoi,Riverside View
+597,Nakuru,Mavoko,Central Zone
+598,Nairobi,Ruiru,Upper Ward
+599,Machakos,Kisumu Central,Market Plains
+600,Meru,Ainabkoi,Town Zone
+601,Kakamega,Kisumu Central,South Village
+602,Kisumu,Kajiado North,Town Heights
+603,Mombasa,Kajiado North,West Estate
+604,Kisumu,Westlands,Town Zone
+605,Kakamega,Ruiru,Market Heights
+606,Meru,Ainabkoi,Central Heights
+607,Uasin Gishu,Ruiru,Riverside Phase
+608,Nairobi,Ruiru,Lower Heights
+609,Kajiado,Naivasha,North Heights
+610,Meru,Westlands,East View
+611,Kajiado,Ruiru,North Village
+612,Meru,Ruiru,Market View
+613,Kakamega,Naivasha,Upper Heights
+614,Kajiado,Ruiru,Lower Plains
+615,Kiambu,Ruiru,Riverside Gardens
+616,Mombasa,Nyali,South Plains
+617,Nairobi,Ainabkoi,Upper Center
+618,Kakamega,Ruiru,Market Gardens
+619,Kisumu,Ruiru,Lower Heights
+620,Uasin Gishu,Mavoko,East Estate
+621,Kakamega,Naivasha,North Estate
+622,Mombasa,Ainabkoi,Riverside Zone
+623,Nakuru,Kisumu Central,Riverside Gardens
+624,Nakuru,Ainabkoi,Town Phase
+625,Mombasa,Ruiru,Central Ward
+626,Kakamega,Lurambi,Lower Center
+627,Nakuru,Lurambi,Lower Zone
+628,Kiambu,Kajiado North,Riverside Heights
+629,Kakamega,Kajiado North,South Plains
+630,Kajiado,Ainabkoi,Market Gardens
+631,Uasin Gishu,Kajiado North,Market Phase
+632,Nairobi,Kajiado North,Town Phase
+633,Nakuru,Imenti North,Town Center
+634,Machakos,Ruiru,Upper Phase
+635,Uasin Gishu,Ainabkoi,East Plains
+636,Meru,Imenti North,Lower View
+637,Kajiado,Mavoko,Lower Plains
+638,Nairobi,Kajiado North,Riverside Center
+639,Mombasa,Naivasha,West Zone
+640,Kisumu,Ruiru,North View
+641,Uasin Gishu,Mavoko,Upper Phase
+642,Kisumu,Lurambi,Upper View
+643,Machakos,Ainabkoi,Lower View
+644,Kisumu,Westlands,East Plains
+645,Machakos,Mavoko,Upper Estate
+646,Kakamega,Ruiru,East Zone
+647,Kajiado,Nyali,Central Center
+648,Kakamega,Lurambi,Riverside Ward
+649,Kakamega,Lurambi,Central Heights
+650,Nairobi,Lurambi,Central Zone
+651,Kisumu,Kisumu Central,Upper Plains
+652,Kajiado,Naivasha,West Heights
+653,Mombasa,Mavoko,West Phase
+654,Machakos,Imenti North,South Estate
+655,Nakuru,Naivasha,Lower Center
+656,Nairobi,Westlands,Riverside View
+657,Kakamega,Naivasha,Riverside Ward
+658,Uasin Gishu,Imenti North,Riverside Ward
+659,Uasin Gishu,Kisumu Central,Upper Heights
+660,Nakuru,Mavoko,Central View
+661,Kisumu,Lurambi,North Estate
+662,Nairobi,Imenti North,Lower Center
+663,Nakuru,Naivasha,East Heights
+664,Mombasa,Mavoko,Town Zone
+665,Meru,Lurambi,East Village
+666,Kakamega,Mavoko,West View
+667,Nakuru,Kajiado North,Riverside Plains
+668,Uasin Gishu,Ruiru,North View
+669,Meru,Kisumu Central,Riverside Zone
+670,Kiambu,Westlands,South Village
+671,Kakamega,Mavoko,West Center
+672,Uasin Gishu,Naivasha,Market Ward
+673,Nairobi,Mavoko,Market Ward
+674,Nairobi,Kisumu Central,Lower Heights
+675,Nairobi,Kisumu Central,South Heights
+676,Nakuru,Naivasha,Town Estate
+677,Uasin Gishu,Ainabkoi,Lower Gardens
+678,Kajiado,Ruiru,Lower Gardens
+679,Kiambu,Kajiado North,Central Heights
+680,Meru,Nyali,East Heights
+681,Meru,Nyali,Town Center
+682,Nairobi,Ruiru,North Plains
+683,Mombasa,Ainabkoi,Central Plains
+684,Nakuru,Kajiado North,South View
+685,Machakos,Nyali,South Heights
+686,Kajiado,Nyali,West Heights
+687,Kajiado,Naivasha,South Plains
+688,Mombasa,Kajiado North,Market Zone
+689,Machakos,Westlands,South Estate
+690,Kakamega,Naivasha,Lower Zone
+691,Kakamega,Lurambi,Riverside Plains
+692,Kiambu,Mavoko,Central Ward
+693,Uasin Gishu,Westlands,South Heights
+694,Kakamega,Westlands,Upper Plains
+695,Meru,Kajiado North,Riverside Gardens
+696,Kakamega,Mavoko,West Zone
+697,Kajiado,Westlands,East Estate
+698,Kajiado,Nyali,North Gardens
+699,Nakuru,Mavoko,West Village
+700,Mombasa,Naivasha,Central Gardens
+701,Uasin Gishu,Lurambi,Lower Phase
+702,Kajiado,Westlands,North Ward
+703,Mombasa,Naivasha,North Plains
+704,Kajiado,Kajiado North,Central Estate
+705,Machakos,Kajiado North,East Estate
+706,Meru,Imenti North,Lower Zone
+707,Machakos,Imenti North,Central Village
+708,Kakamega,Lurambi,Lower Ward
+709,Kisumu,Imenti North,Central Village
+710,Uasin Gishu,Imenti North,South Phase
+711,Nairobi,Kajiado North,Lower Gardens
+712,Meru,Mavoko,Lower Ward
+713,Kajiado,Ainabkoi,Riverside Plains
+714,Kiambu,Ruiru,Market Heights
+715,Meru,Ainabkoi,Market Ward
+716,Kisumu,Imenti North,Town Village
+717,Uasin Gishu,Kajiado North,West Ward
+718,Machakos,Kajiado North,Town Plains
+719,Kakamega,Kisumu Central,Market Zone
+720,Kajiado,Naivasha,West View
+721,Kajiado,Ainabkoi,South Center
+722,Nairobi,Ruiru,Town Plains
+723,Uasin Gishu,Ruiru,South Village
+724,Machakos,Imenti North,Riverside Gardens
+725,Kiambu,Nyali,Upper Center
+726,Uasin Gishu,Westlands,Upper Plains
+727,Kisumu,Imenti North,Town Phase
+728,Nakuru,Nyali,Market Village
+729,Kiambu,Kisumu Central,Lower Village
+730,Uasin Gishu,Ainabkoi,South Estate
+731,Nairobi,Ainabkoi,Town Estate
+732,Kiambu,Ruiru,Upper Village
+733,Uasin Gishu,Imenti North,Town Gardens
+734,Meru,Mavoko,Lower Ward
+735,Kiambu,Naivasha,East Phase
+736,Uasin Gishu,Mavoko,Market Ward
+737,Nairobi,Mavoko,Central Phase
+738,Kisumu,Nyali,South Gardens
+739,Kisumu,Mavoko,Town Ward
+740,Meru,Westlands,Town Estate
+741,Machakos,Naivasha,Upper Village
+742,Kakamega,Ainabkoi,Central Village
+743,Nairobi,Nyali,Town View
+744,Kakamega,Nyali,Central Gardens
+745,Kisumu,Lurambi,Central Center
+746,Nairobi,Nyali,South Estate
+747,Kakamega,Ainabkoi,Central Heights
+748,Meru,Kisumu Central,Lower Village
+749,Uasin Gishu,Mavoko,South View
+750,Mombasa,Lurambi,Market Phase
+751,Kisumu,Lurambi,Town Plains
+752,Kiambu,Nyali,Lower Heights
+753,Kajiado,Lurambi,West Plains
+754,Kakamega,Lurambi,Lower Village
+755,Kakamega,Ainabkoi,Lower Gardens
+756,Nakuru,Mavoko,Central Phase
+757,Uasin Gishu,Lurambi,Market Heights
+758,Uasin Gishu,Nyali,Lower Phase
+759,Machakos,Naivasha,East Center
+760,Meru,Ruiru,Riverside Phase
+761,Nakuru,Naivasha,East Phase
+762,Nakuru,Ainabkoi,South Phase
+763,Meru,Nyali,Upper Phase
+764,Kiambu,Lurambi,North Estate
+765,Nakuru,Nyali,Lower Gardens
+766,Kakamega,Nyali,East Phase
+767,Machakos,Kajiado North,East Ward
+768,Kisumu,Lurambi,Central Village
+769,Kisumu,Nyali,South Ward
+770,Kiambu,Ruiru,Market Heights
+771,Nakuru,Ainabkoi,South Gardens
+772,Kisumu,Kisumu Central,East Zone
+773,Nakuru,Westlands,South Gardens
+774,Kajiado,Kisumu Central,Riverside Village
+775,Kiambu,Imenti North,Lower Heights
+776,Nakuru,Naivasha,North Center
+777,Kakamega,Nyali,East Ward
+778,Uasin Gishu,Ainabkoi,Upper Gardens
+779,Kiambu,Mavoko,Market Ward
+780,Uasin Gishu,Kisumu Central,North View
+781,Meru,Nyali,North View
+782,Mombasa,Naivasha,East Phase
+783,Machakos,Naivasha,Central Ward
+784,Meru,Ruiru,Riverside Ward
+785,Nakuru,Mavoko,Market Phase
+786,Kakamega,Ainabkoi,Lower Estate
+787,Nairobi,Lurambi,South Estate
+788,Kajiado,Ruiru,Central Estate
+789,Nakuru,Naivasha,Upper Gardens
+790,Nakuru,Ruiru,Riverside Center
+791,Kiambu,Ainabkoi,Lower Heights
+792,Kisumu,Nyali,Upper Village
+793,Machakos,Lurambi,East Phase
+794,Meru,Nyali,East Center
+795,Kisumu,Westlands,East Gardens
+796,Mombasa,Kisumu Central,Riverside Estate
+797,Machakos,Nyali,West Center
+798,Kiambu,Westlands,Upper View
+799,Nairobi,Ainabkoi,North View
+800,Nairobi,Kisumu Central,North Phase
+801,Machakos,Kajiado North,Riverside View
+802,Machakos,Mavoko,Upper View
+803,Kajiado,Naivasha,Central View
+804,Machakos,Mavoko,Town Village
+805,Meru,Kajiado North,Market Zone
+806,Meru,Kisumu Central,Town Center
+807,Nairobi,Nyali,East Zone
+808,Mombasa,Nyali,Central Center
+809,Kiambu,Mavoko,North Heights
+810,Kajiado,Ruiru,Riverside Village
+811,Kakamega,Westlands,North Estate
+812,Meru,Ruiru,Market Gardens
+813,Machakos,Ruiru,Riverside Heights
+814,Mombasa,Westlands,North Plains
+815,Kakamega,Mavoko,South Center
+816,Kakamega,Naivasha,Market Village
+817,Nakuru,Lurambi,North Plains
+818,Meru,Naivasha,Lower Ward
+819,Nairobi,Lurambi,North Plains
+820,Uasin Gishu,Mavoko,Upper Plains
+821,Kajiado,Mavoko,Market Ward
+822,Meru,Imenti North,East Ward
+823,Kisumu,Naivasha,North View
+824,Nakuru,Naivasha,South Zone
+825,Nairobi,Ainabkoi,East Village
+826,Kiambu,Ruiru,West Phase
+827,Kajiado,Kajiado North,Lower Plains
+828,Machakos,Ainabkoi,Lower Ward
+829,Nairobi,Naivasha,West Plains
+830,Meru,Nyali,West Gardens
+831,Kakamega,Ruiru,Upper Gardens
+832,Kiambu,Kajiado North,West Estate
+833,Kisumu,Ainabkoi,Riverside Ward
+834,Meru,Mavoko,Market Zone
+835,Meru,Mavoko,Market Heights
+836,Nakuru,Kisumu Central,West Phase
+837,Kakamega,Naivasha,Riverside Phase
+838,Nakuru,Ruiru,Central Village
+839,Uasin Gishu,Lurambi,North Estate
+840,Kisumu,Ainabkoi,Town Plains
+841,Machakos,Naivasha,Town Ward
+842,Uasin Gishu,Ainabkoi,Market Phase
+843,Kajiado,Naivasha,North Zone
+844,Kisumu,Ruiru,Lower Phase
+845,Kisumu,Westlands,South Gardens
+846,Kisumu,Mavoko,West Center
+847,Kakamega,Lurambi,East Ward
+848,Mombasa,Ruiru,North Estate
+849,Kiambu,Mavoko,Central Ward
+850,Kakamega,Westlands,South Plains
+851,Machakos,Naivasha,Central Gardens
+852,Machakos,Kisumu Central,North Heights
+853,Kiambu,Westlands,South Village
+854,Nakuru,Ainabkoi,Riverside Estate
+855,Kakamega,Ainabkoi,Lower Zone
+856,Nairobi,Mavoko,West Plains
+857,Uasin Gishu,Kisumu Central,Town Village
+858,Machakos,Ruiru,Upper Village
+859,Kakamega,Mavoko,Riverside Phase
+860,Kisumu,Ruiru,Upper Plains
+861,Uasin Gishu,Naivasha,Central Plains
+862,Mombasa,Imenti North,Riverside View
+863,Uasin Gishu,Nyali,North Heights
+864,Kajiado,Westlands,Market Ward
+865,Kakamega,Naivasha,Town Heights
+866,Machakos,Lurambi,East Plains
+867,Kakamega,Kisumu Central,Riverside Zone
+868,Kajiado,Nyali,Market Village
+869,Kajiado,Nyali,Riverside Heights
+870,Kajiado,Lurambi,North Heights
+871,Kajiado,Naivasha,North Phase
+872,Kajiado,Kajiado North,Upper View
+873,Kajiado,Naivasha,Town Zone
+874,Kakamega,Naivasha,Central Zone
+875,Nairobi,Mavoko,Central Village
+876,Machakos,Mavoko,West Heights
+877,Nakuru,Imenti North,Central Center
+878,Kajiado,Imenti North,Lower Zone
+879,Kakamega,Kisumu Central,West View
+880,Uasin Gishu,Lurambi,South Phase
+881,Nairobi,Nyali,Central Heights
+882,Kakamega,Ruiru,Riverside Gardens
+883,Nakuru,Ainabkoi,Market View
+884,Kajiado,Imenti North,Upper Gardens
+885,Meru,Kajiado North,Market Heights
+886,Mombasa,Kajiado North,Market Plains
+887,Uasin Gishu,Nyali,Upper Center
+888,Machakos,Nyali,Market Ward
+889,Kajiado,Imenti North,Market Zone
+890,Mombasa,Kajiado North,Market Heights
+891,Meru,Kisumu Central,North Zone
+892,Meru,Kisumu Central,South Center
+893,Kisumu,Kisumu Central,Riverside Zone
+894,Nairobi,Naivasha,East Heights
+895,Mombasa,Ruiru,Riverside Estate
+896,Kisumu,Imenti North,Central View
+897,Uasin Gishu,Kajiado North,Upper Center
+898,Nakuru,Kajiado North,Market Ward
+899,Kajiado,Naivasha,Lower Center
+900,Kakamega,Kisumu Central,South Phase
+901,Kajiado,Nyali,South Phase
+902,Nakuru,Kajiado North,Market View
+903,Kisumu,Ainabkoi,Market Estate
+904,Nairobi,Mavoko,Central Phase
+905,Kiambu,Ruiru,West Heights
+906,Uasin Gishu,Kajiado North,Town Gardens
+907,Meru,Westlands,South Plains
+908,Kisumu,Ruiru,Town Village
+909,Mombasa,Mavoko,Upper Plains
+910,Kakamega,Mavoko,Riverside Gardens
+911,Meru,Ruiru,Upper Heights
+912,Nairobi,Kajiado North,North Gardens
+913,Kiambu,Ainabkoi,Market View
+914,Kisumu,Lurambi,Town Phase
+915,Uasin Gishu,Mavoko,Lower Estate
+916,Nairobi,Naivasha,West Village
+917,Uasin Gishu,Ruiru,East Heights
+918,Kiambu,Imenti North,Riverside Gardens
+919,Machakos,Kajiado North,West Phase
+920,Kakamega,Lurambi,Riverside Estate
+921,Kisumu,Mavoko,South Ward
+922,Nairobi,Kisumu Central,North Center
+923,Nakuru,Imenti North,West Zone
+924,Machakos,Lurambi,North Zone
+925,Kakamega,Westlands,West Zone
+926,Kisumu,Naivasha,Upper Zone
+927,Nairobi,Westlands,South Gardens
+928,Nakuru,Kisumu Central,East Village
+929,Nakuru,Westlands,Upper Gardens
+930,Kisumu,Naivasha,Town Ward
+931,Uasin Gishu,Ruiru,South View
+932,Kiambu,Westlands,East Village
+933,Meru,Westlands,Market Zone
+934,Kajiado,Kajiado North,Market Village
+935,Kakamega,Nyali,West Ward
+936,Nakuru,Imenti North,Town Gardens
+937,Machakos,Kajiado North,Riverside Plains
+938,Nairobi,Lurambi,Town Ward
+939,Mombasa,Lurambi,East Center
+940,Meru,Imenti North,Upper View
+941,Uasin Gishu,Kisumu Central,North Zone
+942,Kajiado,Nyali,Town Zone
+943,Kisumu,Mavoko,North Heights
+944,Machakos,Lurambi,Upper Center
+945,Uasin Gishu,Kajiado North,Lower Plains
+946,Kisumu,Lurambi,South Center
+947,Nairobi,Ruiru,West Estate
+948,Nakuru,Kisumu Central,Central Estate
+949,Mombasa,Lurambi,Town Ward
+950,Kakamega,Ainabkoi,Upper Center
+951,Uasin Gishu,Imenti North,East Gardens
+952,Nakuru,Nyali,Upper Zone
+953,Kajiado,Kisumu Central,South Plains
+954,Nakuru,Mavoko,Central Phase
+955,Nakuru,Westlands,Lower Phase
+956,Kakamega,Ainabkoi,North Center
+957,Kakamega,Naivasha,North Village
+958,Uasin Gishu,Naivasha,Town Plains
+959,Kisumu,Naivasha,Riverside Village
+960,Mombasa,Mavoko,Market Estate
+961,Kakamega,Imenti North,West Estate
+962,Mombasa,Mavoko,West Heights
+963,Uasin Gishu,Ruiru,Lower Plains
+964,Kajiado,Mavoko,South Village
+965,Meru,Ruiru,Upper Village
+966,Nairobi,Imenti North,Central Phase
+967,Kisumu,Westlands,North Plains
+968,Machakos,Mavoko,South Center
+969,Machakos,Nyali,Riverside Zone
+970,Nakuru,Lurambi,South Phase
+971,Kajiado,Nyali,West Center
+972,Uasin Gishu,Naivasha,East View
+973,Machakos,Westlands,North Estate
+974,Meru,Ainabkoi,Riverside Plains
+975,Kajiado,Kajiado North,East Heights
+976,Mombasa,Westlands,Riverside Village
+977,Kakamega,Kisumu Central,East Heights
+978,Kiambu,Nyali,Lower Estate
+979,Kajiado,Ruiru,West Gardens
+980,Mombasa,Lurambi,Market Heights
+981,Nairobi,Lurambi,Upper Phase
+982,Nakuru,Ruiru,Town Estate
+983,Nakuru,Naivasha,Market Estate
+984,Nairobi,Mavoko,Central Zone
+985,Kakamega,Nyali,North Plains
+986,Nakuru,Kajiado North,Central Plains
+987,Kakamega,Nyali,Market Village
+988,Kiambu,Naivasha,Market Phase
+989,Kiambu,Imenti North,South Village
+990,Machakos,Naivasha,Riverside Plains
+991,Uasin Gishu,Ainabkoi,Town Village
+992,Kiambu,Nyali,South Heights
+993,Meru,Kisumu Central,Riverside Ward
+994,Mombasa,Mavoko,Central Gardens
+995,Nakuru,Mavoko,Riverside Plains
+996,Nakuru,Nyali,Town Heights
+997,Kisumu,Westlands,Market View
+998,Kiambu,Kisumu Central,Lower Center
+999,Kisumu,Lurambi,South Village
+1000,Kakamega,Lurambi,West View

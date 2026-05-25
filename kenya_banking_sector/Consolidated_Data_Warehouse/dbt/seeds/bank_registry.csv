@@ -1,0 +1,21 @@
+bank_id,bank_name,tier,listing_status
+KCB,KCB Bank Kenya,Tier 1,Listed
+EQTY,Equity Bank Kenya,Tier 1,Listed
+ABSA,Absa Bank Kenya,Tier 1,Listed
+COOP,Co-operative Bank of Kenya,Tier 1,Listed
+SBIC,Stanbic Bank Kenya,Tier 1,Listed
+SCBK,Standard Chartered Bank Kenya,Tier 1,Listed
+DTBK,Diamond Trust Bank Kenya,Tier 1,Listed
+I&M,I&M Bank Kenya,Tier 1,Listed
+NCBA,NCBA Bank Kenya,Tier 1,Listed
+BBK,Barclays Bank Kenya,Tier 1,Listed
+NBK,National Bank of Kenya,Tier 2,Non-Listed
+STCH,StanChart Kenya,Tier 1,Listed
+HFCK,HF Group,Tier 2,Listed
+FAMB,Family Bank,Tier 2,Non-Listed
+SIDB,Sidian Bank,Tier 3,Non-Listed
+GBAK,Guardian Bank,Tier 3,Non-Listed
+MABK,Middle East Bank,Tier 3,Non-Listed
+PRMB,Prime Bank,Tier 2,Non-Listed
+CBAK,Credit Bank,Tier 3,Non-Listed
+VICT,Victoria Commercial Bank,Tier 3,Non-Listed

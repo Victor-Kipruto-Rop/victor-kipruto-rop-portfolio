@@ -1,0 +1,44 @@
+# Runtime
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Data
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Database
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+geoalchemy2>=0.14.0
+geoalchemy2[shapely]>=0.14.0
+
+# PDF extraction
+pdfplumber>=0.10.0
+PyPDF2>=3.0.0
+pdfminer.six>=20221105
+
+# Geospatial
+shapely>=2.0.0
+geopy>=2.4.0
+
+# ML / clustering
+scikit-learn>=1.3.0
+
+# Orchestration & transforms
+apache-airflow>=2.8.0,<2.9.0
+dbt-core>=1.7.0
+dbt-postgres>=1.7.0
+
+# Notebooks / exploration
+jupyter>=1.0.0
+notebook>=6.5.0
+
+# Visualization
+keplergl[jupyter]>=0.3.0
+folium>=0.14.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.0
+httpx>=0.25.0

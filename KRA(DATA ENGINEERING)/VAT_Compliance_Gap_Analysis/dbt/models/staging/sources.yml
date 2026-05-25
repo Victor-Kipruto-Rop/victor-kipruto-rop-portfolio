@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: vat_raw
-    database: kra_warehouse
-    schema: public
-    tables:
-      - name: raw_vat_compliance

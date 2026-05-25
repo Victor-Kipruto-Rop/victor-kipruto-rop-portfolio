@@ -1,0 +1,46 @@
+=============================================================================
+         M-PESA AGENT NETWORK ANALYTICS — KEPLER.GL QUICK START
+=============================================================================
+
+DATASETS READY:
+✓ data/kepler/agents.geojson       (120,000 agent locations)
+✓ data/kepler/wards.geojson        (879 ward boundaries)
+✓ data/kepler/grid.geojson         (10,000+ density grid cells @ 0.01° res)
+
+STEP 1: Visit https://kepler.gl
+
+STEP 2: Upload Files
+  - Drag & drop or click "Add Data" → select all three GeoJSON files
+  - Or add one-by-one via "Create Map"
+
+STEP 3: Configure Layers
+  Agents:
+    - Type: Point
+    - Color: Red gradient (transactions)
+    - Opacity: 0.8
+    - Size: 4-20 (scale by transactions)
+
+  Wards:
+    - Type: Polygon
+    - Fill: Blue gradient (agent_count)
+    - Stroke: Outline
+    - Opacity: 0.3
+
+  Grid:
+    - Type: Hexagon/Heatmap
+    - Color: Hot (orange/red = high density)
+    - Opacity: 0.5
+
+STEP 4: Interact
+  - Pan/Zoom to explore Kenya regions
+  - Hover over features to see tooltips
+  - Click to filter by county or ward_name
+  - Brush tool to select regions
+
+STEP 5: Export
+  - Top-right menu → "Export" → Save as JSON or PNG
+  - Or switch to data table view for CSV export
+
+=============================================================================
+For full documentation, see: docs/KEPLER_SETUP.md
+=============================================================================
