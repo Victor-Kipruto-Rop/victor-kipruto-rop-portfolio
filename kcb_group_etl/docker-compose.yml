@@ -1,45 +1,45 @@
+version: '3.8'
+
 services:
-  postgres:
+  postgres-kcb:
     image: postgres:15
     environment:
-      POSTGRES_USER: kcb_admin
-      POSTGRES_PASSWORD: kcb_password
-      POSTGRES_DB: postgres
+      POSTGRES_USER: ${DB_USER:-kcb_admin}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-kcb_password}
+      POSTGRES_DB: ${DB_NAME:-kcb_warehouse}
     ports:
       - "5436:5432"
     volumes:
       - postgres_kcb_data:/var/lib/postgresql/data
       - ./init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
 
-  airflow:
-    image: apache/airflow:2.7.1
-    command: standalone
+  airflow-kcb:
+    image: apache/airflow:2.7.1-python3.11
     environment:
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://${DB_USER:-kcb_admin}:${DB_PASSWORD:-kcb_password}@postgres-kcb:5432/${DB_NAME:-kcb_warehouse}
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
-      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://kcb_admin:kcb_password@postgres/postgres
-      - AIRFLOW__CORE__LOAD_EXAMPLES=False
-      - _PIP_ADDITIONAL_DEPENDENCIES=dbt-postgres pandas plotly sqlalchemy psycopg2-binary
     volumes:
-      - ./Financial_Performance_Tracker/dags:/opt/airflow/dags/financials
-      - ./MPesa_Loan_Book_Analytics/dags:/opt/airflow/dags/mpesa
-      - ./Financial_Performance_Tracker:/opt/airflow/projects/financials
-      - ./MPesa_Loan_Book_Analytics:/opt/airflow/projects/mpesa
-    depends_on:
-      - postgres
+      - ./dags:/opt/airflow/dags
+      - ./dbt:/opt/airflow/dbt
+      - .:/opt/airflow/projects/kcb
     ports:
       - "8083:8080"
+    depends_on:
+      - postgres-kcb
 
-  dashboard:
-    image: apache/airflow:2.7.1
-    command: bash -c "pip install streamlit plotly && streamlit run /opt/airflow/projects/dashboard_app.py --server.port 8503 --server.address 0.0.0.0"
+  kcb-dashboard:
+    image: python:3.11-slim
+    command: bash -c "pip install streamlit plotly pandas sqlalchemy psycopg2-binary && streamlit run dashboard_app.py --server.port 8503 --server.address 0.0.0.0"
     ports:
       - "8503:8503"
     environment:
       - STREAMLIT_SERVER_HEADLESS=true
+      - DB_HOST=postgres-kcb
     volumes:
-      - .:/opt/airflow/projects
+      - .:/app
+    working_dir: /app
     depends_on:
-      - postgres
+      - postgres-kcb
 
 volumes:
   postgres_kcb_data:

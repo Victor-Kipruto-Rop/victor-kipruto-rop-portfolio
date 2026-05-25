@@ -1,51 +1,56 @@
-![Project Banner](kcb.png)
-
 # 🦁 KCB Group Integrated ETL & Analytics Platform
 
-### 🚀 Live Dashboard
-**[View Live Analytics Dashboard](https://kipruto45-victor-kipruto-rop-portfolio-g8pspygfpttsbfggjaadwy.streamlit.app)**
-
----
-
 ## Overview
-A comprehensive data engineering platform designed to ingest, transform, and visualize KCB Group's financial performance and mobile lending (M-Pesa) analytics. The system integrates real-world audited financial statements with advanced credit risk modeling.
+This platform manages the ETL and analytical pipelines for KCB Group. it consolidates financial performance data across all regional subsidiaries and provides a detailed vintage analysis of the M-Pesa mobile loan book.
 
-### Key Components
-1.  **Financial Performance Tracker**: Regional subsidiary tracking (Kenya, Uganda, Tanzania, etc.) with automated ingestion of FY 2025 audited financials via PDF parsing.
-2.  **M-Pesa Loan Book Analytics**: Mobile credit cohort analysis, vintage performance tracking, and repayment velocity modeling.
-3.  **Integrated Dashboard**: A secure Streamlit interface providing deep-dive insights into profitability, asset quality (NPL), and credit risk.
+## Architecture
+```mermaid
+graph TD
+    Fin[Audited Results] -->|Load| P[PostgreSQL Raw]
+    Loans[Loan Book Logs] -->|Load| P
+    P -->|dbt Staging| Stg[Staging Layer]
+    Stg -->|dbt Marts| Marts[Financial & Credit Marts]
+    Marts -->|Streamlit| Dash[Executive Hub]
+    Simulator -.->|Orchestration| Airflow[Apache Airflow]
+```
 
 ## Data Sources
-This project integrates multiple real-world data points:
-- **KCB Group PLC**: FY 2025 Audited Financial Statements (Ingested via automated PDF parsing).
-- **Central Bank of Kenya (CBK)**: National Mobile Credit Statistics and banking sector regional performance reports.
-- **M-Pesa Product Disclosures**: Portfolio quality and disbursement data for KCB M-Pesa loan cohorts.
-- **Nairobi Securities Exchange (NSE)**: Historical financial filings for performance benchmarking.
+- **Audited Financials**: FY 2021-2025 Consolidated and Subsidiary reports.
+- **M-Pesa Loan Data**: High-fidelity logs of mobile loan disbursements and repayments.
 
 ## Tech Stack
-*   **Orchestration**: Apache Airflow
-*   **Transformation**: dbt (Data Build Tool)
-*   **Database**: PostgreSQL
-*   **Visualization**: Streamlit & Plotly
-*   **Ingestion**: Python (pdfplumber, Pandas)
-*   **Containerization**: Docker & Docker Compose
+- **Orchestration**: Apache Airflow
+- **Transformation**: dbt Core (PostgreSQL)
+- **Database**: PostgreSQL 15
+- **Visualization**: Streamlit, Plotly
+- **Environment**: Docker, Docker Compose
 
-## Features
-*   **Real Data Ingestion**: Custom PDF extractor for KCB Group PLC audited disclosures.
-*   **KPI Marts**: Automated calculation of NIM (Net Interest Margin), ROE (Return on Equity), and ROA.
-*   **Vintage Analysis**: Heatmaps and default evolution curves for M-Pesa loan cohorts.
-*   **Portable Design**: Built-in CSV fallback mechanism for seamless cloud deployment.
-*   **Security**: Authentication layer for data protection.
+## Folder Structure
+```text
+kcb_group_etl/
+├── dags/               # Financial & Credit ETL DAGs
+├── dbt/                # Consolidated dbt project
+├── ingestion/          # PDF extraction and loan loading
+├── dashboards/         # Visualization layer
+├── tests/              # dbt and python tests
+├── docker-compose.yml  # Local stack definition
+└── README.md
+```
 
-## Usage
-1.  **Local Execution**:
-    ```bash
-    cd KCB_Group(ETL)
-    docker compose up -d
-    ```
-2.  **Access Points**:
-    *   Dashboard: `http://localhost:8503`
-    *   Airflow: `http://localhost:8083`
+## How to Run
+1. **Launch Stack**:
+   ```bash
+   docker-compose up -d
+   ```
+2. **Execute dbt**:
+   ```bash
+   cd dbt
+   dbt run
+   dbt test
+   ```
+3. **Access Dashboard**: Open `http://localhost:8503`
 
----
-*Created by Victor Kipruto - Data Engineering Portfolio*
+## Key Metrics / Outputs
+- **ROE & ROA**: Regional efficiency benchmarking.
+- **Vintage Curves**: Default rate evolution by disbursement cohort.
+- **NIM Trends**: Net Interest Margin tracking across markets.

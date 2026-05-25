@@ -1,0 +1,12 @@
+kcb_profile:
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DB_HOST', 'localhost') }}"
+      user: kcb_admin
+      password: kcb_password
+      port: 5432
+      dbname: kcb_warehouse
+      schema: public
+      threads: 4
+  target: dev

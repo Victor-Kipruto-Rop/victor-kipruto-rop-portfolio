@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: kcb_raw
+    database: kcb_warehouse
+    schema: public
+    tables:
+      - name: raw_kcb_financials
+      - name: raw_mpesa_loans

@@ -1,15 +1,3 @@
-# 🛠️ Advanced Engineering Implementation
-
-This portfolio now features high-level engineering standards implemented across the data platform:
-
-- **☸️ Kubernetes Orchestration**: Automated deployment and scaling manifests for PostgreSQL and Streamlit dashboards located in the `k8s/` directory.
-- **🔄 CI/CD for Pipelines**: Robust GitHub Actions workflows for SQL linting (`SQLFluff`), dbt model validation, and Kubernetes manifest linting.
-- **🛡️ Data Quality Monitoring**: Implementation of `dbt tests` (null checks, unique constraints, and range validation) across all primary marts to ensure data integrity.
-- **🧠 Advanced ML Fraud Systems**: A sophisticated **Isolation Forest** anomaly detection engine implemented within the M-Pesa pipeline for real-time transaction scoring.
-- **🏠 Lakehouse Architectures**: Migration towards a **Medallion Architecture** (Bronze, Silver, Gold) in the Pan-African project, utilizing dbt for structured data layer management.
-
----
-
 # 🚀 Victor Kipruto — Data Engineering Portfolio
 
 Welcome to my Data Engineering Portfolio.  
@@ -89,6 +77,17 @@ This portfolio is built on a foundation of real-world data integrated through ad
 - **Nairobi Securities Exchange (NSE)**: Audited financial filings for listed commercial banks.
 
 ---
+# 🛠️ Advanced Engineering Implementation
+
+This portfolio now features high-level engineering standards implemented across the data platform:
+
+- **☸️ Kubernetes Orchestration**: Automated deployment and scaling manifests for PostgreSQL and Streamlit dashboards located in the `k8s/` directory.
+- **🔄 CI/CD for Pipelines**: Robust GitHub Actions workflows for SQL linting (`SQLFluff`), dbt model validation, and Kubernetes manifest linting.
+- **🛡️ Data Quality Monitoring**: Implementation of `dbt tests` (null checks, unique constraints, and range validation) across all primary marts to ensure data integrity.
+- **🧠 Advanced ML Fraud Systems**: A sophisticated **Isolation Forest** anomaly detection engine implemented within the M-Pesa pipeline for real-time transaction scoring.
+- **🏠 Lakehouse Architectures**: Migration towards a **Medallion Architecture** (Bronze, Silver, Gold) in the Pan-African project, utilizing dbt for structured data layer management.
+
+---
 
 # 📊 Key Areas Covered
 
@@ -136,7 +135,7 @@ This portfolio is built on a foundation of real-world data integrated through ad
 - LinkedIn: https://www.linkedin.com/in/victor-rop-4920b4399
 - Email: kiprutovictor39@gmail.com
 - Phonenumber: +254723484552
-- Am ready for any Data Engineering role
+- Am ready for any Data Engineering role,just contact me for more info
 
 ---
 
