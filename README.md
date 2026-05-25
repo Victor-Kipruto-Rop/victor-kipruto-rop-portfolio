@@ -11,14 +11,13 @@ Experience the live analytical platforms built in this portfolio:
 
 | Dashboard | Access Link | Description |
 |---|---|---|
-| **Equity Group Pan-Africa** | [🚀 View Live Demo](https://kipruto45-victor-kipruto-rop-portfolio-g8pspygfpttsbfggjaadwy.streamlit.app/) | Interactive insights into regional profitability, mobile adoption, and credit risk across 7 countries. |
+| **Executive Financial Summary (2025)** | [🚀 View Executive Hub](https://master-dashboard-link.streamlit.app) | Unified comparison of 2025 audited results for KCB Group, Absa Kenya, and Equity Group. |
+| **Absa Bank Kenya** | [🔴 View Absa Dashboard](https://absa-dashboard-link.streamlit.app) | Integrated view of Financial KPIs, Risk/Capital, and Open Banking API adoption. |
+| **Equity Group Pan-Africa** | [🌍 View Equity Dashboard](https://kipruto45-victor-kipruto-rop-portfolio-g8pspygfpttsbfggjaadwy.streamlit.app/) | Regional profitability, mobile adoption, and credit risk analytics across 7 countries. |
+| **KCB Group Integrated** | [🦁 View KCB Dashboard](https://kcb-dashboard-link.streamlit.app) | Consolidated performance tracking and M-Pesa loan book analytics. |
+| **KRA Revenue & Trade** | [🇰🇪 View KRA Dashboard](https://kra-dashboard-link.streamlit.app) | Real-time monitoring of tax revenue, customs trade, and economic indicators. |
 
-### How to use the Dashboard:
-1. **Navigate**: Use the sidebar to switch between **"Equitel & EazzyPay"** (Mobile Banking) and **"Pan-Africa Consolidation"** (Regional Analytics).
-2. **Interact**: Hover over Plotly charts to see granular data points, zoom into specific time periods, and filter by subsidiary.
-3. **Insights**: 
-    - Check the **Regional Engagement & Risk** tab to see how Digital Maturity correlates with Portfolio Risk.
-    - View **Group Profitability** trends normalized in USD and KES.
+*(Note: Live links for KCB, Absa, and KRA are demonstration placeholders and are best experienced by running the local Docker environment.)*
 
 ---
 

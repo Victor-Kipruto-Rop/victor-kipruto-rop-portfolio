@@ -60,10 +60,8 @@ make dbt-run-equitel
 make dbt-run-pan-africa
 ```
 
-## 📊 Analytical Deliverables
-Detailed insights are available in the executed Jupyter notebooks:
-- **Adoption Analysis**: [View Notebook](./Equitel_EazzyPay_Analytics/notebooks/adoption_analysis.ipynb) - EazzyPay velocity and ARPU trends.
-- **Consolidation Analysis**: [View Notebook](./Pan_Africa_Financial_Platform/notebooks/consolidation_analysis.ipynb) - Group-level USD profit contribution by subsidiary.
+## 🚀 Project Goals
+The platform provides a unified view of Equity Group's Pan-African operations, handling complex multi-currency normalization across 7 subsidiaries and modeling digital adoption.
 
 ---
 *Maintained by the Data Engineering Team*
