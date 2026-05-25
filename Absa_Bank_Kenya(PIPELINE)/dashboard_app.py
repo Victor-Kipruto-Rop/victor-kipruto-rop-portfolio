@@ -7,13 +7,16 @@ import os
 
 st.set_page_config(page_title="Absa Kenya: Financial & Open Banking Analytics", layout="wide", page_icon="🔴")
 
+# Robust path handling for Streamlit Cloud
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def load_data(query, snapshot_name):
     try:
         host = "postgres-absa" if os.path.exists("/.dockerenv") else "localhost"
         engine = create_engine(f'postgresql://absa_admin:absa_password@{host}:5432/absa_warehouse')
         return pd.read_sql(query, engine)
     except Exception:
-        snapshot_path = f"dashboards/snapshots/{snapshot_name}.csv"
+        snapshot_path = os.path.join(BASE_DIR, "dashboards", "snapshots", f"{snapshot_name}.csv")
         if os.path.exists(snapshot_path):
             return pd.read_csv(snapshot_path)
         return pd.DataFrame()
@@ -104,7 +107,15 @@ with tabs[2]:
     else:
         st.info("Open Banking activity data not found. Ensure the API pipeline is running.")
 
-st.sidebar.image("images/absa.png", width=100)
+logo_path = os.path.join(BASE_DIR, "images", "absa.png")
+if os.path.exists(logo_path):
+    st.sidebar.image(logo_path, width=100)
+else:
+    # Fallback for root execution
+    logo_path_root = os.path.join(BASE_DIR, "Absa_Bank_Kenya(PIPELINE)", "images", "absa.png")
+    if os.path.exists(logo_path_root):
+        st.sidebar.image(logo_path_root, width=100)
+
 st.sidebar.title("Data Controls")
 if st.sidebar.button("Refresh Dashboard"):
     st.rerun()
