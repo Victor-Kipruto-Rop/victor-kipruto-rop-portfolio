@@ -67,6 +67,11 @@ I am a Data Engineer focused on:
 
 ---
 
+## 🔗 Other Repositories
+### [🚀 these are my other projects](https://github.com/kipruto45?tab=repositories)
+
+---
+
 # 🛰️ Real-World Data Sources
 
 This portfolio is built on a foundation of real-world data integrated through advanced ingestion pipelines:
