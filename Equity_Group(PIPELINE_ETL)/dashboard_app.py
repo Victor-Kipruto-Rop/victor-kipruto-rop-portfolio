@@ -5,7 +5,10 @@ import plotly.graph_objects as go
 from sqlalchemy import create_engine
 import os
 
-st.set_page_config(page_title="Equity Group: Pan-Africa Analytics", layout="wide", page_icon="🏦")
+st.set_page_config(page_title="Equity Group: Integrated Pan-Africa Analytics", layout="wide", page_icon="🏦")
+
+# Robust path handling for Streamlit Cloud
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_data(query, snapshot_name):
     try:
@@ -13,48 +16,104 @@ def load_data(query, snapshot_name):
         engine = create_engine(f'postgresql://equity_admin:equity_password@{host}:5441/equity_warehouse')
         return pd.read_sql(query, engine)
     except Exception:
-        snapshot_path = f"dashboards/snapshots/{snapshot_name}.csv"
+        snapshot_path = os.path.join(BASE_DIR, "dashboards", "snapshots", f"{snapshot_name}.csv")
         if os.path.exists(snapshot_path):
             return pd.read_csv(snapshot_path)
         return pd.DataFrame()
 
-st.title("🏦 Equity Group: Pan-Africa Financial Hub")
-st.markdown("Consolidated performance monitoring across 7 markets.")
+st.title("🏦 Equity Group: Integrated Pan-Africa Financial Hub")
+st.markdown("Consolidated real-time monitoring of 7 regional markets and mobile banking ecosystems.")
 
-perf_df = load_data("SELECT * FROM mart_subsidiary_performance ORDER BY year", "mart_subsidiary_performance")
+# Navigation Tabs
+tabs = st.tabs(["🌍 Regional Performance", "📱 Digital & Equitel Analytics", "📊 Market Comparison"])
 
-if not perf_df.empty:
-    latest_year = perf_df['year'].max()
-    latest_data = perf_df[perf_df['year'] == latest_year]
-    
-    col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Total Group Assets (B KES)", f"{latest_data['total_assets_m_kes'].sum()/1000:,.1f}B")
-    col2.metric("Group Profit (B KES)", f"{latest_data['profit_after_tax_m_kes'].sum()/1000:,.1f}B")
-    col3.metric("Digital Adoption", f"{latest_data['digital_txn_percentage'].mean():,.1f}%")
-    col4.metric("Regional Markets", latest_data['subsidiary'].nunique())
+# Tab 1: Regional Performance
+with tabs[0]:
+    perf_df = load_data("SELECT * FROM mart_subsidiary_performance ORDER BY year", "mart_subsidiary_performance")
 
-    st.markdown("---")
-    
-    tab1, tab2 = st.tabs(["Regional Contribution", "Growth Trends"])
-    
-    with tab1:
+    if not perf_df.empty:
+        latest_year = perf_df['year'].max()
+        latest_data = perf_df[perf_df['year'] == latest_year]
+        
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Group Total Assets", f"KES {latest_data['total_assets_m_kes'].sum()/1000:,.1f}B")
+        col2.metric("Group Net Profit", f"KES {latest_data['profit_after_tax_m_kes'].sum()/1000:,.1f}B")
+        col3.metric("Digital Channels", f"{latest_data['digital_txn_percentage'].mean():,.1f}%")
+        col4.metric("Reporting Markets", latest_data['subsidiary'].nunique())
+
+        st.markdown("---")
+        
         c1, c2 = st.columns(2)
         with c1:
             st.subheader("Asset Distribution by Market")
-            fig_pie = px.pie(latest_data, names='subsidiary', values='total_assets_m_kes', hole=0.4)
+            fig_pie = px.pie(latest_data, names='subsidiary', values='total_assets_m_kes', hole=0.4,
+                             color_discrete_sequence=px.colors.qualitative.Pastel)
             st.plotly_chart(fig_pie, use_container_width=True)
         with c2:
-            st.subheader("Profitability by Market")
-            fig_bar = px.bar(latest_data.sort_values('profit_after_tax_m_kes'), x='subsidiary', y='profit_after_tax_m_kes', color='profit_after_tax_m_kes')
+            st.subheader("Profitability Contribution (KES M)")
+            fig_bar = px.bar(latest_data.sort_values('profit_after_tax_m_kes'), x='subsidiary', y='profit_after_tax_m_kes', 
+                             color='profit_after_tax_m_kes', color_continuous_scale='Reds')
             st.plotly_chart(fig_bar, use_container_width=True)
             
-    with tab2:
-        st.subheader("Regional Profit Growth (Time Series)")
+        st.subheader("Profit Growth Trends by Region")
         fig_line = px.line(perf_df, x='year', y='profit_after_tax_m_kes', color='subsidiary', markers=True)
         st.plotly_chart(fig_line, use_container_width=True)
+    else:
+        st.warning("Regional performance data not found.")
 
+# Tab 2: Digital & Equitel Analytics
+with tabs[1]:
+    adoption_df = load_data("SELECT * FROM mart_adoption_curve", "mart_adoption_curve")
+    arpu_df = load_data("SELECT * FROM mart_arpu_benchmark", "mart_arpu_benchmark")
+    
+    if not adoption_df.empty:
+        st.subheader("Equitel & EazzyPay Adoption S-Curve")
+        fig_adoption = px.area(adoption_df, x='month', y='active_users', color='product', 
+                               title="Growth of Digital Banking Users")
+        st.plotly_chart(fig_adoption, use_container_width=True)
+        
+        if not arpu_df.empty:
+            st.markdown("---")
+            st.subheader("Revenue per User (ARPU) Benchmarking")
+            fig_arpu = px.bar(arpu_df, x='segment', y='arpu_kes', color='segment', barmode='group')
+            st.plotly_chart(fig_arpu, use_container_width=True)
+    else:
+        st.info("Mobile banking analytics data unavailable.")
+
+# Tab 3: Market Comparison
+with tabs[2]:
+    comp_df = load_data("SELECT * FROM mart_subsidiary_comparison", "mart_subsidiary_comparison")
+    
+    if not comp_df.empty:
+        st.subheader("Multi-Market Efficiency Analysis")
+        # Bubble chart: Assets vs Profit, size by Customer Count
+        fig_bubble = px.scatter(comp_df, x='total_assets_m_kes', y='profit_after_tax_m_kes', 
+                                size='customer_count', color='subsidiary', hover_name='subsidiary',
+                                title="Market Matrix: Assets vs Profitability",
+                                labels={'total_assets_m_kes': 'Total Assets (M KES)', 'profit_after_tax_m_kes': 'Net Profit (M KES)'})
+        st.plotly_chart(fig_bubble, use_container_width=True)
+    else:
+        st.info("Comparison matrix data not found.")
+
+# Sidebar
+logo_path = os.path.join(BASE_DIR, "images", "pan.png")
+if os.path.exists(logo_path):
+    st.sidebar.image(logo_path, width=150)
 else:
-    st.warning("Data not found. Ingesting mock data...")
-    from Pan_Africa_Financial_Platform.ingestion.generate_subsidiary_data import generate_equity_financials
-    generate_equity_financials()
+    # Root execution fallback
+    logo_path_root = os.path.join(BASE_DIR, "Equity_Group(PIPELINE_ETL)", "images", "pan.png")
+    if os.path.exists(logo_path_root):
+        st.sidebar.image(logo_path_root, width=150)
+
+st.sidebar.title("Data Controls")
+if st.sidebar.button("Refresh Results"):
     st.rerun()
+
+st.sidebar.markdown("""
+**Data Sources:**
+- Equity Group FY 2025 Audited Reports
+- CBK Regional Supervision Disclosures
+- Equitel/EazzyPay Ingestion Logs
+""")
+
+st.sidebar.info("Dashboard integrates Regional Consolidation and Mobile Banking Analytics projects.")

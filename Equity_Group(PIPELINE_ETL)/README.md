@@ -23,24 +23,23 @@ The projects share a common containerized environment managed at this root level
 - **Unified Orchestrator**: A single Apache Airflow instance managing DAGs for both regional consolidation and mobile analytics.
 - **BI & Visualization**: Integrated Metabase for dashboarding and embedded Matplotlib visuals in executed notebooks.
 
-## 📊 Dashboards
+## 📊 Integrated Analytics Dashboard
 
-The platform includes two ways to visualize insights:
+The platform includes a detailed multi-tab Streamlit dashboard providing insights into regional performance and digital banking adoption.
 
-### 1. Modern Interactive Dashboards (Streamlit)
-A high-fidelity, interactive dashboard built with Streamlit and Plotly.
+### Key Features:
+- **🌍 Regional Performance**: Tracking of Assets, Profit, and Digital Adoption across 7 markets (Kenya, DRC, Rwanda, Uganda, etc.).
+- **📱 Digital & Equitel Analytics**: Modeling of EazzyPay/Equitel user growth curves and Revenue per User (ARPU).
+- **📊 Market Comparison**: Efficiency analysis using interactive scatter-bubble charts (Assets vs. Profitability).
 
-- **Live Demo**: [🚀 Click Here to Open Dashboard](https://kipruto45-victor-kipruto-rop-portfolio-g8pspygfpttsbfggjaadwy.streamlit.app/)
-- **Local Access**: `http://localhost:8502`
-- **How to Use**:
-    1. **Regional Comparison**: Use the "Pan-Africa Consolidation" mode to see how subsidiaries in DRC, Rwanda, and Uganda compare in USD profit.
-    2. **Risk Analysis**: Switch to the **Regional Engagement & Risk** tab to see bubble charts of Digital Maturity vs. Credit Risk.
-    3. **Growth Tracking**: Use the "Equitel & EazzyPay" mode to track subscriber S-curves and transaction velocity.
-- **Portability**: This dashboard uses a "Portable Mode" fallback—if the live PostgreSQL database is not available, it automatically loads pre-processed data snapshots for instant viewing.
-
-### 2. BI Layer (Metabase)
-Pre-defined SQL queries for Metabase dashboards in the `dashboards/` directory.
-- **Access**: `http://localhost:3001`
+### Accessing the Dashboards:
+1. **Interactive Dashboard (Streamlit)**: 
+   - **Live Demo**: [🚀 View Equity Integrated Dashboard](https://kipruto45-victor-kipruto-rop-portfolio-g8pspygfpttsbfggjaadwy.streamlit.app/)
+   - **Local URL**: [http://localhost:8502](http://localhost:8502)
+   - **Command**: `streamlit run dashboard_app.py` from the project root.
+2. **BI Layer (Metabase)**:
+   - **URL**: [http://localhost:3001](http://localhost:3001)
+3. **Master Hub**: Accessible via the [Master Dashboard](../master_dashboard.py).
 
 ## 🚦 Getting Started
 
