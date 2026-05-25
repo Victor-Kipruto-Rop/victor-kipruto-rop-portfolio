@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: absa-postgres
+  namespace: data-pipelines
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: absa-postgres
+  template:
+    metadata:
+      labels:
+        app: absa-postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:15
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_USER
+          value: absa_admin
+        - name: POSTGRES_PASSWORD
+          value: absa_password
+        - name: POSTGRES_DB
+          value: absa_warehouse
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-absa
+  namespace: data-pipelines
+spec:
+  selector:
+    app: absa-postgres
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: absa-dashboard
+  namespace: data-pipelines
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: absa-dashboard
+  template:
+    metadata:
+      labels:
+        app: absa-dashboard
+    spec:
+      containers:
+      - name: dashboard
+        image: python:3.11-slim
+        command: ["streamlit", "run", "Absa_Bank_Kenya(PIPELINE)/dashboard_app.py"]
+        ports:
+        - containerPort: 8501
+        env:
+        - name: DB_HOST
+          value: postgres-absa

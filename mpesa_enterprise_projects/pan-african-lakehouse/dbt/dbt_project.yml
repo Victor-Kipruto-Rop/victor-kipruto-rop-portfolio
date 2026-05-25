@@ -1,0 +1,19 @@
+name: 'pan_african_lakehouse'
+version: '1.0.0'
+config-version: 2
+profile: 'lakehouse'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+models:
+  pan_african_lakehouse:
+    bronze:
+      +materialized: table
+      +schema: bronze
+    silver:
+      +materialized: table
+      +schema: silver
+    gold:
+      +materialized: view
+      +schema: gold
