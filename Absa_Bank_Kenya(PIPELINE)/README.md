@@ -46,13 +46,20 @@ The platform includes a comprehensive Streamlit dashboard providing real-time vi
 ## 🚦 Getting Started
 
 ### 1. Environment Setup
-Create a `.env` file in this directory with your Absa Developer credentials:
+Create a `.env` file in this directory based on `.env.example` with your Absa Developer credentials:
 ```env
 ABSA_CONSUMER_KEY=your_key
 ABSA_CONSUMER_SECRET=your_secret
 ```
 
-### 2. Launch Services
+### 2. Verify API Connection
+You can test your Playpen credentials by running the automated connection test:
+```bash
+python3 Open_Banking_API_Pipeline/test_api_connection.py
+```
+This script will authenticate against `https://www.api.absa.africa:9443` and attempt to list accounts.
+
+### 3. Launch Services
 Use the unified Makefile to start the platform:
 ```bash
 make up
