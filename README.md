@@ -1,4 +1,4 @@
-# 🚀 Victor Kipruto — Data Engineering Portfolio
+# 🚀 Victor Kipruto Rop— Data Engineering Portfolio
 
 Welcome to my Data Engineering Portfolio.  
 This repository contains end-to-end data engineering, ETL, streaming, analytics, fraud detection, and financial intelligence projects built around the Kenyan banking and telecom ecosystem.
